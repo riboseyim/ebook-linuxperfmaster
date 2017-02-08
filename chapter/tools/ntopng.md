@@ -6,16 +6,14 @@
 >作为 NetFlow/sFlow  采集器 (Cisco/ Juniper 路由器)  ；交换机配合 nProbe.
 
 
-[新一代网络监控工具Ntopng：架构分析和可视化](http://www.jianshu.com/p/f10a2d862863)
-![][image-2]
+![](http://og2061b3n.bkt.clouddn.com/ntop-demo-1.jpg)
+![](http://og2061b3n.bkt.clouddn.com/ntop-demo-2.jpg)
+![](http://og2061b3n.bkt.clouddn.com/ntop-demo-3.jpg)
+![](http://og2061b3n.bkt.clouddn.com/ntop-demo-4.jpg)
+![](http://og2061b3n.bkt.clouddn.com/ntop-demo-5.jpg)
+![](http://og2061b3n.bkt.clouddn.com/ntop-demo-6.jpg)
 
-[NTop 2016 路线图](http://www.jianshu.com/p/b268267800e9)
 
-
-
-[image-2]:	https://raw.githubusercontent.com/riboseyim/chief-arch/master/%E6%9E%B6%E6%9E%84%E9%80%8F%E8%A7%86%EF%BC%9ANtopng/1037849-87d7f478ec9b823a.jpg
-
-<!-- more -->
 
 **What ntopng can do for me?**
 
@@ -35,6 +33,7 @@
 
 ## Ntopng 架构
 
+![](http://og2061b3n.bkt.clouddn.com/ntopng-arch-view.jpg)
 
 #### 主要开发语言
 C、C++、**Python**、Lua
@@ -66,6 +65,8 @@ Redis是一个开源的使用ANSIC语言编写、支持网络、可基于内存�
 
 **Geoip：IP GIS图形**
 
+
+![](http://og2061b3n.bkt.clouddn.com/ntopng-geomap.png)
 
 #### 其它库
 

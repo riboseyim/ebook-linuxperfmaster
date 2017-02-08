@@ -1,12 +1,12 @@
 # eBook: Linux Perf Master
 
-##作者：[RiboseYim](https://riboseyim.github.io)
+##作者
+[RiboseYim](https://riboseyim.github.io)
 工程师、开源粉、深度阅读患者。
 
 [Linkedin](https://www.linkedin.com/in/riboseyim/)
 [知乎专栏](https://www.zhihu.com/people/riboseyim)
 [开源中国](https://my.oschina.net/zijingshanke/blog)
-
 
 * [Chapter 1:ABC](chapter/abc/load.md)
 * [基于Linux单机的负载评估](chapter/abc/load.md)
@@ -25,6 +25,7 @@
 * [About Author](chapter/about/2016.md)
 
 ## Thanks
+
 Thanks to my family and colleagues.
 
 <hr>

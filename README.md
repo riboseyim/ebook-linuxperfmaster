@@ -7,7 +7,7 @@
 [Linkedin](https://www.linkedin.com/in/riboseyim/)
 [知乎专栏](https://www.zhihu.com/people/riboseyim)
 [开源中国](https://my.oschina.net/zijingshanke/blog)
-[About Author](chapter/about/2016.md)
+[作品集](chapter/about/2016.md)
 
 
 ### 特色章节
@@ -26,8 +26,8 @@
 Thanks to my family and colleagues.
 
 <hr>
-更多精彩内容，请扫码关注公众号：@睿哥杂货铺  
-[RSS订阅 RiboseYim](https://riboseyim.github.io)
+更多精彩内容，请扫码关注公众号：@睿哥杂货铺 [RSS订阅 RiboseYim](https://riboseyim.github.io)
+
 ![微信公众号](http://o8m8ngokc.bkt.clouddn.com/qrcode_for_gh_896dd3dd5255_344.jpg)
 
 ## License

@@ -32,9 +32,8 @@ Systems Performance:Enterprise and the Cloud
 
 >推荐语：系统性能优化方向的葵花宝典。
 
-作者：Brendan Gregg(SUN、ORACLE性能工程师)
-
-DTrace（最早应用于Solaris，现已移植到FreeBSD、Mac OS X）作者
+**作者：Brendan Gregg**
+(SUN、ORACLE性能工程师)、DTrace（最早应用于Solaris，现已移植到FreeBSD、Mac OS X）作者
 
 Mac OS X EI Capatian:
 

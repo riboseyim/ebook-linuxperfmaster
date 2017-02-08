@@ -1,8 +1,8 @@
 # eBook: Linux Perf Master
 
-## 作者
-[RiboseYim](https://riboseyim.github.io)
-工程师、开源粉、深度阅读患者。
+## 作者：[RiboseYim](https://riboseyim.github.io)
+
+>工程师、开源粉、深度阅读患者。
 
 [Linkedin](https://www.linkedin.com/in/riboseyim/)
 [知乎专栏](https://www.zhihu.com/people/riboseyim)
@@ -20,6 +20,7 @@
 * [木马来袭：黑客入侵导致的性能问题](chapter/thinking/ssh.md)
 * [性能优化思路：从珠海航展交通管控实践谈起](chapter/thinking/traffic.md)
 
+### VERSION 1.0.1-201702
 
 ## Thanks
 

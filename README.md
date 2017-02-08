@@ -3,11 +3,12 @@
 ## 作者：[RiboseYim](https://riboseyim.github.io)
 
 >工程师、开源粉、深度阅读患者。
+高效运维社区2016年度金牌作者
 
 [Linkedin](https://www.linkedin.com/in/riboseyim/)
 [知乎专栏](https://www.zhihu.com/people/riboseyim)
 [开源中国](https://my.oschina.net/zijingshanke/blog)
-[作品集](chapter/about/2016.md)
+[作品合集](chapter/about/2016.md)
 
 
 ### 特色章节

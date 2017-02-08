@@ -14,6 +14,6 @@
 * [美国网络安全立法策略：组织的问题组织解决](chapter/thinking/ganglia.md)
 * [Chapter 4:文化](chapter/culture/books.md)
 * [Linus Torvalds: The mind behind Linux](chapter/culture/books.md)
-* [社区：Community Over Code](chapter/culture/books.md)
+* [社区：Community Over Code](chapter/culture/community.md)
 * [推荐书单](chapter/culture/books.md)
 * [About Author](chapter/aboutme/2016.md)

@@ -23,6 +23,8 @@
 
 ### VERSION 1.0.1-201702
 
+https://www.gitbook.com/book/riboseyim/linux-perf-master/details
+
 ## Thanks
 
 Thanks to my family and colleagues.

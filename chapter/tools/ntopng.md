@@ -55,7 +55,7 @@ Gdbm：DBM的GNU版本，使用hash存储非结构化数据
 
 **Redis**
 Redis是一个开源的使用ANSIC语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。Ntopng的Redis数据结构如下：
-
+![](http://og2061b3n.bkt.clouddn.com/ntop-redis-data.jpg)
 
 #### 前端展现层
 
@@ -89,6 +89,13 @@ pixman：像素管理（图形）
 Cairo：a2Dgraphicslibrarywithsupportformultipleoutputdevices.
 Freetype：FreeType库是一个完全免费（开源）的、高质量的且可移植的字体引擎，它提供统一的接口来访问多种字体格式文件，包括TrueType,OpenType, Type1, CID,CFF, Windows FON/FNT, X11 PCF等
 fontconfig：字体库管理
+
+### P2P 演示案例
+
+![](http://og2061b3n.bkt.clouddn.com/ntop-p2p-1.jpg)
+![](http://og2061b3n.bkt.clouddn.com/ntop-p2p-2.jpg)
+![](http://og2061b3n.bkt.clouddn.com/ntop-p2p-3.jpg)
+![](http://og2061b3n.bkt.clouddn.com/ntop-p2p-4.jpg)
 
 <hr>
 更多精彩内容，请扫码关注公众号：@睿哥杂货铺  

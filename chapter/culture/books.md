@@ -98,6 +98,9 @@ Mike Muss: ping
 ## 四、《How Linux Works》
 **作者：BRIAN WARD**
 
+## 五、《Just For Fun》
+Linus自传，2001年
+
 
 <hr>
 更多精彩内容，请扫码关注公众号：@睿哥杂货铺  

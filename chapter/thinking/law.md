@@ -11,7 +11,6 @@ The Red Army had been gone for years, but it still had the power to inspire cont
 网络犯罪的潜在受害者或是网络冲突的潜在目标，我们更应从行政法的范畴来看待他们。在诸如环境法，反垄断法，产品责任法，
 公共卫生法等领域也面临相似的挑战。这些法律范畴不仅产出一个思考网络安全的更丰富的分析框架，也提出了可能的应对策略。
 
-
 1. Environmental Law  环保法
 2. Antitrust Law  反托拉斯法 反垄断法
 3. Products liability Law  产品责任法

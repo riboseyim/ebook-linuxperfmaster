@@ -1,24 +1,16 @@
----
-title: CyberSecurity
-date: 2016-10-07 00:57:40
-tags:
----
-
-
-## 木马来袭：网络安全立法策略
+## 美国网络安全立法策略:组织的问题组织解决
 
 The Red Army had been gone for years, but it still had the power to inspire controversy—and destruction……the same sorts of challenges the modern administrative state faces in fields like environmental law, antitrust law, products liability law, and public health law.
 
 推荐一篇美国学者的论文《Regulating Cybersecurity》 (forthcoming 2013)。
 
-### 框架
+## 框架
 
 学术界普遍认为国家的关键基础设施，如银行，电信网络，电网等等，非常容易受到灾难性的网络攻击。
 然而，现有的学术文献并未充分阐述这一问题，因其将网络安全的范畴过度狭隘化。作者认为，与其仅仅将这些私有企业视为
 网络犯罪的潜在受害者或是网络冲突的潜在目标，我们更应从行政法的范畴来看待他们。在诸如环境法，反垄断法，产品责任法，
 公共卫生法等领域也面临相似的挑战。这些法律范畴不仅产出一个思考网络安全的更丰富的分析框架，也提出了可能的应对策略。
 
-<!-- more -->
 
 1. Environmental Law  环保法
 2. Antitrust Law  反托拉斯法 反垄断法

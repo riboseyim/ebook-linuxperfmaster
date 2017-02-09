@@ -23,10 +23,10 @@
 
 ## Community
 
-**简书专题：《系统运维专家》** [链接](http://www.jianshu.com/c/9a817d8a67ea)
+[>>> 简书专题：《系统运维专家》](http://www.jianshu.com/c/9a817d8a67ea)
 
 **小密圈：**
-![小密圈_qcode](http://o8m8ngokc.bkt.clouddn.com/riboseyim_id_quanzi_ops.png)
+![小密圈_qcode](http://o8m8ngokc.bkt.clouddn.com/riboseyim_id_quanzi_ops_small.png)
 
 
 ### VERSION 1.0.1-201702

@@ -21,6 +21,14 @@
 * [木马来袭：黑客入侵导致的性能问题](chapter/thinking/ssh.md)
 * [性能优化思路：从珠海航展交通管控实践谈起](chapter/thinking/traffic.md)
 
+## Community
+
+**简书专题：《系统运维专家》** [链接](http://www.jianshu.com/c/9a817d8a67ea)
+
+**小密圈：**
+![小密圈_qcode](http://o8m8ngokc.bkt.clouddn.com/riboseyim_id_quanzi_ops.png)
+
+
 ### VERSION 1.0.1-201702
 
 https://www.gitbook.com/book/riboseyim/linux-perf-master/details

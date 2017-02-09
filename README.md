@@ -6,6 +6,7 @@
 高效运维社区2016年度金牌作者
 
 [Linkedin](https://www.linkedin.com/in/riboseyim/)
+[简书主页](http://www.jianshu.com/u/8cc1dba4bc96)
 [知乎专栏](https://www.zhihu.com/people/riboseyim)
 [开源中国](https://my.oschina.net/zijingshanke/blog)
 [作品合集](chapter/about/2016.md)

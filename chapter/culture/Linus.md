@@ -200,5 +200,5 @@ CA: 我们TED本周的主题是梦想——宏伟的，醒目的，大胆的梦�
 ![linus-talk-5.png](http://upload-images.jianshu.io/upload_images/1037849-90c6bae3e006eafa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 <hr>
-更多精彩内容，请扫码关注公众号：@睿哥杂货铺 [RSS订阅 RiboseYim](https://riboseyim.github.io)
-![微信公众号](http://o8m8ngokc.bkt.clouddn.com/qrcode_for_gh_896dd3dd5255_344.jpg)
+更多精彩内容，请扫码关注公众号：@睿哥杂货铺  
+[RSS订阅 RiboseYim](https://riboseyim.github.io?product=ebook&id=linuxperfmaster)

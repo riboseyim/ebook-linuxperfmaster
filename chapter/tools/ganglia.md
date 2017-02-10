@@ -261,9 +261,6 @@ Gmetad默认15秒向gmond取一次xml数据,解析xml文件带来的CPU负荷也
 3、这篇本来没有什么直接关系，是Ganglia作者的最新研究成果，仅供娱乐。
 ![](http://og2061b3n.bkt.clouddn.com/Ganglia_ADAM.png)
 
-
 <hr>
-更多精彩内容，请扫码关注公众号：@睿哥杂货铺  
-[RSS订阅 RiboseYim](https://riboseyim.github.io)
-
-![微信公众号](http://o8m8ngokc.bkt.clouddn.com/qrcode_for_gh_896dd3dd5255_344.jpg)
+更多精彩内容，请扫码关注公众号：@睿哥杂货铺
+[RSS订阅 RiboseYim](https://riboseyim.github.io?product=ebook&id=linuxperfmaster)

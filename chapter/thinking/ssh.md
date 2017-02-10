@@ -394,3 +394,7 @@ ssh -Q kex          # 支持的密钥交换算法
 ssh -G  user@somehost.example.com
 ~~~
 将列出所有的配置选项，包括被选用的编码方式，消息验证码，公钥算法，密钥算法参数的值。
+
+<hr>
+更多精彩内容，请扫码关注公众号：@睿哥杂货铺
+[RSS订阅 RiboseYim](https://riboseyim.github.io?product=ebook&id=linuxperfmaster)

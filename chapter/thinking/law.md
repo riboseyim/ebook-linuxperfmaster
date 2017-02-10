@@ -44,3 +44,7 @@ Deputy Assistant Secretary for Policy Development(2006-2007)
 
 GEORGETOWN UNIVERSITY LAW CENTER，Washington，DC
 DUKE UNIVERSITY SCHOOL OF LAW，Durham，NC
+
+<hr>
+更多精彩内容，请扫码关注公众号：@睿哥杂货铺 
+[RSS订阅 RiboseYim](https://riboseyim.github.io?product=ebook&id=linuxperfmaster)

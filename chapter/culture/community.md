@@ -25,8 +25,10 @@
 
 另外，我自己也经营了一个简书专题：[《系统运维专家》](http://www.jianshu.com/c/9a817d8a67ea)
 
+欢迎读者朋友订阅、投稿。
+
 小密圈：
-![](http://o8m8ngokc.bkt.clouddn.com/riboseyim_id_quanzi_ops.png)
+![](http://o8m8ngokc.bkt.clouddn.com/riboseyim_id_quanzi_ops_small.png)
 
 <hr>
 更多精彩内容，请扫码关注公众号：@睿哥杂货铺 [RSS订阅 RiboseYim](https://riboseyim.github.io)

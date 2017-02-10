@@ -130,7 +130,5 @@ Oracle Linux DTrace，将 DTrace 迁移到Oracle Linux的实现。
 一种新型追踪器， 能够基于类似tcpdump的命令操作 syscall events, 再用lua后处理。
 
 <hr>
-更多精彩内容，请扫码关注公众号：@睿哥杂货铺  
-[RSS订阅 RiboseYim](https://riboseyim.github.io)
-
-![微信公众号](http://o8m8ngokc.bkt.clouddn.com/qrcode_for_gh_896dd3dd5255_344.jpg)
+更多精彩内容，请扫码关注公众号：@睿哥杂货铺
+[RSS订阅 RiboseYim](https://riboseyim.github.io?product=ebook&id=linuxperfmaster)

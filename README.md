@@ -40,6 +40,7 @@ Thanks to my family and colleagues.
 
 
 ## License
+版权声明：自由转载-非商用-非衍生-保持署名| Creative Commons BY-NC-ND 3.0
 
 **You are free to Share**
 

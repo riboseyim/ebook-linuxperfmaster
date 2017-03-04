@@ -1,0 +1,10 @@
+fj-zyite-app01$ netstat -i
+Name  Mtu  Net/Dest      Address        Ipkts  Ierrs Opkts  Oerrs Collis Queue 
+lo0   8232 loopback      localhost      458212876 0     458212876 0     0      0     
+fjgi0 1500 fjgi0-app     fjgi0-app      67096766 0     122245489 0     0      0     
+fjgi1 1500 fjgi1         fjgi1          2044186622 0     2049552500 0     0      0     
+hme0  1500 fj-zyite-app01 fj-zyite-app01 494574 0     465808 0     0      0     
+cip0  1500 app01RMS      app01RMS       0      0     2      0     0      0     
+
+您在 /var/mail/slview 中有新邮件
+fj-zyite-app01$ c

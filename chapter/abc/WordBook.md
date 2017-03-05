@@ -84,3 +84,263 @@ for(资源;所有资源;i++){
   2.使用率高？
   3.饱和？
 }
+
+# Scheduling Algorithm 调度算法
+
+|**Code**|**Name**|**名称**|**说明**|
+|----|----------|---------|-------------------|
+|RR|**round－robin**|轮询调度|单纯依次请求真实服务器。均等分发|
+|WRR|**weighted round-robin**|加权轮询调度|引入加权值来控制分发比率。|
+|LC|**least-connection**|最小连接调度|将新的请求连接到当前连接数最少的服务器|
+|WLC|**weighted least-connection**|加权最小连接调度|（连接数＋1）／加权值。|
+|SED|**shortest expected delay**|最短预期延时调度|选择响应速度最快的那台服务器，选择状态ESTABLISHED的连接数最少的服务器。与WLC类似，但WLC会把TIME_WAIT或FIN_WAIT的连接数计算在最小因素中|
+|NQ|**never queue**|不排队调度|最优先选择连接数为0的服务器|
+|SH|**source hashing**|源地址散列调度|对发出请求的IP地址计算散列值|
+|DH|**destination hashing**|目标地址散列调度|对需要接收请求的目标地址计算散列值|
+|LBLC|**locality-based least-connection**|基于局部性的最小连接|在连接数没有超过加权值指定的值时，将选择同一台服务器|
+|LBLCR|**locality-based least-connection with replication**|带复制的基于局部性最小连接|当所有服务器的连结数都超过加权值指定的值时，将选择连接数最少的那台服务器|
+
+# DevOps-WordBook
+
+
+## A
+
+**Availability** () [可用性]
+```
+系统停止的可能性。
+```
+
+**Algorithm**()[算法]
+
+[Scheduling Algorithm 调度算法](SchedulingAlgorithm.md)
+
+## B
+
+**Bottleneck** () [瓶颈]
+```
+阻碍系统整体性能提升的地方。
+```
+
+
+## C
+
+**CDN** (Content Delivery Network) [内容分发网络]
+```
+从散布在全世界的缓存服务器中，选择离客户端较近的服务器来发送信息，据此实现性能的提升
+```
+
+
+## D
+
+**DC** (Data Center) [数据中心]
+```
+容纳服务器设备。配备空调，冗余电源。配备火灾、地震等应急措施。
+```
+
+**Daemon** () [守护程序]
+```
+在后台持续运行并发挥作用。
+```
+
+## E
+
+**Environment** () [环境]
+```
+Production Environment 生产环境
+Staging Environment  准生产环境
+```
+
+## F
+
+**Failover** () [故障转移]
+```
+在冗余系统中，活动节点（Active Node）停止时，自动切换到备用节点（Backup Node）.
+如果不是自动切换，而是手动，通常叫作Switchover.
+```
+**Failback** ()[故障恢复]
+
+
+**File System** () [文件系统]
+```
+分类：
+Memory File System:建立在内存中的文件系统
+
+```
+
+## G
+
+**** () []
+```
+
+```
+
+## H
+
+**Health Check** () [健康检查]
+```
+确认检查对象的状态是否正常。
+例如：确认服务器是否能响应ping,是否能应答HTTP等。
+```
+
+## I
+
+**** () []
+```
+
+```
+
+## J
+
+**** () []
+```
+
+```
+
+## K
+
+**Keepalived** () [内容分发网络]
+```
+http://www.keepalived.org
+```
+## L
+
+**LVS** (Linux Virtual Server) [Linux虚拟服务器]
+```
+原伟项目名，旨在搭建具有可扩展性的、实用性高的系统。
+http://www.linuxvirtualserver.org
+```
+
+**Load Balancer** () [负载均衡器]
+```
+位于客户端和服务器之间，将客户端的请求分散到后端的多台服务器。
+Load［负载］大致力可分为“CPU负载”和“IO负载”。详见：http://www.jianshu.com/p/db8e8a2884ef
+```
+
+**Latency** () [延迟]
+```
+通常指数据投递完成所花费的时间。
+```
+
+## M
+
+**** () []
+```
+
+```
+
+## N
+
+**NIC** (Network Interface Card) [网络接口卡，网卡]
+```
+网络接口的总称
+```
+
+**Netfilter**
+```
+Linux内核中操作网络数据包所需的协议框架。
+实现分组过滤的iptables和负载均衡的IPVS也应用了Netfilter协议。
+```
+
+## O
+
+**OSI** (Open Systems Interconnection) [参考模型]
+```
+分为七层（Layer）框架，例如：
+第七层：应用层。HTTP及SMT等协议
+第四层：传输层。TCP及UDP
+第三层：网络层。IP、ARP及ICMP
+第二层：数据链路层。以太网等
+```
+
+**OSS** (OpenSource Software) [开源软件]
+```
+```
+
+## P
+
+**Proxy** () [代理]
+```
+Transparent Proxy:透明代理
+
+```
+## Q
+
+**** () []
+```
+
+```
+
+## R
+
+**Redundancy** () [冗余]
+```
+将系统的构成要素配置多个，即使其中一个发生故障而停止运作，也可以切换到备用设备以使服务不停止。
+```
+**Resource** () [资源]
+```
+指CPU,内存，磁盘空间等
+```
+
+## S
+
+**Scalability** () [可扩展性]
+```
+随着用户的增多以及规模的扩大，在某种程度上扩展系统以加强应对的能力。
+Scale-out:横向扩展。例如：将服务分摊到多台服务器
+Scale-up:纵向扩展。 例如：提升单个服务器性能
+```
+
+**SPO** (Single Point of Failure) [单点故障]
+```
+若此处出现问题，就会令整个系统停止，即系统要害。
+```
+
+
+## T
+
+**Throughput** () [吞吐量]
+```
+代表单位时间的传送量。
+例如：大巴车和小汽车。
+```
+
+## U
+
+**** () []
+```
+
+```
+
+## V
+
+**VIP** (Virtual IP Address) [虚拟IP地址]
+```
+浮动分配给某项服务或功能的IP地址。例如负载均衡器中接收客户端请求的IP地址。
+```
+## W
+
+**** () []
+```
+
+```
+
+## X
+
+**** () []
+```
+
+```
+
+## Y
+
+**** () []
+```
+
+```
+
+## Z
+
+**** () []
+```
+
+```

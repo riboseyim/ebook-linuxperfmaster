@@ -1,31 +1,42 @@
+# 动态追踪案例：strace+gdb 发现Nginx模块性能问题
 
+[原文:elvinefendi.com](http://www.elvinefendi.com/2017/03/07/my-experience-with-lua-nginx-openssl-strace-gdb-glibc-and-linux-vm.html)
 
-[原文](http://www.elvinefendi.com/2017/03/07/my-experience-with-lua-nginx-openssl-strace-gdb-glibc-and-linux-vm.html)
+#### 翻译：soul11201
+http://blog.soul11201.com/notes/translate/2017/03/25/translate-nginx-oom.html
+
 
 在lua-nginx-module 中，一个内存相关的黑魔法导致冗余的大内存分配。
 
 最近我在线上改变了一个的 Nginx 配置，导致 OOM（Out of Memory） killer 在 Nginx 加载新配置的过程中 杀死了 Nginx 进程。这是添加到配置中的行：
 
+```
 lua_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
-在这篇文章中，我将会阐述我是如何找出这个问题的根本原因、记录在这个过程中现学现用的工具。这篇文章内容细节非常琐碎。在进行深入阅读前，先列下使用的软件栈：
+```
 
+在这篇文章中，我将会阐述我是如何找出这个问题的根本原因、记录在这个过程中现学现用的工具。这篇文章内容细节非常琐碎。在进行深入阅读前，先列下使用的软件栈：
+```
 Openssl 1.0.2j
 OS:Ubuntu Trusty with Linux 3.19.0-80-generic
 Nginx:Openresty bundle 1.11.2
 glibc:Ubuntu EGLIBC 2.19-0ubuntu6.9
+```
+
 我们从 OOM Killer 开始。它是一个 Linux 内核函数，当内核不能分配更多的内存空间的时候它将会被触发。OOM Killer 的任务是探测哪一个进程是对系统危害最大（参考 https://linux-mm.org/OOM_Killer,获取更多关于坏评分是如何计算出来的信息），一旦检测出来，将会杀死进程、释放内存。也就是说我遇到的情况是 ，Nginx 是在申请越来越多的内存，最终内核申请内存失败并且触发OOM Killer，杀死 Nginx 进程。
 
 到此为止，现在让我们看看当 Nginx 重新加载配置的时候做了什么。可以使用 strace 进行跟踪。这是一个非常棒的工具，能在不用阅读源码的情况下查看程序正在做什么。
 
 在我这里，执行：
-
+```
 sudo strace -p `cat /var/run/nginx.pid` -f
+```
 接着
-
+```
 sudo /etc/inid.t/nginx reload
+```
 -f 选项告诉 strace 也要对子进程进行跟踪。 在http://jvns.ca/zines/#strace-zine.你能看到一个对strace非常好的评价。下面是一个非常有趣的片段，执行完strace后输出的：
 
-
+```
 [pid 31774] open("/etc/ssl/certs/ca-certificates.crt", O_RDONLY) = 5
 [pid 31774] fstat(5, {st_mode=S_IFREG|0644, st_size=274340, ...}) = 0
 [pid 31774] mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6dc8266000
@@ -45,13 +56,15 @@ sudo /etc/inid.t/nginx reload
 [pid 31774] read(5, "", 4096)           = 0
 [pid 31774] close(5)                    = 0
 [pid 31774] munmap(0x7f6dc8266000, 4096) = 0
-
+```
 这段重复了很多次！有两行非常有意思。
-
+```
 open("/etc/ssl/certs/ca-certificates.crt", O_RDONLY) = 5
+```
 这行意味着是跟修改的配置（上面提到的修改）有关的操作，
-
+```
 mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6c927c3000
+```
 这行意味着在read过程中间请求内核分配 1M 内存空间。
 
 在 strace 的输出中，另一个有意思的细节是分配的内存从来没有执行munmap进行释放。注意在调用close后0x7f6dc8266000才被传入munmap。
@@ -59,16 +72,18 @@ mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x
 这些事实让我相信 ，当设置lua_ssl_trusted_certificate这条指令后，Nginx 发生了 内存泄露（尽管我对底层调试几乎没有任何经验）。什么？Nginx 发生了内存泄露，难道那还不让人兴奋？！不要这么兴奋。
 
 为了找出是Nginx 的哪个组件发生了内存泄露，我决定使用 gdb。如果编译程序的时候打开了调试符号选项，gdb将会非常有用。如上所述，我使用的是 Nginx Openresty 套件， 需要使用下面的命令开启调试符号选项重新编译：
-
+```
 ~/openresty-1.11.2.2 $ ./configure -j2 --with-debug --with-openssl=../openssl-1.0.2j/ --with-openssl-opt="-d no-asm -g3 -O0 -fno-omit-frame-pointer -fno-inline-functions"
---with-openssl-opt="-d no-asm -g3 -O0 -fno-omit-frame-pointer -fno-inline-functions" 确保 OpenSSL 编译的时候也开启调试符号信息。现在已经在Openresty的可执行程序中带有了调试符号信息，能通过gdb启动运行、找到上面提到的触发mmap的具体的调用函数。
+--with-openssl-opt="-d no-asm -g3 -O0 -fno-omit-frame-pointer -fno-inline-functions"
+```
+确保 OpenSSL 编译的时候也开启调试符号信息。现在已经在Openresty的可执行程序中带有了调试符号信息，能通过gdb启动运行、找到上面提到的触发mmap的具体的调用函数。
 
 首先我们需要启动gdb调试 Openresty 可执行程序：
-
+```
 sudo gdb `which openresty`
+```
 这个命令将打开gdb命令行，像下面这样：
-
-
+```
 GNU gdb (Ubuntu 7.7.1-0ubuntu5~14.04.2) 7.7.1
 Copyright (C) 2014 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -85,16 +100,20 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from /usr/local/openresty/bin/openresty...done.
 (gdb)
+```
 
 接下来，设置程序的命令行参数
-
+```
 (gdb) set args -p `pwd` -c nginx.conf
+```
 这将使gdb在启动 Opneresty/Nginx 的时候把给出的命令行参数传递过去。接着配置断点，使其能够暂停程序到某一个文件的某一行或者是某一个函数。因为我想找出在open打开信任的验证文件后，那个令人奇怪的mmap的调用者，所以我首先添加了一个断点在
-
+```
 open("/etc/ssl/certs/ca-certificates.crt", O_RDONLY) = 5
+```
 断点设置如下：
-
+```
 break open if strcmp($rdi, "/etc/ssl/certs/ca-certificates.crt") == 0
+```
 如果你先前没有了解过gdb，gdb 是非常棒的工具，可以使用它添加一个自定义的条件来创建复杂的断点。这里我们告诉gdb暂停程序，如果open函数被调用并且rdi寄存器指向的数据是 /etc/ssl/certs/ca-certificates.crt 。我不知道是否还有更好的方式，我是在反复尝试后，发现open函数的第一个参数（文件路径）保存在了rdi寄存器，所以才会如此设置断点。现在告诉gdb运行程序：
 
 ```

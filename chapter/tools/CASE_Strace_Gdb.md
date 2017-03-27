@@ -102,7 +102,7 @@ break open if strcmp($rdi, "/etc/ssl/certs/ca-certificates.crt") == 0
 ```
 第一次出现open("/etc/ssl/certs/ca-certificates.crt", O_RDONLY)调用时，gdb将会暂停程序执行。现在我们可以使用其他的gdb辅助命令观察此刻程序的内部状态。下面是程序执行到断点的时候的内部状态：
 
-
+```
 Breakpoint 1, open64 () at ../sysdeps/unix/syscall-template.S:81
 81  ../sysdeps/unix/syscall-template.S: No such file or directory.
 (gdb) bt
@@ -127,9 +127,11 @@ Breakpoint 1, open64 () at ../sysdeps/unix/syscall-template.S:81
 #18 0x000000000045e2f1 in ngx_init_cycle (old_cycle=old_cycle@entry=0x7fffffffe300) at src/core/ngx_cycle.c:274
 #19 0x000000000044cef4 in main (argc=<optimized out>, argv=<optimized out>) at src/core/nginx.c:276
 
+```
+
 真令人兴奋，gdb向我们展示了完整的函数调用栈及参数！查看此刻寄存器中的数据，可以用 info registers命令。为了更好的理解调用栈，我查看了一下 Nginx的内部工作流程（我记得Openresty仅仅是组装了一些额外的模块的Nginx）。Nginx 内部所有的（除了Nginx 核心）都被实现为模块，这些模块注册 handlers 和 filters。Nginx 的配置文件主要有三个主要的块组成，分别是main、server、location。 假设您的自定义Nginx模块引入了一个新的配置指令，那么您还需要注册一个处理程序（handler）来处理该指令的配置的值。因此整个过程如下 Nginx 解析配置文件，每一个配置部分解析后就会调用注册的相应处理程序。下面是lua-nginx-module（Openresty Nginx 组件的核心模块）的实现：
 
-
+```
 ngx_http_module_t ngx_http_lua_module_ctx = {
 #if (NGX_HTTP_LUA_HAVE_MMAP_SBRK)                                            \
     && (NGX_LINUX)                                                           \
@@ -149,11 +151,11 @@ ngx_http_module_t ngx_http_lua_module_ctx = {
     ngx_http_lua_create_loc_conf,     /*  create location configuration */
     ngx_http_lua_merge_loc_conf       /*  merge location configuration */
 };
-
+```
 
 这里是 Nginx 模块注册的处理程序。从注释中你也可以看到，Nginx 解析出来一个 location 配置 就会调用 ngx_http_lua_merge_loc_conf 将配置和 main 块合并。回到我们的上面的gdb输出,可以看到#13就是这个函数调用。默认情况下对于每一个 location 块配置这个函数将会被调用。通过源码我们可以看到这个函数直接去读去配置值、继承server中的配置条目、设置默认值。如果设置了lua_ssl_trusted_certificate 指令，可以看到其中调用了ngx_http_lua_set_ssl,在其内部又调用了Nginx SSL 模块的 ngx_ssl_trusted_certificate。ngx_ssl_trusted_certificate 是一个非常简单的函数，对于给定的配置块（一个location 块），设置SSL 环境(context)的验证深度，调用另外一个 OpenSSL API 加载验证文件（还有一些错误处理）。
 
-
+```
 0649 ngx_int_t
 0650 ngx_ssl_trusted_certificate(ngx_conf_t *cf, ngx_ssl_t *ssl, ngx_str_t *cert,
 0651     ngx_int_t depth)
@@ -186,17 +188,19 @@ ngx_http_module_t ngx_http_lua_module_ctx = {
 0678
 0679     return NGX_OK;
 0680 }
+```
 
 Nginx SSL 模块的完整代码在这里能找到。
 
 现在我们已经走到调用栈的一半了，并且走出了 Nginx的世界。下一个函数调用是SSL_CTX_load_verify_locations，来自于 OpenSSL。程序在这里程序打开了信任的验证文件，并且暂停。接下来将会读取文件（根据上面的strace输出）。
 
 由于我最初的目的就是找出是谁调用了令人奇怪的mmap 调用，很自然的下一个断点就是:
-
+```
 (gdb) b mmap
+```
 b是break的简写。(gdb) c将会继续程序的执行。程序暂停在了下一个断点：
 
-
+```
 Breakpoint 3, mmap64 () at ../sysdeps/unix/syscall-template.S:81
 81  ../sysdeps/unix/syscall-template.S: No such file or directory.
 (gdb) bt
@@ -218,6 +222,7 @@ Breakpoint 3, mmap64 () at ../sysdeps/unix/syscall-template.S:81
 #38 ngx_http_lua_merge_loc_conf (cf=0x7fffffffe150, parent=0x7ffff7f15808, child=0x7ffff7f22ef8) at ../ngx_lua-0.10.7/src/ngx_http_lua_module.c:1158
 #39 0x000000000047e2b1 in ngx_http_merge_servers (cmcf=<optimized out>, cmcf=<optimized out>, ctx_index=<optimized out>, module=<optimized out>, cf=<optimized out>) at src/http/ngx_http.c:599
 <Nginx function calls stripped for clarity>
+```
 
 此刻我异常兴奋。我“发现”了一个OpenSSL内存泄露！带着异常兴奋的情绪，我开始阅读理解 上个世纪90年代就开发的 OpenSSL 的代码。如此高兴，接下来的几天几夜去理解这写函数并且试图找到我非常确定的函数中的内存泄露。看了许多给 OpenSSL 的内存泄露bug（尤其是和上面这个函数相关的）后，我信心大增，因此我有花了几天几夜去捉这个臭虫！
 
@@ -233,7 +238,7 @@ Breakpoint 3, mmap64 () at ../sysdeps/unix/syscall-template.S:81
 
 反复调用模拟多个 location 块（我这里是5000个）:
 
-
+```
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -305,6 +310,7 @@ read(3, "sO+wmETRIjfaAKxojAuuK\nHDp2KntWFh"..., 4096) = 4096
 read(3, "8z+uJGaYRo2aWNkkijzb2GShROfyQcsi"..., 4096) = 4096
 read(3, "CydAXFJy3SuCvkychVSa1ZC+N\n8f+mQA"..., 4096) = 4096
 ...
+```
 
 brk 调用后面没有 mmap 调用，内存消耗也没有按照超出预期的增长！
 
@@ -323,16 +329,18 @@ brk 调用后面没有 mmap 调用，内存消耗也没有按照超出预期的�
 高潮来了！！！把这些线索放一起。一个明显的猜想是 brk 调用后面是mmap调用在Openresty 上下文环境中，但是在独立的c中却不是，因为 Openresty 在配置文件加载之前 在某个地方创建了一个洞。
 
 这不难验证，使用grep 命令在PRs,issus和lua-nginx-module源码中查找。最后发现Luajit 需要工作在低地址空间获得更高的效率，这是为什么lua-nginx-module那群家伙决定在程序开始执行之前执行下面这段代码：
-
+```
 if (sbrk(0) < (void *) 0x40000000LL) {
     mmap(ngx_align_ptr(sbrk(0), getpagesize()), 1, PROT_READ,
          MAP_FIXED|MAP_PRIVATE|MAP_ANON, -1, 0);
 }
+```
+
 完整代码可以在仓库中找到。现在我还没太弄明白这段代码是如何让luajit拥有低地址空间的（如果有人能在评论里面解释清楚，我将非常感激），但是这确实是导致这个问题的代码。
 
 为了证明，我拷贝出来这段代码到我的 独立 C 程序中：
 
-
+```
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -392,13 +400,10 @@ int main() {
         malloc_stats();
         usleep(1000 * 60);
 }
+```
 
 当我编译运行这段程序的时候，通过strace我能看到和Openresty环境中相同的行为。为了更进一步的确认，我编辑Opneresty的源码、注释掉ngx_http_lua_limit_data_segment、重新编译运行，内存增长的现象没有发生。
 
 搞定！！！
 
 上面就是我这次的收获。根据这次结果，我提交了一个issue。当你有很多的location 块的时候，这真的会成为一个问题。例如加入你有一个很大的 Nginx 配置文件，里面有超过4k 个location 块，然后你加入了lua_ssl_trusted_certificate指令到 mian 配置块，然后当你 reload/restart/start Nginx 的时候，内存消耗将会增长到~4G(4k * 1MB)并且不会释放。
-
-soul11201
-联系方式：soul11201@gmail.com
-站长统计

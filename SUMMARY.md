@@ -6,6 +6,7 @@
 * [Netflix性能分析模型：黄金60秒](chapter/abc/Netflix.md)
 * [Chapter 2:工具](chapter/tools/dtrace.md)
 * [动态追踪技术：DTrace](chapter/tools/dtrace.md)
+* [动态追踪案例：strace与gdb](chapter/tools/CASE_Strace_Gdb.md)
 * [基于Ganglia实现集群性能态势感知](chapter/tools/ganglia.md)
 * [新一代Ntopng网络流量监控—可视化和架构分析](chapter/tools/ntopng.md)
 * [Chapter 3:思考](chapter/thinking/AAA.md)

@@ -16,6 +16,7 @@
 
 * [基于Linux单机的负载评估](chapter/abc/load.md)
 * [动态追踪技术：DTrace](chapter/tools/dtrace.md)
+* [动态追踪案例：strace与gdb](chapter/tools/CASE_Strace_Gdb.md)
 * [基于Ganglia实现集群性能态势感知](chapter/tools/ganglia.md)
 * [新一代Ntopng网络流量监控—可视化和架构分析](chapter/tools/ntopng.md)
 * [基于LVS的AAA负载均衡架构实践](chapter/thinking/AAA.md)

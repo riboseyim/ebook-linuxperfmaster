@@ -2,6 +2,7 @@
 
 * [Chapter 1:ABC](chapter/abc/load.md)
 * [词典：首要问题是明确概念（编辑中）](chapter/abc/WordBook.md)
+* [词典：Linux入门命令100条](chapter/abc/LinuxCommands.md)
 * [基于Linux单机的负载评估](chapter/abc/load.md)
 * [Netflix性能分析模型：黄金60秒](chapter/abc/Netflix.md)
 * [Chapter 2:工具](chapter/tools/dtrace.md)

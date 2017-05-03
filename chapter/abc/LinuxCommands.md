@@ -1,9 +1,3 @@
----
-title: Linux Commands - Overview and Examples
-date: 2017-04-26 15:33:39
-tags: [Linux,DevOps]
----
-
 # Linux Commands - Overview and Examples
 
 >The command line is one of the most powerful features of Linux. There exists a sea of Linux command line tools, allowing you to do almost everything you can think of doing on your Linux PC. However, this usually creates a problem: with so many commands available to use, you don't know where and how to start learning them, especially when you are beginner.

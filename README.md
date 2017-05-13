@@ -1,4 +1,4 @@
-# eBook: Linux Perf Master
+# Linux Perf Master
 
 ## 作者：[RiboseYim](https://riboseyim.github.io)
 
@@ -30,8 +30,7 @@
 **小密圈：**
 ![小密圈_qcode](http://o8m8ngokc.bkt.clouddn.com/riboseyim_id_quanzi_ops_small.png)
 
-
-### VERSION 1.0.1-201702
+### Latest Version
 
 https://www.gitbook.com/book/riboseyim/linux-perf-master/details
 

@@ -22,6 +22,7 @@
 * [基于LVS的AAA负载均衡架构实践](chapter/thinking/AAA.md)
 * [木马来袭：黑客入侵导致的性能问题](chapter/thinking/ssh.md)
 * [性能优化思路：从珠海航展交通管控实践谈起](chapter/thinking/traffic.md)
+* [Linus Torvalds: 人生在世，Just for Fun](chapter/culture/Linus_JustForFun.md)
 
 ## Community
 

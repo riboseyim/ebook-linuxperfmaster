@@ -21,7 +21,7 @@ geek和nerd这个词类似，江湖俗称发烧友或怪咖，通常被用于形
 1. 教授之家
    林纳斯·托瓦兹的外祖父家族原来只是贫穷的农民，直到外祖父那一代，六兄弟中有两人获得博士学位。（p13）Leo Törnqvist是芬兰第一批统计学教授，同时意外地开启了林纳斯的编程之路。教授购买了一台Commodore VIC 20电脑，期望用户解决工作中遇到的统计计算问题，显然老教授并不善此道。彼时小林纳斯11岁，仅仅是因为好玩，通过阅读手册自学了指令集，并开始使用BASIC语言编写一些统计学方面的小程序。
 
-![](http://og2061b3n.bkt.clouddn.com/Linus_Torvalds_Family.png)
+![](http://og2061b3n.bkt.clouddn.com/Linus_Torvalds_Family_201705.png)
 
 2. 破碎之家（dysfunctional family）
    林纳斯的父母在他很小的时候就离异了。“At times we lived with my dad and his girlfriend, at other times Sara lived with my dad and I lived with my mom.At times both of us lived with my mom.” 他的祖父晚年中风，祖母也年老体弱，一家老小挤在一所旧房子里。作为职业女性，林纳斯的母亲经常需要工作到很晚，林纳斯只得和妹妹自己去购物、安排晚餐。在艰难的日子里，电脑是唯一的寄托。“The computer found a home on a tiny desk against the window, maybe two feet from my bed.(p19)”
@@ -110,4 +110,4 @@ I think that Linus Torvalds succeed first a foremost as an author of a "new BIOS
 
 4. [维基百科：芬兰教育](https://zh.wikipedia.org/wiki/芬蘭教育)
 
-更多精彩内容，请关注订阅：[@睿哥杂货铺](https://riboseyim.github.io) 
+更多精彩内容，请关注订阅：[@睿哥杂货铺](https://riboseyim.github.io)

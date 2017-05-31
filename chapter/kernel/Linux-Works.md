@@ -9,8 +9,6 @@
 6.  init sets the rest of the system processes in motion
 7.  At some point, init starts a process allowing you to log in, usually at the end or near the end of the boot.
 
-<!--more-->
-
 #### Startup Messages
 有两种方式可以查看内核引导和运行诊断信息：
 1. 查看内核系统日志文件。文件路径： /var/log/kern.log

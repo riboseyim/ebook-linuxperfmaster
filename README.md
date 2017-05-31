@@ -13,7 +13,7 @@
 [作品合集](chapter/about/2016.md)
 
 ### 特色章节
-
+* [How Linux Works](chapter/kernel/Linux-Works.md)
 * [基于Linux单机的负载评估](chapter/abc/load.md)
 * [动态追踪技术：DTrace](chapter/tools/dtrace.md)
 * [动态追踪案例：strace与gdb](chapter/tools/CASE_Strace_Gdb.md)

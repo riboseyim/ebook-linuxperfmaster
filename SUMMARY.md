@@ -5,6 +5,7 @@
 * [词典：Linux入门命令100条](chapter/abc/LinuxCommands.md)
 * [基于Linux单机的负载评估](chapter/abc/load.md)
 * [Netflix性能分析模型：黄金60秒](chapter/abc/Netflix.md)
+* [How Linux Works](chapter/kernel/Linux-Works.md)
 * [Chapter 2:工具](chapter/tools/dtrace.md)
 * [动态追踪技术：DTrace](chapter/tools/dtrace.md)
 * [动态追踪案例：strace与gdb](chapter/tools/CASE_Strace_Gdb.md)

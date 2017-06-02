@@ -25,12 +25,10 @@
 [    0.000000] x86/fpu: Using 'eager' FPU context switches.
 [    0.000000] e820: BIOS-provided physical RAM map:
 …….
-
 [    0.000000] NX (Execute Disable) protection: active
 [    0.000000] SMBIOS 2.8 present.
 [    0.000000] DMI: QEMU Standard PC (i440FX + PIIX, 1996), BIOS rel-1.9.1-0-gb3ef39f-prebuilt.qemu-project.org 04/01/2014
 [    0.000000] Hypervisor detected: KVM
-
 ……
 [    0.371925] raid6: sse2x1   gen()  7490 MB/s
 [    0.428689] raid6: sse2x1   xor()  5953 MB/s

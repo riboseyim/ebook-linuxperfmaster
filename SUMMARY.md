@@ -11,7 +11,7 @@
 * [Chapter 3: How Linux Works](chapter/kernel/Linux-Works.md)
 * [How Linux Works](chapter/kernel/Linux-Works.md)
 * [动态追踪技术(一)：DTrace](chapter/dtrace/DTrace.md)
-* [动态追踪技术(二)：基于strace+gdb发现Nginx模块性能问题](chapter/tools/DTrace_Strace_Gdb.md)
+* [动态追踪技术(二)：基于strace+gdb发现Nginx模块性能问题](chapter/dtrace/DTrace_Strace_Gdb.md)
 * [动态追踪技术(三)：Linux Ftrace](chapter/dtrace/DTrace_FTrace.md)
 * [Chapter 4: 关于技术思维](chapter/thinking/AAA.md)
 * [基于LVS的AAA负载均衡架构实践](chapter/thinking/AAA.md)

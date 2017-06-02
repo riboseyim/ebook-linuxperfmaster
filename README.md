@@ -13,14 +13,15 @@
 [作品合集](chapter/about/2016.md)
 
 ### 特色章节
-* [How Linux Works](chapter/kernel/Linux-Works.md)
+
 * [基于Linux单机的负载评估](chapter/abc/load.md)
-* [动态追踪技术：DTrace](chapter/tools/dtrace.md)
-* [动态追踪案例：strace与gdb](chapter/tools/CASE_Strace_Gdb.md)
 * [基于Ganglia实现集群性能态势感知](chapter/tools/ganglia.md)
 * [新一代Ntopng网络流量监控—可视化和架构分析](chapter/tools/ntopng.md)
 * [基于LVS的AAA负载均衡架构实践](chapter/thinking/AAA.md)
 * [木马来袭：黑客入侵导致的性能问题](chapter/thinking/ssh.md)
+* [How Linux Works](chapter/kernel/Linux-Works.md)
+* [动态追踪技术(一)：DTrace](chapter/dtrace/DTrace.md)
+* [动态追踪技术(三)：Linux Ftrace](chapter/dtrace/DTrace_FTrace.md)
 * [性能优化思路：从珠海航展交通管控实践谈起](chapter/thinking/traffic.md)
 * [Linus Torvalds: 人生在世，Just for Fun](chapter/culture/Linus_JustForFun.md)
 

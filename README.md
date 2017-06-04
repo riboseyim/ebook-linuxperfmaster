@@ -59,6 +59,6 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 4. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
 <hr>
-更多精彩内容请扫码关注公众号,[RiboseYim's Blog:](https://riboseyim.github.io?product=ebook&id=linuxperfmaster)
+更多精彩内容请扫码关注公众号,[RiboseYim's Blog:riboseyim.github.io](https://riboseyim.github.io?product=ebook&id=linuxperfmaster)
 <hr>
-![微信公众号@睿哥杂货铺](http://http://o8m8ngokc.bkt.clouddn.com/ID_RiboseYim_201706.png)
+![微信公众号@睿哥杂货铺](http://o8m8ngokc.bkt.clouddn.com/ID_RiboseYim_201706.png)

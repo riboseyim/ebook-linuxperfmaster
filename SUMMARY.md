@@ -4,7 +4,7 @@
 * [ABC：Linux入门命令100条](chapter/abc/LinuxCommands.md)
 * [ABC：基于Linux单机的负载评估](chapter/abc/load.md)
 * [ABC：Netflix性能分析模型：黄金60秒](chapter/abc/Netflix.md)
-* [Chapter 2: 关于开源工具平台](chapter/tools/ganglia.md)
+* [Chapter 2: 关于开源工具平台]()
 * [基于Ganglia实现集群性能态势感知](chapter/tools/ganglia.md)
 * [新一代Ntopng网络流量监控—可视化和架构分析](chapter/tools/ntopng.md)
 * [Chapter 3: How Linux Works]()

@@ -7,6 +7,7 @@
 * [Chapter 2: 关于开源工具平台]()
 * [基于Ganglia实现集群性能态势感知](chapter/tools/ganglia.md)
 * [新一代Ntopng网络流量监控—可视化和架构分析](chapter/tools/ntopng.md)
+* [网络数据包的捕获、分析与注入](chapter/kernel/Pcap.md)
 * [Chapter 3: How Linux Works]()
 * [How Linux Works](chapter/kernel/Linux-Works.md)
 * [动态追踪技术(一)：DTrace](chapter/dtrace/DTrace.md)

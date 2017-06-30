@@ -25,6 +25,7 @@
 * [动态追踪技术(一)：DTrace](chapter/dtrace/DTrace.md)
 * [动态追踪技术(三)：Linux Ftrace](chapter/dtrace/DTrace_FTrace.md)
 * [Linus Torvalds: 人生在世，Just for Fun](chapter/culture/Linus_JustForFun.md)
+* [工程师的自我修养：全英文技术学习实践](chapter/thinking/Technology-English.md)
 
 ## Community
 更多精彩内容请扫码关注公众号,[RiboseYim's Blog:riboseyim.github.io](https://riboseyim.github.io?product=ebook&id=linuxperfmaster)

@@ -22,6 +22,7 @@
 * [Linus Torvalds: The mind behind Linux](chapter/culture/Linus.md)
 * [Linus Torvalds: 人生在世，Just for Fun](chapter/culture/Linus_JustForFun.md)
 * [Community Over Code](chapter/culture/community.md)
+* [工程师的自我修养：全英文技术学习实践](chapter/thinking/Technology-English.md)
 * [推荐书单](chapter/culture/books.md)
 * [Chapter 6: 关于作者]()
 * [我的2016年度盘点](chapter/aboutme/2016.md)

@@ -130,14 +130,3 @@
 ---- Steve Jobs
 
 回到本文开头，关于国内开技术大会还需要现场翻译，我相信未来总有一天会通过技术进步来解决这个问题。面对技术的不断更新换代，持续学习能力才是增强竞争力的不二法门。获得知识的途径早已不限于各种专业技术书籍、同行经验交流，社区分享，博客，公众号，推特，电子书和在线视频等新载体层出不穷，突破语言瓶颈的要义在于提高交流学习的视野、借用天下资源为我所用，最终目的还是服务我们的实践活动。当我们的实践达到相当的深度和广度，自然可以通过早已建立的、世界范围的联系发挥影响力。
-
-
-## 参考文献
-- [魏祢:不懂英语，造就了13亿人的信息孤岛](https://mp.weixin.qq.com/s?__biz=MzI0MjY0OTkxNw==&mid=2247486113&idx=1&sn=e0f873be4fa2ade4e4c1855553c5e3ff&chksm=e97854f3de0fdde5048600a259e68673036f0701778a4f254473c63747243166ba4bd784833d&mpshare=1&scene=1&srcid=0601l0wqez1ugHgXQsNjNRrN#rd)
-- [邱俊涛：技术人员如何写一本书](http://mp.weixin.qq.com/s?__biz=MjM5MzA0ODkyMA==&mid=211925813&idx=2&sn=0e9c817c4b3a8347e63a91f6ee97aa1f&mpshare=1&scene=1&srcid=1102hLZpXjHA2L6390LtcYQD##)
-- [恶魔奶爸Sam:如何才能熟练阅读各类英文报刊](https://mp.weixin.qq.com/s?__biz=MzI4MzExMDU1Nw==&mid=2649858997&idx=1&sn=08d95ad869dbc882a9c9e66fe690e319&chksm=f38abe47c4fd37510d247e6d8f31d86c7457eaefefb04f6670df42a2df1ff36e8df5b454c2ae&mpshare=1&scene=1&srcid=0421oW6WxbHp907tR50v9iWI#rd)
-- [恶魔奶爸Sam:怎么解决专业英语的问题？](https://mp.weixin.qq.com/s?__biz=MzI4MzExMDU1Nw==&mid=2649859187&idx=1&sn=3398451ee69c4a397d3c503c2693fb2e&chksm=f38ab981c4fd30974551592e98d25ef991291e0c2d573b0b2d04321ecfac6c6d19e6a5acd564&mpshare=1&scene=1&srcid=0601ptqyHE4XERrvzYa2tCm9#rd)
-- [Joey Chen:我为什么鼓励工程师写Blog](https://dotblogs.com.tw/hatelove/2017/03/26/why-engineers-should-keep-blogging)
-- [搜狐新闻：中产教育鄙视链-绝不让娃和没英文名的孩子同读](http://www.sohu.com/a/143634471_767148)
-- [热爱阅读的芬兰人](https://finland.fi/zh/shenghuoyushehui/reaiyuedudefenlanren/)
-- [裁判文书网：北京中青文文化传媒有限公司与北京百度网讯科技有限公司侵害作品信息网络传播权纠纷申请再审民事裁定书](http://wenshu.court.gov.cn/content/content?DocID=ae8a516f-fbf7-4f66-82f6-830900b58b8d)

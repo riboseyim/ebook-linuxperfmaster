@@ -19,13 +19,13 @@
 * [新一代Ntopng网络流量监控—可视化和架构分析](chapter/tools/ntopng.md)
 * [基于LVS的AAA负载均衡架构实践](chapter/thinking/AAA.md)
 * [关于珠海航展交通管控对性能优化思路的借鉴](chapter/thinking/traffic.md)
-* [Cyber-security：黑客入侵导致的性能问题](chapter/thinking/ssh.md)
-* [Cyber-security：美国网络安全立法策略](chapter/thinking/law.md)
+* [工程师的自我修养：全英文技术学习实践](chapter/thinking/Technology-English.md)
+* [Cyber-security：黑客入侵导致的性能问题](chapter/cybersecurity/ssh.md)
+* [Cyber-security：美国网络安全立法策略](chapter/cybersecurity/law.md)
 * [How Linux Works](chapter/kernel/Linux-Works.md)
 * [动态追踪技术(一)：DTrace](chapter/dtrace/DTrace.md)
 * [动态追踪技术(三)：Linux Ftrace](chapter/dtrace/DTrace_FTrace.md)
 * [Linus Torvalds: 人生在世，Just for Fun](chapter/culture/Linus_JustForFun.md)
-* [工程师的自我修养：全英文技术学习实践](chapter/thinking/Technology-English.md)
 
 ## Community
 更多精彩内容请扫码关注公众号,[RiboseYim's Blog:riboseyim.github.io](https://riboseyim.github.io?product=ebook&id=linuxperfmaster)

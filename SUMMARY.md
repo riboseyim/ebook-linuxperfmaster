@@ -27,4 +27,5 @@
 * [OpenSource:Community Over Code](chapter/culture/community.md)
 * [附录1：推荐书单](chapter/culture/books.md)
 * [附录2: 创作历史](chapter/aboutme/history.md)
-* [附录3: 关于作者-RiboseYim的2016年度盘点](chapter/aboutme/2016.md)
+* [附录3: 关于作者](chapter/aboutme/2016.md)
+* [附录4: 版权声明](chapter/aboutme/License.md)

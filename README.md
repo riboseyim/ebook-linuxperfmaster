@@ -38,9 +38,9 @@
 ![微信公众号@睿哥杂货铺](http://o8m8ngokc.bkt.clouddn.com/ID_RiboseYim_201706.png)
 
 ### 读者交流
-- QQ群：338272982
+- **读者QQ群：338272982**
 - [简书专题](http://www.jianshu.com/c/9a817d8a67ea)
-- 小密圈
+- 小密圈:@系统运维专家
 
 ![小密圈@系统运维专家](http://o8m8ngokc.bkt.clouddn.com/riboseyim_id_quanzi_ops_small.png)
 

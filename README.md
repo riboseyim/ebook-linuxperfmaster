@@ -40,8 +40,8 @@
 
 ### 读者交流
 - **读者QQ群：338272982**
-- [简书专题](http://www.jianshu.com/c/9a817d8a67ea)
-- 小密圈:@系统运维专家
+- [简书专题：《系统运维专家》](http://www.jianshu.com/c/9a817d8a67ea)
+- [小密圈:@系统运维专家](http://t.xiaomiquan.com/U7qn6Qv)
 
 ![小密圈@系统运维专家](http://o8m8ngokc.bkt.clouddn.com/riboseyim_id_quanzi_ops_small.png)
 

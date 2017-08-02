@@ -50,7 +50,9 @@
 https://www.gitbook.com/book/riboseyim/linux-perf-master/details
 
 ### 快捷下载
-- [百度网盘 https://pan.baidu.com/s/1qXCho2w version 20170701](https://pan.baidu.com/s/1qXCho2w)
+
+- [Edition 0.2 20170701](https://pan.baidu.com/s/1i4VsrbR)
+
 
 ## Thanks
 Thanks to my family and colleagues.

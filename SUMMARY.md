@@ -20,6 +20,7 @@
 * [工程师的自我修养：全英文技术学习实践](chapter/thinking/Technology-English.md)
 * [Chapter 5: 网络安全篇]()
 * [Cyber-Security：黑客入侵导致的性能问题](chapter/cybersecurity/ssh.md)
+* [Cyber-Security：IPv6 & Security](chapter/cybersecurity/IPv6.md)
 * [Cyber-Security：美国网络安全立法策略](chapter/cybersecurity/law.md)
 * [Cyber-Security：香港网络安全与科技罪案调查科简介](chapter/cybersecurity/CSTCB.md)
 * [Chapter 6: 社区文化篇]()

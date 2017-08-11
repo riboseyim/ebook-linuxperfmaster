@@ -31,6 +31,7 @@
 * [工程师的自我修养：全英文技术学习实践](chapter/thinking/Technology-English.md)
 * Chapter 5: 网络安全篇
 * [Cyber-security：黑客入侵导致的性能问题](chapter/cybersecurity/ssh.md)
+* [Cyber-Security：IPv6 & Security](chapter/cybersecurity/IPv6.md)
 * [Cyber-Security：香港拟增设网络安全与科技罪案总警司](chapter/cybersecurity/CSTCB.md)
 * Chapter 6: 社区文化篇
 * [Linus Torvalds: 人生在世，Just for Fun](chapter/culture/Linus_JustForFun.md)

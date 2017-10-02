@@ -23,8 +23,9 @@
 * [Packet Capturing:网络数据包的捕获、过滤与分析](chapter/kernel/Pcap.md)
 * Chapter 3: 系统内核篇
 * [How Linux Works](chapter/kernel/Linux-Works.md)
-* [动态追踪技术(一)：DTrace](chapter/dtrace/DTrace.md)
-* [动态追踪技术(三)：Linux Ftrace](chapter/dtrace/DTrace_FTrace.md)
+* [动态追踪技术(一)：DTrace 入门概要](chapter/dtrace/DTrace.md)
+* [动态追踪技术(三)：Trace Your Functions!](chapter/dtrace/DTrace_FTrace.md)
+* [动态追踪技术(四)：基于 Linux bcc/BPF 实现 Go 程序动态追踪](chapter/dtrace/DTrace_bcc.md)
 * Chapter 4: 技术思维篇
 * [基于LVS的AAA负载均衡架构实践](chapter/thinking/AAA.md)
 * [关于珠海航展交通管控对性能优化思路的借鉴](chapter/thinking/traffic.md)

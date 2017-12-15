@@ -14,13 +14,15 @@
 
 ### 特色章节
 * Chapter 1: 入门ABC
-* [基于Linux单机的负载评估](chapter/abc/load.md)
-* [ABC：六十秒完成Linux性能分析](chapter/abc/Netflix.md)
+* [Linux 性能诊断：Linux入门命令100条](chapter/abc/LinuxCommands.md)
+* [Linux 性能诊断：单机负载评估](chapter/abc/load.md)
+* [Linux 性能诊断：快速检查单(Netflix版)](chapter/abc/Netflix.md)
 * Chapter 2: 工具平台篇
-* [基于Ganglia实现集群性能态势感知](chapter/tools/ganglia.md)
-* [新一代Ntopng网络流量监控—可视化和架构分析](chapter/tools/ntopng.md)
-* [浅谈基于数据分析的网络态势感知：NetFlow与sFlow](chapter/tools/sFlow.md)
-* [Packet Capturing:网络数据包的捕获、过滤与分析](chapter/kernel/Pcap.md)
+* [基于 Ganglia 实现计算集群性能态势感知](chapter/tools/ganglia.md)
+* [浅谈基于数据分析的网络态势感知: NetFlow 与 sFlow](chapter/tools/sFlow.md)
+* [监控数据可视化：新一代 Ntopng 网络流量监控](chapter/tools/ntopng.md)
+* [监控数据可视化：Graphite 体系结构详解](chapter/tools/Visualization-Graphite.md)
+* [监控数据可视化：开源地理信息系统简史](chapter/tools/Visualization-GIS.md)
 * Chapter 3: 系统内核篇
 * [How Linux Works](chapter/kernel/Linux-Works.md)
 * [动态追踪技术(一)：DTrace 入门概要](chapter/dtrace/DTrace.md)

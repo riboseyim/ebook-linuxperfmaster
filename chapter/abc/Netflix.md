@@ -1,9 +1,18 @@
-# 六十秒完成Linux性能分析
+# Linux 性能诊断:快速检查单(Netflix版)
+
+## 快速检查单
+快速检查单（Quick Reference Handbook，QRH）是飞行员在飞行过程中依赖的重要指导性文件。
+
+第一张飞行检查单起源于一次严重的航空事故。1935年波音公司研制的一架新型轰炸机在试飞过程中突然坠机，导致2名机组人员遇难——包括一名最优秀的试飞员普洛耶尔·希尔少校。后来的调查结果分析，事故并不是机械故障引起的，而是人为失误造成。新型飞机比以往的飞机更复杂，飞行员要管理4台发动机，操控起落架、襟翼、电动配平调整片和恒速液压变距螺旋桨等。因为忙于各种操作，希尔少校忘记了一项简单却很重要的工作 —— 在起飞前忘记对新设计的升降舵和方向舵实施解锁。
+
+美国军方组织飞行专家编制了一份飞行检查单，将起飞、巡航、着陆和滑行各阶段的重要步骤写在一张索引卡片上。飞行员根据检查单的提示检查刹车是否松开，飞行仪表是否准确设定，机舱门窗是否完全关闭，升降舵等控制面是否已经解锁。
+
+## Netflix 性能工程团队
 
 登陆一台 Linux 服务器排查性能问题：**开始一分钟你该检查哪些呢？**
 在 Netflix 我们有一个庞大的 EC2 Linux集群，也有许多性能分析工具用于监视和检查它们的性能。它们包括用于云监测的Atlas (工具代号) ，用于实例分析的 Vector (工具代号) 。尽管这些工具能帮助我们解决大部分问题，我们有时也需要登陆一台实例、运行一些标准的 Linux 性能分析工具。在这篇文章，Netflix 性能工程团队将向您展示：在开始的60秒钟，利用标准的Linux命令行工具，执行一次充分的性能检查。
 
-## 黄金60秒：概述
+## Linux 性能分析黄金60秒
 
 运行以下10个命令，你可以在60秒内，获得系统资源利用率和进程运行情况的整体概念。查看是否存在异常、评估饱和度，它们都非常易于理解，可用性强。饱和度表示资源还有多少负荷可以让它处理，并且能够展示请求队列的长度或等待的时间。
 
@@ -36,7 +45,7 @@ $ uptime
 
 #### 2. dmesg | tail
 
-```
+```C
 $ dmesg | tail
 [1880957.563150] perl invoked oom-killer: gfp_mask=0x280da, order=0, oom_score_adj=0
 [...]
@@ -49,13 +58,11 @@ nters.
 
 这个结果输出了最近10条系统信息。可以查看到引起性能问题的错误。上面的例子包含了oom-killer,以及TCP丢包。
 
->译者注:这个真的很容易忽略啊，真真的踩过坑！！ 另外，除了error级的日志，info级的也要留个心眼，可能包含一些隐藏信息。
-
-[oom-killer](https://linux-mm.org/OOM_Killer)一层保护机制，用于避免 Linux 在内存不足的时候不至于出太严重的问题，把无关紧要的进程杀掉，有些壮士断腕的意思。
+>译者注:除了error级的日志，info级的也要留个心眼，可能包含一些隐藏信息。
 
 #### 3. vmstat 1
 
-```
+```C
 $ vmstat 1
 procs ---------memory---------- ---swap-- -----io---- -system-- ------cpu-----
 r b swpd free buff cache si so bi bo in cs us sy id wa st
@@ -80,7 +87,7 @@ r b swpd free buff cache si so bi bo in cs us sy id wa st
 
 #### 4. mpstat P ALL 1
 
-```
+```C
 $ mpstat -P ALL 1
 Linux 3.13.0-49-generic (titanclusters-xxxxx) 07/14/2015 _x86_64_ (32 CPU)
 07:38:49 PM CPU %usr %nice %sys %iowait %irq %soft %steal %guest %gnice %idle
@@ -95,7 +102,7 @@ Linux 3.13.0-49-generic (titanclusters-xxxxx) 07/14/2015 _x86_64_ (32 CPU)
 
 #### 5. pidstat 1
 
-```
+```C
 $ pidstat 1
 Linux 3.13.0-49-generic (titanclusters-xxxxx) 07/14/2015 _x86_64_ (32 CPU)
 07:41:02 PM UID PID %usr %system %guest %CPU CPU Command
@@ -117,7 +124,7 @@ pidstat 有一点像顶级视图－针对每一个进程，但是输出的时候
 
 #### 6. iostat xz 1
 
-```
+```C
 $ iostat -xz 1
 Linux 3.13.0-49-generic (titanclusters-xxxxx) 07/14/2015 _x86_64_ (32 CPU)
 avg-cpu: %user %nice %system %iowait %steal %idle
@@ -150,28 +157,27 @@ dm-2 0.00 0.00 0.09 0.07 1.35 0.36 22.50 0.00 2.55 0.23 5.62 1.78 0.03
 
 #### 7. free m
 
-```
+```C
 $ free -m
 total used free shared buffers cached
 Mem: 245998 24545 221453 83 59 541
 -/+ buffers/cache: 23944 222053
 Swap: 0 0 0
-
 ```
-
 **buffers**: buffer cache,用于块设备I/O。
 **cached**:page cache, 用于文件系统。
 ￼ ￼
-我们只是想检查这些指标值不为0，那样意味着磁盘I/O高、性能差（确认需要用iostat）。
-上面的例子看起来不错，每一个都有很多Mbytes。
+我们只是想检查这些指标值不为0——那样意味着磁盘I/O高、性能差（确认需要用iostat）。上面的例子看起来不错，每一类内存都有富余。
 
 **“­/+ buffers/cache”**: 提供了关于内存利用率更加准确的数值。
 
-Linux可以将空闲内存用于缓存，并且在应用程序需要的时候收回。所以应用到缓存的内存必须以另一种方式包括在内存空闲的数据里面。甚至有一个网站[linux ate my ram](http://www.linuxatemyram.com/),专门探讨这个困惑。它还有更令人困惑的地方，如果在Linux上使用ZFS,正如我们运行一些服务，ZFS拥有自己的文件系统缓存，也不能在free -m 的输出里正确反映。这种情况会显示系统空闲内存不足，但是内存实际上可用，通过回收 ZFS 的缓存。
+Linux可以将空闲内存用于缓存，并且在应用程序需要的时候收回。所以应用到缓存的内存必须以另一种方式包括在内存空闲的数据里面。有一个网站[linux ate my ram](http://www.linuxatemyram.com/),专门探讨这个困惑。它还有更令人困惑的地方，如果在Linux上使用ZFS,正如我们运行一些服务，ZFS拥有自己的文件系统缓存，也不能在free -m 的输出里正确反映。这种情况会显示系统空闲内存不足，但是内存实际上可用，通过回收 ZFS 的缓存。
+
+关于 Linux 内存管理的更多内容，可以阅读[操作系统原理：How Linux Works (Memroy)](https://riboseyim.github.io/2017/12/11/Linux-Works-Memory/)。
 
 #### 8. sar n DEV 1
 
-```
+```C
 $ sar -n DEV 1
 Linux 3.13.0-49-generic (titanclusters-xxxxx) 07/14/2015 _x86_64_ (32 CPU)
 12:16:48 AM IFACE rxpck/s txpck/s rxkB/s txkB/s rxcmp/s txcmp/s rxmcst/s %ifutil
@@ -189,7 +195,7 @@ Linux 3.13.0-49-generic (titanclusters-xxxxx) 07/14/2015 _x86_64_ (32 CPU)
 在上面的例子中，网卡 eth0 收包大道 22 Mbytes/s, 即176 Mbits/sec (就是说，在 1 Gbit/sec 的限制之内)。此版本也有一个体现设备利用率的 “％ifutil” （两个方向最大值），我们也可以使用 Brendan的nicstat 工具来度量。和 nicstat 类似，这个值很难准确获取，看起来在这个例子中并没有起作用（0.00）。
 
 #### 9. sar n TCP,ETCP 1
-```
+```C
 $ sar -n TCP,ETCP 1
 Linux 3.13.0-49-generic (titanclusters-xxxxx) 07/14/2015 _x86_64_ (32 CPU)
 12:17:19 AM active/s passive/s iseg/s oseg/s
@@ -212,7 +218,7 @@ Linux 3.13.0-49-generic (titanclusters-xxxxx) 07/14/2015 _x86_64_ (32 CPU)
 上面的例子显示每秒钟仅有一个新的TCP连接。
 
 #### 10. top
-```
+```C
 $ top
 top - 00:15:40 up 21:56, 1 user, load average: 31.09, 29.87, 29.92
 Tasks: 871 total, 1 running, 868 sleeping, 0 stopped, 2 zombie
@@ -235,6 +241,16 @@ PID USER PR NI VIRT RES SHR S %CPU %MEM TIME+ COMMAND
 
 top命令包含了许多我们之前已经检查的指标。它可以非常方便地运行，看看是否任何东西看起来与从前面的命令的结果完全不同，可以表明负载指标是不断变化的。顶部下面的输出，很难按照时间推移的模式查看，可能使用如 vmstat 和 pidstat 等工具会更清晰，它们提供滚动输出。如果你保持输出的动作不够快 （CtrlS 要暂停，CtrlQ 继续），屏幕将清除，间歇性问题的证据也会丢失。
 
-## 原文
+## 总结
+故障检查过程中，人的作用主要是作出决策。遗忘、遗漏、麻痹、松懈是每个人都会犯的错误，好的公司都会根据经验编制检查单，提高工作效率，降低人为失误发生的概率。出于竞争因素考虑，应该充分重视检查单的更新、完善、自动化，以此为基础建立自己的技术壁垒。
 
-[Netflix Technology Blog:Linux Performance Analysis in 60,000 Milliseconds](https://medium.com/netflix-techblog/linux-performance-analysis-in-60-000-milliseconds-accc10403c55)
+## 扩展阅读：Linux 操作系统
+- [《Linus Torvalds:Just for Fun》](http://riboseyim.github.io/2016/04/24/LinusTorvalds/)
+- [Linux 常用命令一百条](http://riboseyim.github.io/2017/04/26/Linux-Commands/)
+- [Linux 性能诊断:负载评估](https://riboseyim.github.io/2017/12/11/Linux-Perf-Load/)
+- [Linux 性能诊断:快速检查单(Netflix版)](https://riboseyim.github.io/2017/12/11/Linux-Perf-Netflix/)
+- [Linux 性能诊断：荐书|《图解性能优化》](https://riboseyim.github.io/2017/10/24/Linux-Perf-Picture/)
+- [Linux 性能诊断：Web应用性能优化](https://riboseyim.github.io/2017/10/24/Linux-Perf-Wan/)
+- [操作系统原理 | How Linux Works（一）：How the Linux Kernel Boots](http://riboseyim.github.io/2017/05/29/Linux-Works/)
+- [操作系统原理 | How Linux Works（二）：User Space & RAM](http://riboseyim.github.io/2017/05/29/Linux-Works/)
+- [操作系统原理 | How Linux Works（三）：Memory](https://riboseyim.github.io/2017/12/11/Linux-Works-Memory/)

@@ -20,7 +20,7 @@
 * [Chapter 4: 技术思维篇]()
 * [基于 LVS 的 AAA 负载均衡架构实践](chapter/thinking/AAA.md)
 * [他山之石：珠海航展交通管控对性能优化思路的借鉴](chapter/thinking/traffic.md)
-* [The Road To Leader:基于看板（Kanban）的管理实践](chapter/thinking/Technology-Kanban.md)
+* [基于看板（Kanban）的管理实践](chapter/thinking/Teamwork-Kanban.md)
 * [工程师的自我修养：全英文技术学习实践](chapter/thinking/Technology-English.md)
 * [Chapter 5: 网络安全篇]()
 * [Cyber-Security：网络数据包的捕获、过滤与分析](chapter/kernel/Pcap.md)

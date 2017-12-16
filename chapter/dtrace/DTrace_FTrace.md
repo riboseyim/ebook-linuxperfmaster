@@ -90,8 +90,8 @@ KernelShark是trace-cmd的前端工具，提供了对trace.dat的可视化分析
 [>>>more about DTrace>>>>](http://riboseyim.github.io/2016/11/26/DTrace/)
 
 ## 参考文献
-- [(Key)Julia Evans:ftrace: trace your kernel functions!](https://jvns.ca/blog/2017/03/19/getting-started-with-ftrace/)
-- [(Key)IBM developerWorks@刘明：ftrace简介,2009](https://www.ibm.com/developerworks/cn/linux/l-cn-ftrace/)
+- [Julia Evans:ftrace: trace your kernel functions!](https://jvns.ca/blog/2017/03/19/getting-started-with-ftrace/)
+- [IBM developerWorks@刘明：ftrace简介,2009](https://www.ibm.com/developerworks/cn/linux/l-cn-ftrace/)
 - [Debugging the kernel using Ftrace - part 1 (Dec 2009, Steven Rostedt)](https://lwn.net/Articles/365835/)
 - [Debugging the kernel using Ftrace - part 2 (Dec 2009, Steven Rostedt](https://lwn.net/Articles/366796/)
 - [Secrets of the Linux function tracer (Jan 2010, Steven Rostedt)](https://lwn.net/Articles/370423/)
@@ -99,9 +99,5 @@ KernelShark是trace-cmd的前端工具，提供了对trace.dat的可视化分析
 - [Using KernelShark to analyze the real-time scheduler (2011, Steven Rostedt)](https://lwn.net/Articles/425583/)
 - [Ftrace: The hidden light switch (2014, Brendan Gregg)](https://lwn.net/Articles/608497/)
 - [(Key)the kernel documentation:ftrace.txt](https://www.kernel.org/doc/Documentation/trace/ftrace.txt)
-- [documentation on events you can trace Documentation/events.txt]()
-- [some docs on ftrace design for linux kernel devs (not as useful, but interesting)]()
-- [Documentation/ftrace-design.txt]()
 - [trace-cmd图形化工具：KernelShark](http://rostedt.homelinux.com/kernelshark/)
 - [Youtube:ELC2011 Ftrace GUI (KernelShark)](https://www.youtube.com/watch?v=ABRtzVtUVBo)
-- [(Key)StevenRostedt:ELC2011_KernelShark(quick tutorial)(PDF)](http://elinux.org/images/6/64/Elc2011_rostedt.pdf)

@@ -1,15 +1,16 @@
 # 动态追踪技术(三)：Trace Your Functions !
 
-Ftrace是一个设计用来帮助开发者和设计者监视内核的追踪器，可用于调试或分析延迟以及性能问题。ftrace令人印象最深刻的是作为一个function tracer，内核函数调用、耗时等情况一览无余。另外，ftrace最常见的用途是事件追踪，通过内核是成百上千的静态事件点，看到系统内核的哪些部分在运行。实际上，ftrace更是一个追踪框架，它具备丰富工具集：延迟跟踪检查、何时发生中断、任务的启用、禁用及抢占等。在ftrace的基线版本之上，还有很多第三方提供的开源工具，用于简化操作或者提供数据可视化等扩展应用。
+Ftrace 是一个设计用来帮助开发者和设计者监视内核的追踪器，可用于调试或分析延迟以及性能问题。
+ftrace 令人印象最深刻的是作为一个function tracer，内核函数调用、耗时等情况一览无余。另外，ftrace最常见的用途是事件追踪，通过内核是成百上千的静态事件点，看到系统内核的哪些部分在运行。实际上，ftrace更是一个追踪框架，它具备丰富工具集：延迟跟踪检查、何时发生中断、任务的启用、禁用及抢占等。在 ftrace 的基线版本之上，还有很多第三方提供的开源工具，用于简化操作或者提供数据可视化等扩展应用。
 
 ## 一、Introduction
 
-Developer(s):	Steven Rostedt(RedHat) and others
-Initial release: October 9, 2008;
-Operating system:	Linux （merged into the Linux kernel mainline in kernel version 2.6.27）
-Type:	Kernel extension
-License: GNU GPL
-Website: [www.kernel.org/doc/Documentation/trace](www.kernel.org/doc/Documentation/trace)
+- Developer(s):	Steven Rostedt(RedHat) and others
+- Initial release: October 9, 2008;
+- Operating system:	Linux （merged into the Linux kernel mainline in kernel version 2.6.27）
+- Type:	Kernel extension
+- License: GNU GPL
+- Website: [www.kernel.org](www.kernel.org/doc/Documentation/trace)
 
 ## 二、ABC
 
@@ -91,13 +92,13 @@ KernelShark是trace-cmd的前端工具，提供了对trace.dat的可视化分析
 
 ## 参考文献
 - [Julia Evans:ftrace: trace your kernel functions!](https://jvns.ca/blog/2017/03/19/getting-started-with-ftrace/)
-- [IBM developerWorks@刘明：ftrace简介,2009](https://www.ibm.com/developerworks/cn/linux/l-cn-ftrace/)
-- [Debugging the kernel using Ftrace - part 1 (Dec 2009, Steven Rostedt)](https://lwn.net/Articles/365835/)
-- [Debugging the kernel using Ftrace - part 2 (Dec 2009, Steven Rostedt](https://lwn.net/Articles/366796/)
-- [Secrets of the Linux function tracer (Jan 2010, Steven Rostedt)](https://lwn.net/Articles/370423/)
-- [trace-cmd: A front-end for Ftrace (Oct 2010, Steven Rostedt)](https://lwn.net/Articles/410200/)
-- [Using KernelShark to analyze the real-time scheduler (2011, Steven Rostedt)](https://lwn.net/Articles/425583/)
-- [Ftrace: The hidden light switch (2014, Brendan Gregg)](https://lwn.net/Articles/608497/)
-- [(Key)the kernel documentation:ftrace.txt](https://www.kernel.org/doc/Documentation/trace/ftrace.txt)
-- [trace-cmd图形化工具：KernelShark](http://rostedt.homelinux.com/kernelshark/)
-- [Youtube:ELC2011 Ftrace GUI (KernelShark)](https://www.youtube.com/watch?v=ABRtzVtUVBo)
+- [IBM developerWorks 刘明：ftrace简介,2009](https://www.ibm.com/developerworks/cn/linux/l-cn-ftrace/)
+- [Debugging the kernel using Ftrace - part 1 | Dec 2009, Steven Rostedt](https://lwn.net/Articles/365835/)
+- [Debugging the kernel using Ftrace - part 2 | Dec 2009, Steven Rostedt](https://lwn.net/Articles/366796/)
+- [Secrets of the Linux function tracer | Jan 2010, Steven Rostedt](https://lwn.net/Articles/370423/)
+- [trace-cmd: A front-end for Ftrace | Oct 2010, Steven Rostedt](https://lwn.net/Articles/410200/)
+- [Using KernelShark to analyze the real-time scheduler | 2011, Steven Rostedt](https://lwn.net/Articles/425583/)
+- [Ftrace: The hidden light switch | 2014,Brendan Gregg](https://lwn.net/Articles/608497/)
+- [the kernel documentation:ftrace.txt](https://www.kernel.org/doc/Documentation/trace/ftrace.txt)
+- [trace-cmd 图形化工具：KernelShark](http://rostedt.homelinux.com/kernelshark/)
+- [Youtube:ELC2011 Ftrace GUI | KernelShark](https://www.youtube.com/watch?v=ABRtzVtUVBo)

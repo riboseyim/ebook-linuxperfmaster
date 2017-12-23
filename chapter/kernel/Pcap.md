@@ -319,6 +319,7 @@ func main() {
         gopacket.Payload(rawBytes),
     )
     outgoingPacket = buffer.Bytes()
+  }
 }
 ```
 

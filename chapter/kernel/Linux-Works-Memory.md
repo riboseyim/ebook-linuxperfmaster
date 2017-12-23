@@ -247,8 +247,8 @@ XX:MaxPermSize=128M JVM最大允许分配的非堆内存
 正如摔跤游戏一样，内存管理的法则就是让进程在 **留有余地** 的前提下搏杀。
 
 ## 扩展阅读：Linux 操作系统
-- [《Linus Torvalds:Just for Fun》](http://riboseyim.github.io/2016/04/24/LinusTorvalds/)
-- [Linux 常用命令一百条](http://riboseyim.github.io/2017/04/26/Linux-Commands/)
+- [《Linus Torvalds:Just for Fun》](https://riboseyim.github.io/2016/04/24/LinusTorvalds/)
+- [Linux 常用命令一百条](https://riboseyim.github.io/2017/04/26/Linux-Commands/)
 - [Linux 性能诊断：负载评估](https://riboseyim.github.io/2017/12/11/Linux-Perf-Load/)
 - [Linux 性能诊断：快速检查单(Netflix版)](https://riboseyim.github.io/2017/12/11/Linux-Perf-Netflix/)
 - [Linux 性能诊断：荐书|《图解性能优化》](https://riboseyim.github.io/2017/10/24/Linux-Perf-Picture/)

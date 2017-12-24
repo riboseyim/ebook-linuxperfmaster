@@ -34,6 +34,6 @@
 * [Linus Torvalds：The mind behind Linux](chapter/culture/Linus.md)
 * [Linus Torvalds：人生在世，Just for Fun](chapter/culture/Linus_JustForFun.md)
 * [附录1：推荐书单](chapter/books/books.md)
-* [附录2：创作历史](chapter/aboutme/history.md)
-* [附录3：关于作者](chapter/aboutme/2016.md)
+* [附录2：创作历史](chapter/aboutme/eBook-LPM.md)
+* [附录3：关于作者](chapter/aboutme/Catalog.md)
 * [附录4：版权声明](chapter/aboutme/License.md)

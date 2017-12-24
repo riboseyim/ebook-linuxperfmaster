@@ -1,16 +1,14 @@
 # Linux Perf Master
 
-## 作者：[RiboseYim](https://riboseyim.github.io)
-
->工程师、开源粉、深度阅读患者。
-
-**高效运维社区2016年度金牌作者**
+## 作者：[RiboseYim](https://riboseyim.github.io/2016/05/31/AboutMe/)
 
 [Linkedin](https://www.linkedin.com/in/riboseyim/)
 [简书主页](http://www.jianshu.com/u/8cc1dba4bc96)
 [知乎专栏](https://www.zhihu.com/people/riboseyim)
 [开源中国](https://my.oschina.net/zijingshanke/blog)
-[作品合集](chapter/about/2016.md)
+[作品合辑](chapter/aboutme/Catalog.md)
+[Telegram](https://t.me/riboseyim)
+[Mail](mailto:riboseyim@gmail.com)
 
 ### 特色章节
 * Chapter 1: 入门ABC
@@ -56,7 +54,6 @@ https://www.gitbook.com/book/riboseyim/linux-perf-master/details
 ### 快捷下载
 
 - [Edition 0.2 20170701](https://pan.baidu.com/s/1i4VsrbR)
-
 
 ## Thanks
 Thanks to my family and colleagues.

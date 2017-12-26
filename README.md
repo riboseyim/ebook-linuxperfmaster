@@ -6,7 +6,7 @@
 [简书主页](http://www.jianshu.com/u/8cc1dba4bc96)
 [知乎专栏](https://www.zhihu.com/people/riboseyim)
 [开源中国](https://my.oschina.net/zijingshanke/blog)
-[作品合辑](chapter/aboutme/Catalog.md)
+[作品合辑](chapter/about/Catalog.md)
 [Telegram](https://t.me/riboseyim)
 [Mail](mailto:riboseyim@gmail.com)
 

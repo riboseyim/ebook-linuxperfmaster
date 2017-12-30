@@ -57,11 +57,13 @@ https://www.gitbook.com/book/riboseyim/linux-perf-master/details
 
 ### 快捷下载
 
-- [Edition 0.2 20170701](https://pan.baidu.com/s/1i4VsrbR)
+- [Edition 0.3 20171230](https://pan.baidu.com/s/1bppqKdL)
 
 ## Thanks
 Thanks to my family and colleagues.
 
 <hr>
+
 ## License
-版权声明：自由转载-非商用-非衍生-保持署名| [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
+
+版权声明：自由转载-非商用-非衍生-保持署名 | [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)

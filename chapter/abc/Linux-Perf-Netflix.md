@@ -18,11 +18,15 @@
 
 ```
 uptime
-dmesg | tail vmstat 1
-mpstat -P ALL 1 pidstat 1
-iostat -xz 1 free -m
+dmesg | tail
+vmstat 1
+mpstat -P ALL 1
+pidstat 1
+iostat -xz 1
+free -m
 sar -n DEV 1
-sar -n TCP,ETCP 1 top
+sar -n TCP,ETCP 1
+top
 ```
 
 ![性能检查的一般步骤](http://upload-images.jianshu.io/upload_images/1037849-9981ca123c9bc27a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

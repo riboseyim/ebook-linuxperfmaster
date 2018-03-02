@@ -5,26 +5,6 @@
 
 鉴于这套兵器过于复杂（牛逼），属于专家级技能， advanced performance analysis and troubleshooting tool。据称掌握该技能需要耗费大约100小时以上，所以如果不是对于系统性能问题有极致追求，以及变态般地技术狂热，建议绕过本文。为了便于展开，今天先起个头，重点梳理下动态追踪技术的发展简史和目前的生态环境。更加具体详细的内容，会在后续的文章中陆续发表。
 
-上月底，正当全国人民翘首以盼光棍节的时候，开源社区传来一则重要新闻：
-Linux 4.9-rc1发布，正式合并了一项重要特性：BPF追踪（Timed sampling）。
-
-系统性能领域的国际导师Brendan Gregg，感动得都快哭了，当即在Twitter上表示这是一个重要的里程碑!
-他随后又写了一篇长文[《DTrace for Linux 2016》](http://www.brendangregg.com/blog/2016-10-27/dtrace-for-linux-2016.html)，以示庆祝。
-
->As a long time DTrace user and expert, this is an exciting milestone!
---Brendan Gregg
-
-Linux 合并了BPF而已嘛，跟DTrace这个劳什子有什么关系呢？
-
-DTrace 是动态追踪技术的鼻祖，源自 Solaris 操作系统，提供了高级性能分析和调试功能，它的源代码采用 CDDL 许可证，不兼容 Linux 内核使用的 GPLv2 许可证，无法直接移植。当然，江湖上还有另外一种说法，Linux之所以一直没有原生支持DTrace,是因为Linus 觉得这玩意没什么必要。Anyway,随着 BPF跟踪的最后主要功能合并到 Linux 4.9-rc1，Linux 现在有了类似 DTrace 的高级分析和调试功能。
-
-Linux 这次合并的BPF（The Berkeley Packet Filter ），和Ganglia一样，来自于加州大学伯克利分校（这所大学很有意思，以后还要反复提到）。BPF，顾名思义，最早只是一个纯粹的封包过滤器，后来在很多牛人的参与下，进行了扩展，得到了一个所谓的 eBPF，可以作为某种更加通用的内核虚拟机。
-通过这种机制，我们其实可以在 Linux 中构建类似 DTrace 那种常驻内核的动态追踪虚拟机。
-
->Linux 没有 DTrace（名字），但现在有了 DTrace（功能）
-
-严格来说，DTrace这个词本身，已经并不是狭义上基于Solaris的那套工具了，而是代表的是后现代操作系统的一整套工具家族和方法论。
-
 ### History
 
 >当时 Solaris 操作系统的几个工程师花了几天几夜去排查一个看似非常诡异的线上问题。

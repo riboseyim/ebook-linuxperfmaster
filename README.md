@@ -1,5 +1,7 @@
 # Linux Perf Master
 
+![](http://p11slcnom.bkt.clouddn.com/banner-LPM-201803.png)
+
 ## 作者：[RiboseYim](https://riboseyim.github.io/2016/05/31/AboutMe/)
 
 [Linkedin](https://www.linkedin.com/in/riboseyim/)

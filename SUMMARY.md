@@ -37,7 +37,7 @@
 * [基于看板（Kanban）的管理实践](chapter/thinking/Teamwork-Kanban.md)
 * [工程师的自我修养：全英文技术学习实践](chapter/thinking/Technology-English.md)
 * [Chapter 7: 社区文化篇]()
-* [开源故事：DTrace 软件许可证演变简史](chapter/cluture/DTrace_Linux.md)
+* [开源故事：DTrace 软件许可证演变简史](chapter/culture/DTrace_Linux.md)
 * [Linus Torvalds：The mind behind Linux](chapter/culture/Linus.md)
 * [Linus Torvalds：人生在世，Just for Fun](chapter/culture/Linus_JustForFun.md)
 * [附录]()

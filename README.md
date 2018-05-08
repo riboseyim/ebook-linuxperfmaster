@@ -26,6 +26,7 @@
 * [基于LVS的AAA负载均衡架构实践](chapter/thinking/AAA.md)
 * [浅谈基于数据分析的网络态势感知: NetFlow 与 sFlow](chapter/network/Network-sFlow.md)
 * [网络数据包的捕获、过滤与分析](chapter/network/Network-Pcap.md)
+* [微服务与分布式追踪系统](chapter/network/DevOps-OpenCensus.md)
 * Chapter 4: 系统内核篇
 * [How Linux Works](chapter/kernel/Linux-Works.md)
 * [动态追踪技术(一)：DTrace 入门概要](chapter/dtrace/DTrace.md)
@@ -40,6 +41,7 @@
 * [Cyber-Security：IPv6 & Security](chapter/security/Protocol-IPv6.md)
 * [Cyber-Security：香港警务处网络安全与科技罪案调查科](chapter/security/CyberSecurity-CSTCB.md)
 * Chapter 7: 社区文化篇
+* [开源故事：DTrace 软件许可证演变简史](chapter/culture/DTrace_Linux.md)
 * [Linus Torvalds: 人生在世，Just for Fun](chapter/culture/Linus_JustForFun.md)
 
 ## Community

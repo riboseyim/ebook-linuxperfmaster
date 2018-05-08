@@ -1,6 +1,6 @@
 # Summary
 
-* [Chapter 1: Linux 性能诊断入门]()
+* [Chapter 1: 性能诊断入门]()
 * [Linux 性能诊断：Linux入门命令100条](chapter/abc/Linux-Commands.md)
 * [Linux 性能诊断：单机负载评估](chapter/abc/Linux-Perf-Load.md)
 * [Linux 性能诊断：快速检查单(Netflix版)](chapter/abc/Linux-Perf-Netflix.md)
@@ -11,6 +11,7 @@
 * [监控数据可视化：新一代 Ntopng 网络流量监控](chapter/tools/Network-Ntopng.md)
 * [监控数据可视化：Graphite 体系结构详解](chapter/tools/Visualization-Graphite.md)
 * [监控数据可视化：开源地理信息系统简史](chapter/tools/Visualization-GIS.md)
+* [基础设施标准化：部署和配置管理](chapter/tools/DevOps-Deployment.md)
 * [Chapter 3: 系统内核篇]()
 * [How Linux Works：内核空间和启动顺序](chapter/kernel/Linux-Works.md)
 * [How Linux Works：内存管理](chapter/kernel/Linux-Works-Memory.md)
@@ -23,6 +24,7 @@
 * [基于数据分析的网络态势感知: NetFlow 与 sFlow](chapter/network/Network-sFlow.md)
 * [网络数据包的捕获、过滤与分析](chapter/network/Network-Pcap.md)
 * [新兴计算机远程通信协议：gRPC](chapter/network/Protocol-gRPC.md)
+* [微服务与分布式追踪系统](chapter/network/DevOps-OpenCensus.md)
 * [Chapter 5: 信息安全篇]()
 * [Cyber-Security：黑客入侵导致的性能问题](chapter/security/CyberSecurity-SSH.md)
 * [Cyber-Security：WEB 应用安全、攻击、防护和检测](chapter/security/CyberSecurity-Headers.md)
@@ -35,6 +37,7 @@
 * [Oracle 数据库迁移与割接实践](chapter/thinking/Technology-Oracle.md)
 * [珠海航展交通管控实践经验借鉴](chapter/thinking/Network-Traffic.md)
 * [基于看板（Kanban）的管理实践](chapter/thinking/Teamwork-Kanban.md)
+* [DevOps 漫谈:从作坊到工厂的寓言故事](chapter/thinking/DevOps-Phoenix.md)
 * [工程师的自我修养：全英文技术学习实践](chapter/thinking/Technology-English.md)
 * [Chapter 7: 社区文化篇]()
 * [开源故事：DTrace 软件许可证演变简史](chapter/culture/DTrace_Linux.md)

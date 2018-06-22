@@ -41,8 +41,6 @@
 
 Google Dapper 的理念影响了一批分布式跟踪系统的发展，例如 2012 年，Twitter 公司严格按照 Dapper 论文的要求实现了 Zipkin （Scala 编写，集成到 Twitter公司自己的分布式服务 Finagle ）；Uber 公司基于 Google Dapper 和 Twitter Zipkin 的灵感，开发了开源分布式跟踪系统 Jaeger，例如 Jaeger 规范中同样定义了 Span（跨度, 跨径，两个界限间的距离）。
 
-![](http://og2061b3n.bkt.clouddn.com/DTM-Uber-Jaeger.png)
-
 然而，Google Dapper 的定位更准确的说是分析系统，并不能解决从生产服务中提取数据的难题，OpenCensus 项目为此提供了解决方案。
 
 ## OpenCensus: A framework for distributed tracing

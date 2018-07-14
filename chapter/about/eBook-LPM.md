@@ -15,19 +15,19 @@
 
 **持续发布：争取做到每四个月发布一个新版本**
 
-#### Edition 0.4.2 20180630
+#### Edition 0.4 20180714
 - mod "网络工程篇"调整为分布式系统专题
 - mod Pcap、sFlow 调整到Cyber-Security专题
-- add 应用监控与可视化;开源监控框架：LinkedIn Kafka Monitor
-- add 应用监控与可视化;2018 Docker 用户报告 - Sysdig Edition
+- add 应用监控与可视化;LinkedIn Kafka Monitor
+- add 应用监控与可视化;2018 Docker 用户报告
+- add PostgreSQL 数据库
 - add 案例：基于 Kafka 的事件溯源型微服务
 - add 分布式追踪系统体系概要
 - add 开源分布式跟踪系统 OpenCensus
-
-#### Edition 0.4 20180430
-- add 微服务与分布式追踪系统(preview)
 - add 从作坊到工厂的寓言故事
 - add 基础设施标准化：部署和配置管理
+- add macOS vs Linux Kernels ？
+- add IT 工程师养生指南
 
 #### Edition 0.3  20171225
 - 修订 Linux 快速性能诊断三篇、gRPC

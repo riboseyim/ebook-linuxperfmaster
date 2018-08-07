@@ -15,6 +15,15 @@
 
 **持续发布：争取做到每四个月发布一个新版本**
 
+#### Edition 0.5 preview
+- add How Linux Works: DNS/Route/ARP/UDP
+- add 情绪健康管理
+- mod "分布式系统架构与挑战" 调整为 “大数据与分布式架构”
+- mod Linux 常用命令一文调整为附录
+- mod "PostgreSQL 数据库的时代到来了吗" 调整到“工程管理”一章
+- mod "LinkedIn Kafka Monitor" 调整到“分布式架构”一章
+- mod "DTrace 软件许可证演变简史" 调整到“内核原理”一章
+
 #### Edition 0.4 20180714
 - mod "网络工程篇"调整为分布式系统专题
 - mod Pcap、sFlow 调整到Cyber-Security专题

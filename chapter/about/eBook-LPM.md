@@ -16,7 +16,10 @@
 **持续发布：争取做到每四个月发布一个新版本**
 
 #### Edition 0.5 preview
+- add 分布式架构案例：Uber Hadoop 文件系统最佳实践
+- add 大数据监控框架：Uber JVM Profiler
 - add How Linux Works: DNS/Route/ARP/UDP
+- add Linux 实用扩展命令
 - add 情绪健康管理
 - mod "分布式系统架构与挑战" 调整为 “大数据与分布式架构”
 - mod Linux 常用命令一文调整为附录

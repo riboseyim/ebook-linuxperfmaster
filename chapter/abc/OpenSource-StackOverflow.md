@@ -4,7 +4,7 @@
 > Stack Overflow 架构解析，其架构既有商业外包服务，也大量采用开源软件，可以全景式展现当代主流架构的风貌。
 Stack Overflow 由 Jeff Atwood 和 Joel Spolsky 这两个非常著名的 Blogger 在 2008 年创建。
 
-![](http://o8m8ngokc.bkt.clouddn.com/StackOverflow-2.png)
+![](http://riboseyim-qiniu.riboseyim.com/StackOverflow-2.png)
 
 >As of April 2014, Stack Overflow has over 4,000,000 registered users[19]and more than 10,000,000 questions,[20]with 10,000,000 questions celebrated[21]in late August 2015. Based on the type oftagsassigned to questions, the top eight most discussed topics on the site are:Java,JavaScript,C#,PHP,Android,jQuery,PythonandHTML。——wiki
 
@@ -15,7 +15,7 @@ Stack Overflow 可以分解为八个切面：互联网、负载均衡、web层�
 #### First Rule:Everything is redundant
 两个数据中心：纽约和科罗拉多，冗余且持续备份。其它所有关键组件都尽可能贯彻冗余原则。
 
-![全景视图](http://o8m8ngokc.bkt.clouddn.com/StackOverflow-1.png)
+![全景视图](http://riboseyim-qiniu.riboseyim.com/StackOverflow-1.png)
 
 #### 物理架构
 - 4 台 Microsoft SQL Server 服务器（其中 2 台使用了新的硬件）
@@ -52,7 +52,7 @@ L2级别：L1级别缓存失败之后，通过Redis获取数据
 L1&L2都是无法命中的情况下，会从数据库查询，并更新到缓存和Redis。
 
 缓存更新：基于发布／订阅模型，利用这个机制来清除其他服务上的 L1 缓存，用来保持 web 服务器上的缓存一致性。(另外Redis实例的CPU都很低，不到2%，这点很惊人。)
-![](http://o8m8ngokc.bkt.clouddn.com/SO-Architecture-Redis-Utilization.png)
+![](http://riboseyim-qiniu.riboseyim.com/SO-Architecture-Redis-Utilization.png)
 
 #### Push推送
 开源库：NetGrain
@@ -86,11 +86,11 @@ Elasticsearch集群，每个ES集群都有3个Node
 - exception logs
 - haproxy
 
-![](http://o8m8ngokc.bkt.clouddn.com/SO-Architecture-Opserver-HAProxy.png)
+![](http://riboseyim-qiniu.riboseyim.com/SO-Architecture-Opserver-HAProxy.png)
 
-![](http://o8m8ngokc.bkt.clouddn.com/SO-Architecture-Opserver-DBTier.png)
+![](http://riboseyim-qiniu.riboseyim.com/SO-Architecture-Opserver-DBTier.png)
 
-![](http://o8m8ngokc.bkt.clouddn.com/SO-Architecture-Opserver-WebTier.png)
+![](http://riboseyim-qiniu.riboseyim.com/SO-Architecture-Opserver-WebTier.png)
 
 数据库 CPU 利用率非常低
 
@@ -177,15 +177,15 @@ Hide Pictures (in case you’re using this as a hardware reference list later)
 
 原作者备注: 每个 FEX 到核心 拥有 80 Gbps 上联带宽 ，核心通过一个160 Gbps端口通道与它们连接。由于最近的一些工程，我们位于丹佛数据中心的硬件会更新一些。所有4 台路由器的型号是 ASR-1001-x 和 双核 Cisco Nexus 56128P,每个都拥有96 SFP+ 10Gbps 端口 和 8 QSFP+ 40Gbps 端口。这些节省下来的端口，可以用于未来扩展，我们可以为核心绑定4x 40Gbps链接，替代每个 16x10Gbps端口的方案，正如我们在纽约做的那样。这些就是纽约的网络设备情况:
 
-![SO-Hardware-Network-NewYork-Fiber-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Network-NewYork-Fiber-Small.jpg)
-![SO-Hardware-Network-NewYork-Fortinet-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Network-NewYork-Fortinet-Small.jpg)
-![SO-Hardware-Network-NewYork-Rack-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Network-NewYork-Rack-Small.jpg)
+![SO-Hardware-Network-NewYork-Fiber-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Network-NewYork-Fiber-Small.jpg)
+![SO-Hardware-Network-NewYork-Fortinet-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Network-NewYork-Fortinet-Small.jpg)
+![SO-Hardware-Network-NewYork-Rack-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Network-NewYork-Rack-Small.jpg)
 
 #### 丹佛数据中心
 这里需要提到的是Mark Henderson, 我们网站的可靠性工程师之一，专程到纽约数据中心为我的这份报告拿到了一些高分辨率的照片。
-![SO-Hardware-Network-Denver-Installed-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Network-Denver-Installed-Small.jpg)
-![SO-Hardware-Network-Denver-Racked-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Network-Denver-Racked-Small.jpg)
-![SO-Hardware-Network-Denver-Raw-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Network-Denver-Raw-Small.jpg)
+![SO-Hardware-Network-Denver-Installed-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Network-Denver-Installed-Small.jpg)
+![SO-Hardware-Network-Denver-Racked-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Network-Denver-Racked-Small.jpg)
+![SO-Hardware-Network-Denver-Raw-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Network-Denver-Raw-Small.jpg)
 
 **SQL Servers (Stack Overflow 集群)**
 - 2 Dell R720xd 服务器，每台配置如下:
@@ -204,10 +204,10 @@ Hide Pictures (in case you’re using this as a hardware reference list later)
 原作者备注: 丹佛的SQL硬件在规格上相同，对应纽约部分这里只有一个 SQL 服务器
 这是二月份为纽约的SQL Server 升级PCIe SSD的情形：
 
-![SO-Hardware-SQL-Front-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-SQL-Front-Small.jpg)
-![SO-Hardware-SQL-Inside-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-SQL-Inside-Small.jpg)
-![SO-Hardware-SQL-SSDs-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-SQL-SSDs-Small.jpg)
-![SO-Hardware-SQL-Top-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-SQL-Top-Small.jpg)
+![SO-Hardware-SQL-Front-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-SQL-Front-Small.jpg)
+![SO-Hardware-SQL-Inside-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-SQL-Inside-Small.jpg)
+![SO-Hardware-SQL-SSDs-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-SQL-SSDs-Small.jpg)
+![SO-Hardware-SQL-Top-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-SQL-Top-Small.jpg)
 
 **Web 服务器**
 - 11 Dell R630 服务器，每台配置如下:
@@ -226,10 +226,10 @@ Hide Pictures (in case you’re using this as a hardware reference list later)
 - 2x Intel 320 300GB SATA SSDs (RAID 1)
 - 双 10 Gbps 网络 (Intel X540/I350 NDC)
 
-![SO-Hardware-Web-Tier-Back-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Web-Tier-Back-Small.jpg)
-![SO-Hardware-Web-Tier-Front-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Web-Tier-Front-Small.jpg)
-![SO-Hardware-Web-Tier-Front2-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Web-Tier-Front2-Small.jpg)
-![SO-Hardware-Web-Tier-Unboxed-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Web-Tier-Unboxed-Small.jpg)
+![SO-Hardware-Web-Tier-Back-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Web-Tier-Back-Small.jpg)
+![SO-Hardware-Web-Tier-Front-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Web-Tier-Front-Small.jpg)
+![SO-Hardware-Web-Tier-Front2-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Web-Tier-Front2-Small.jpg)
+![SO-Hardware-Web-Tier-Unboxed-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Web-Tier-Unboxed-Small.jpg)
 
 原作者备注: NY-SERVICE03 目前仍然是一台 R620, 但是现在并没有足够老到以至于需要更换。它会在今年晚些时候升级。
 
@@ -264,10 +264,10 @@ Hide Pictures (in case you’re using this as a hardware reference list later)
 原作者备注: 这些服务器是不同时期采购的，因此规格上略有差异。并且，2台CloudFlare负载均衡器因为安装了memcached,拥有更多内存（我们现在已经不运行该组件）。这些服务，redis, 检索,和负载均衡器在stack都是基于1U 服务器。
 这是纽约的情况：
 
-![SO-Hardware-Redis-Inside-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Redis-Inside-Small.jpg)
-![SO-Hardware-Service-Inside-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Service-Inside-Small.jpg)
-![SO-Hardware-Service-Rear-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Service-Rear-Small.jpg)
-![SO-Hardware-Service-Redis-Search-Front-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Redis-Search-Front-Small.jpg)
+![SO-Hardware-Redis-Inside-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Redis-Inside-Small.jpg)
+![SO-Hardware-Service-Inside-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Service-Inside-Small.jpg)
+![SO-Hardware-Service-Rear-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Service-Rear-Small.jpg)
+![SO-Hardware-Service-Redis-Search-Front-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Redis-Search-Front-Small.jpg)
 
 ### 其它服务器
 我们还有一些其他的服务器并不直接或间接服务于网站的流量。
@@ -287,10 +287,10 @@ Hide Pictures (in case you’re using this as a hardware reference list later)
 - 24x Dell 10K RPM 900GB SAS HDDs (RAID10)
 - 双 10Gb 网络 (SFP+)
 
-![SO-Hardware-VMs-Blades-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-VMs-Blades-Small.jpg)
-![SO-Hardware-VMs-Blades2-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-VMs-Blades2-Small.jpg)
-![SO-Hardware-VMs-Front-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-VMs-Front-Small.jpg)
-![SO-Hardware-VMs-Rear-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-VMs-Rear-Small.jpg)
+![SO-Hardware-VMs-Blades-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-VMs-Blades-Small.jpg)
+![SO-Hardware-VMs-Blades2-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-VMs-Blades2-Small.jpg)
+![SO-Hardware-VMs-Front-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-VMs-Front-Small.jpg)
+![SO-Hardware-VMs-Rear-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-VMs-Rear-Small.jpg)
 
 在一些场景下，还有几台重要的服务器不是虚拟机。这些系统后台任务，帮助我们通过日志追踪排查问题，存储大量的数据等等。
 
@@ -339,5 +339,6 @@ Hide Pictures (in case you’re using this as a hardware reference list later)
 - 8x Intel S3700 800 GB SATA SSDs (RAID 10)
 - 双 10 Gbps 网络 (Intel X540/I350 NDC)
 
-![SO-Hardware-Racks-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Racks-Small.jpg)
-![SO-Hardware-Racks2-Small.jpg](http://o8m8ngokc.bkt.clouddn.com/SO-Hardware-Racks2-Small.jpg)
+![SO-Hardware-Racks-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Racks-Small.jpg)
+
+![SO-Hardware-Racks2-Small.jpg](http://riboseyim-qiniu.riboseyim.com/SO-Hardware-Racks2-Small.jpg)

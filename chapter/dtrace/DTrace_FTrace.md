@@ -18,11 +18,11 @@ ftrace 令人印象最深刻的是作为一个function tracer，内核函数调�
 
 debugfs是Linux内核中一种特殊的文件系统，非常易用、基于RAM，专门设计用于调试。（since version 2.6.10-rc3，https://en.wikipedia.org/wiki/Debugfs)。
 
-![](http://p11slcnom.bkt.clouddn.com/DTrace_ftrace_1.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTrace_ftrace_1.png)
 
 挂载之后会自动创建如下文件：
 
-![](http://p11slcnom.bkt.clouddn.com/DTrace_ftrace_2.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTrace_ftrace_2.png)
 
 ## 三、BASIC
 
@@ -30,12 +30,12 @@ debugfs是Linux内核中一种特殊的文件系统，非常易用、基于RAM�
 
 以Function tracer为例，结果存储在 trace ，该文件类似一张报表，该表将显示 4 列信息。首先是进程信息，包括进程名和PID ；第二列是CPU；第三列是时间戳；第四列是函数信息，缺省情况下，这里将显示内核函数名以及它的上一层调用函数。
 
-![](http://p11slcnom.bkt.clouddn.com/DTrace_ftrace_3.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTrace_ftrace_3.png)
 
 ### 2. Function graph tracer
 Function graph tracer 和 function tracer 类似，但输出为函数调用图，更加容易阅读：
 
-![](http://p11slcnom.bkt.clouddn.com/DTrace_ftrace_4.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTrace_ftrace_4.png)
 
 ![Linux ftrace tracers](http://og2061b3n.bkt.clouddn.com/DTrace_ftrace_tracers.png)
 
@@ -50,22 +50,22 @@ Ftrace 有两大组成部分，framework 和一系列的 tracer 。每个 tracer
 >WARNNING:使用ftrace追踪内核将有可能对系统性能产生影响，追踪的函数越多，开销越大。
 使用者必须提前做好准备工作，生产环境必须谨慎使用。
 
-![](http://p11slcnom.bkt.clouddn.com/DTrace_ftrace_5.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTrace_ftrace_5.png)
 
 ## 五、Useful Tools
 
 ### 1. trace-cmd
 trace-cmd是一个非常有用的Ftrace命令行工具。
 
-![](http://p11slcnom.bkt.clouddn.com/DTrace_ftrace_6.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTrace_ftrace_6.png)
 
 在很有情况下不能使用函数追踪，需要依赖 **事件追踪** 的支持，例如：
 
-![](http://p11slcnom.bkt.clouddn.com/DTrace_ftrace_7.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTrace_ftrace_7.png)
 
 输出如下：
 
-![](http://p11slcnom.bkt.clouddn.com/DTrace_ftrace_8.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTrace_ftrace_8.png)
 
 切换路径：PID 24817 -> 15144 -> kernel -> 24817 -> 1561 -> 15114。
 
@@ -81,7 +81,7 @@ killsnoop: 追踪kill()信号（进程和信号详细）
 
 代码下载：https://github.com/brendangregg/perf-tools
 
-![](http://p11slcnom.bkt.clouddn.com/DTrace_ftrace_9.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTrace_ftrace_9.png)
 
 ## 六、可视化工具:KernelShark
 

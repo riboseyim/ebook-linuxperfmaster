@@ -4,7 +4,7 @@
 - Distributed Tracing and Monitoring System
 - OpenCensus: A framework for distributed tracing
 
-![](http://og2061b3n.bkt.clouddn.com/DTM-OpenCensus-Theme.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTM-OpenCensus-Theme.png)
 
 ## 背景
 
@@ -16,9 +16,9 @@
 
 为了解决上述问题，分布式跟踪系统 —— 一种帮助理解分布式系统行为、帮助分析性能问题的工具应运而生。
 
-![](http://og2061b3n.bkt.clouddn.com/DTM-OpenCensus-Micro-1.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTM-OpenCensus-Micro-1.png)
 
-![](http://og2061b3n.bkt.clouddn.com/DTM-OpenCensus-Micro-2.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTM-OpenCensus-Micro-2.png)
 
 
 ## Distributed Tracing and Monitoring System
@@ -37,7 +37,7 @@
 - 跟踪树和span
 在 Dapper 跟踪树（Trace tree）中，基本单元是树节点（分配 spanid）。节点之间通过连线表示父子关系，通过 parentId 和 spanId 把所有的关系串联起来，实现记录业务流的作用。
 
-![](http://og2061b3n.bkt.clouddn.com/DTM-Dapper-TraceTree-Span.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTM-Dapper-TraceTree-Span.png)
 
 Google Dapper 的理念影响了一批分布式跟踪系统的发展，例如 2012 年，Twitter 公司严格按照 Dapper 论文的要求实现了 Zipkin （Scala 编写，集成到 Twitter公司自己的分布式服务 Finagle ）；Uber 公司基于 Google Dapper 和 Twitter Zipkin 的灵感，开发了开源分布式跟踪系统 Jaeger，例如 Jaeger 规范中同样定义了 Span（跨度, 跨径，两个界限间的距离）。
 
@@ -47,7 +47,7 @@ Google Dapper 的理念影响了一批分布式跟踪系统的发展，例如 20
 
 >OpenCensus is a framework for stats collection and distributed tracing.
 
-![](http://og2061b3n.bkt.clouddn.com/DTM-OpenCensus-Logo.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTM-OpenCensus-Logo.png)
 
 OpenCensus 项目是 Google 开源的一个用来收集和追踪应用指标的第三方库。OpenCensus 能够提供了一套统一的测量工具：跨服务捕获跟踪跨度（span）、应用级别指标以及来自其他应用的元数据（例如日志）。OpenCensus 有如下一些主要特点：
 - 标准通信协议和一致的 API ：用于处理 metric 和 trace
@@ -58,7 +58,7 @@ OpenCensus 项目是 Google 开源的一个用来收集和追踪应用指标的�
 - 不需要额外的服务器或守护进程来支持 OpenCensus
 - In process debugging：一个可选的代理程序，用于在目标主机上显示请求和指标数据
 
-![](http://og2061b3n.bkt.clouddn.com/DTM-OpenCensus-Language.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTM-OpenCensus-Language.png)
 
 ## OpenCensus Concepts
 
@@ -96,7 +96,7 @@ OpenCensus 是独立于供应商的，可以通过各种 Exporter 实现将数�
 #### Introspection | 内省
 OpenCensus 提供在线仪表板，显示进程中的诊断数据。这些页面被称为 z-pages ，它们有助于了解如何查看来自特定进程的数据，而不必依赖任何度量收集器或分布式跟踪后端。
 
-![](http://og2061b3n.bkt.clouddn.com/DTM-OpenCensus-traceZ.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTM-OpenCensus-traceZ.png)
 
 ## OpenCensus Examples
 

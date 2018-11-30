@@ -6,14 +6,17 @@
 >作为 NetFlow/sFlow  采集器 (Cisco/ Juniper 路由器)  ；交换机配合 nProbe.
 
 
-![](http://og2061b3n.bkt.clouddn.com/ntop-demo-1.jpg)
-![](http://og2061b3n.bkt.clouddn.com/ntop-demo-2.jpg)
-![](http://og2061b3n.bkt.clouddn.com/ntop-demo-3.jpg)
-![](http://og2061b3n.bkt.clouddn.com/ntop-demo-4.jpg)
-![](http://og2061b3n.bkt.clouddn.com/ntop-demo-5.jpg)
-![](http://og2061b3n.bkt.clouddn.com/ntop-demo-6.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/ntop-demo-1.jpg)
 
+![](http://riboseyim-qiniu.riboseyim.com/ntop-demo-2.jpg)
 
+![](http://riboseyim-qiniu.riboseyim.com/ntop-demo-3.jpg)
+
+![](http://riboseyim-qiniu.riboseyim.com/ntop-demo-4.jpg)
+
+![](http://riboseyim-qiniu.riboseyim.com/ntop-demo-5.jpg)
+
+![](http://riboseyim-qiniu.riboseyim.com/ntop-demo-6.jpg)
 
 **What ntopng can do for me?**
 
@@ -33,7 +36,7 @@
 
 ## Ntopng 架构
 
-![](http://og2061b3n.bkt.clouddn.com/ntopng-arch-view.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/ntopng-arch-view.jpg)
 
 #### 主要开发语言
 C、C++、**Python**、Lua
@@ -55,7 +58,7 @@ Gdbm：DBM的GNU版本，使用hash存储非结构化数据
 
 **Redis**
 Redis是一个开源的使用ANSIC语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。Ntopng的Redis数据结构如下：
-![](http://og2061b3n.bkt.clouddn.com/ntop-redis-data.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/ntop-redis-data.jpg)
 
 #### 前端展现层
 
@@ -66,7 +69,7 @@ Redis是一个开源的使用ANSIC语言编写、支持网络、可基于内存�
 **Geoip：IP GIS图形**
 
 
-![](http://og2061b3n.bkt.clouddn.com/ntopng-geomap.png)
+![](http://riboseyim-qiniu.riboseyim.com/ntopng-geomap.png)
 
 #### 其它库
 
@@ -92,10 +95,10 @@ fontconfig：字体库管理
 
 ### P2P 演示案例
 
-![](http://og2061b3n.bkt.clouddn.com/ntop-p2p-1.jpg)
-![](http://og2061b3n.bkt.clouddn.com/ntop-p2p-2.jpg)
-![](http://og2061b3n.bkt.clouddn.com/ntop-p2p-3.jpg)
-![](http://og2061b3n.bkt.clouddn.com/ntop-p2p-4.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/ntop-p2p-1.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/ntop-p2p-2.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/ntop-p2p-3.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/ntop-p2p-4.jpg)
 
 <hr>
 更多精彩内容，请扫码关注公众号：@睿哥杂货铺  

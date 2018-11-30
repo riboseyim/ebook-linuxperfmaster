@@ -12,7 +12,7 @@
 
 - [原文: A History of Open Source GIS, from Humble Beginnings to World-Changing Applications | 23 Jun 2017 9:00am, by Anthony Calamito](https://thenewstack.io/humble-beginnings-world-changing-applications-history-open-source-gis/)
 
-![](http://og2061b3n.bkt.clouddn.com/GIS_History_1.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/GIS_History_1.jpg)
 
 数字制图和地理空间信息系统（Geographic Information System,GIS）的出现彻底改变了人们和对周围世界思考、互动的方式。将位置信息分层重叠用于决策的概念首先是由 Ian McHarg（景观设计师）在上世纪60年代提出。大约在同一时间，Roger Tomlinson —— 人们普遍称之为“GIS 之父”（Father of GIS） 完成了他的博士论文，主要研究使用计算方法处理分层的地理空间信息。罗杰随后致力于创建第一个计算机化的地理信息系统——加拿大地理信息系统（the Canada Geographic Information System），主要用于勘探测绘。
 
@@ -23,15 +23,15 @@
 
 随后不久，GRASS (“草” ，Geographic Resources Analysis Support System，地理资源分析支持系统）诞生。GRASS 系统拥有 350 多个模块用于处理栅格、拓扑向量、图像和图形数据，该软件最初设计提供给美国军方使用，以协助土地管理和环境规划。GRASS 系统广泛应用于科学研究和商业领域，包括地理空间数据管理和分析、图像处理、空间和时间建模以及创建图形和地图。
 
-![](http://og2061b3n.bkt.clouddn.com/GIS_History_2.png)
+![](http://riboseyim-qiniu.riboseyim.com/GIS_History_2.png)
 
 #### 1.2、GIS 的发展：GeoTools, GDAL, PostGIS 和 GeoServer
 1996，利兹大学（the University of Leeds）在一个项目上开始创建基于 Java 开发语言的地理信息库，设计可以被纳入不同的应用需要。最终的成果是 GeoTools，一个可以操纵空间数据的开源库，在今天广泛应用于Web地理空间信息服务，网络地图服务和桌面应用程序。
-![](http://og2061b3n.bkt.clouddn.com/GIS_History_3.gif)
+![](http://riboseyim-qiniu.riboseyim.com/GIS_History_3.gif)
 
 四年后，一个跨平台的地理信息库 GDAL (Geospatial Data Abstraction Library, 地理空间数据抽象库) 出现了 。GDAL 使得 GIS 应用程序可以支持不同的数据格式，它还附带了各种有用的命令行工具，用于处理和转换各种数据格式。GDAL 支持超过 50 个栅格格式和20 个矢量格式的数据，它是全世界使用最广泛的地理空间数据访问库，支持的应用程序包括谷歌地球（Google Earth），GRASS，QGIS、FME（the Feature Manipulation Engine）和ArcGIS。
 
-![](http://og2061b3n.bkt.clouddn.com/GIS_History_4.png)
+![](http://riboseyim-qiniu.riboseyim.com/GIS_History_4.png)
 
 2001年，[Refractions Research(加拿大 IT 咨询机构，创建于1998年)](http://www.refractions.net)， 研发了开源项目 PostGIS ，使得空间数据可以存储在 Postgres 数据库。同年，GeoServer 创建，一个基于 Java 语言开发的应用程序，用于将空间数据发布为标准的Web服务。PostGIS 和 GeoServer 项目都取得了令人难以置信的成功，今天广泛应用于开源 GIS 数据库和 GIS 服务器。
 
@@ -54,14 +54,14 @@ QGIS 被认为是在开源桌面 GIS 的鼻祖。QGIS 在2002发布，它集成�
 
 开源 GIS 拥有美好的前景和巨大的潜力，它使得增强协作、共享有价值的数据和访问关键资源成为可能。凭借其众多的环境、政府、公共安全和健康应用，开源GIS 技术及其应用项目具有改变世界的潜力。
 
-![](http://og2061b3n.bkt.clouddn.com/GIS-History-5.png)
+![](http://riboseyim-qiniu.riboseyim.com/GIS-History-5.png)
 
 #### Demo:A Full Stack Geo-enabled Internet of Things (IoT) Solution
 - Github:https://github.com/amollenkopf/dcos-iot-demo
 - using Mesosphere's open sourced Data Center Operating System (DC/OS)
 - using Docker containerization and frameworks for Mesos including Marathon, Kafka, Spark, and Elasticsearch.
-![](http://og2061b3n.bkt.clouddn.com/GIS_History_Demo_Mesosphere_DCOS_Architecture.jpg)
-![](http://og2061b3n.bkt.clouddn.com/GIS_History_Demo_Mesosphere.png)
+![](http://riboseyim-qiniu.riboseyim.com/GIS_History_Demo_Mesosphere_DCOS_Architecture.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/GIS_History_Demo_Mesosphere.png)
 
 ## 二、GIS Technology Applications  
 

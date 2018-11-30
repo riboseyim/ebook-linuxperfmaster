@@ -17,7 +17,7 @@
 
 系统架构如下图所示，服务器采用一主一备模式，一般情况下由Master服务器处理请求，如果它故障或者负荷过高、无法快速响应请求，网元会将请求发送到BackUP服务器处理。AAA Server上运行守护进程处理请求，记为TACACSD。
 
-![](http://o8m8ngokc.bkt.clouddn.com/LB-AAA-Now.png)
+![](http://riboseyim-qiniu.riboseyim.com/LB-AAA-Now.png)
 
 **容量计算**
 	>服务端资源需求T＝ 认证请求规模g(n) ／ TACACSD运算能力 f(n)  
@@ -72,7 +72,7 @@ listen AAA-Cluster
 ### 1.HAProxy+TProxy
 当我们满怀希望地推进之时，一个要命的问题摆在面前：后端的AAA服务器上看到的连接的Source IP都不再是用户原始的IP，而是前端的HAProxy服务器的IP，
 
-![](http://o8m8ngokc.bkt.clouddn.com/LB-AAA-HAProxy.png)
+![](http://riboseyim-qiniu.riboseyim.com/LB-AAA-HAProxy.png)
 
 官方文档对于source调度算法的描述：
 
@@ -89,7 +89,7 @@ TACACSD进程必须获取到认证请求的Source IP，为此我们尝试引入T
 
 即使用上“HAProxy+TProxy”的组合拳，还是存在另外一个问题：
 **设备对于认证结果报文，似乎需要请求报文的目标地址（代理服务器）与结果报文的发送端（Real  AAA Server）一致。**
-![](http://o8m8ngokc.bkt.clouddn.com/LB-AAA-Flow.png)
+![](http://riboseyim-qiniu.riboseyim.com/LB-AAA-Flow.png)
 
 过程描述：网络设备会发送该用户的凭证到 TACACS+ 服务器进行验证，然后决定分配访问相关设备的权限，并将这些决定的结果包含在应答数据包中并发送到网络设备上，再由网络设备发送到用户终端。
 **至于是否真的是这个校验规则，或者我们还没有找到更好的解释。暂且搁置，引述一段RFC 1492的说明，日后再补充这个问题。**
@@ -133,11 +133,11 @@ LVS只处理一般连接,将请求给后端real server,然后由real server处�
 
 缺点：由于采用物理层,所以DR模式的调度器和后端real server必须在一个物理网段里,中间不能过路由器。
 
-![](http://o8m8ngokc.bkt.clouddn.com/LB-AAA-LVS-Single.png)
+![](http://riboseyim-qiniu.riboseyim.com/LB-AAA-LVS-Single.png)
 
 另外，为了防止LVS控制机的单点故障问题，还选用了Keepalived，负责LVS控制机和备用机的自动故障切换。
 
-![](http://o8m8ngokc.bkt.clouddn.com/LB-AAA-LVS-Cluster.png)
+![](http://riboseyim-qiniu.riboseyim.com/LB-AAA-LVS-Cluster.png)
 
 
 LVS依赖项：IPVS内核模块和ipvsadm工具包。
@@ -162,7 +162,7 @@ ip addr list
 ## 五、小结
 
 ### 1. 各种负载均衡实现在网络中的位置
-![](http://o8m8ngokc.bkt.clouddn.com/LB-Normal-Model.png)
+![](http://riboseyim-qiniu.riboseyim.com/LB-Normal-Model.png)
 
 四层负载均衡的特点一般是在网络和网络传输层(TCP/IP)做负载均衡，而七层则是指在应用层做负载均衡。
 四层负载均衡对于应用侵入比较小，对应用的感知较也少，同时应用接入基本不需要对此做特殊改造。

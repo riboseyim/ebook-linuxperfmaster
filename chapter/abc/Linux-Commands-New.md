@@ -20,11 +20,11 @@
 
 cat 被用于打印文件内容。ccat 工具还提供像语法高亮显示这样的功能。在此基础之上，bat 还支持 分页, 行号和 git 集成。同时允许在输出中搜索 (当输出长于屏幕高度时) 。更多信息：[https://github.com/sharkdp/bat](https://github.com/sharkdp/bat)
 
-![](http://og2061b3n.bkt.clouddn.com/CLI-20180902-bat-1.png)
+![](http://riboseyim-qiniu.riboseyim.com/CLI-20180902-bat-1.png)
 
-![](http://og2061b3n.bkt.clouddn.com/CLI-20180902-bat-2.png)
+![](http://riboseyim-qiniu.riboseyim.com/CLI-20180902-bat-2.png)
 
-![](http://og2061b3n.bkt.clouddn.com/CLI-20180902-bat-3.png)
+![](http://riboseyim-qiniu.riboseyim.com/CLI-20180902-bat-3.png)
 
 ```
 # Linux
@@ -42,7 +42,7 @@ alias cat='bat'
 
 ping 是一种非常有用的网络工具。原理是向目标主机传出一个ICMP echo@要求数据包，并等待接收 echo 回应数据包。程序会按时间和成功响应的次数估算丢失数据包率（丢包率）和数据包往返时间（网络时延，Round-trip delay time）。不过默认的 ping 命令输出比较乏味。prettyping 则提供了更友好、更美观的输出，包括彩色点图表示网络连通性。prettyping 基于 bash 和 awk 编写能，够兼容大部分操作系统 (例如 Linux, BSD, Mac OS X, …)。更多信息：[http://denilson.sa.nom.br/prettyping/](http://denilson.sa.nom.br/prettyping/)
 
-![](http://og2061b3n.bkt.clouddn.com/CLI-20180903-ping.png)
+![](http://riboseyim-qiniu.riboseyim.com/CLI-20180903-ping.png)
 
 ```
 curl -O https://raw.githubusercontent.com/denilsonsa/prettyping/master/prettyping
@@ -56,7 +56,7 @@ alias ping='prettyping --nolegend'
 在终端中使用 ctrl + r 组合键可以向后搜索历史操作记录（ 尽管有点繁琐 ）。fzf 工具是对 ctrl + r 的增强。支持对终端操作历史的模糊搜索, 预览可能的匹配结果。除了历史搜索之外, fzf 还可以预览和打开文件。
 更多信息：[https://github.com/junegunn/fzf](https://github.com/junegunn/fzf)
 
-![](http://og2061b3n.bkt.clouddn.com/CLI-20180902-fzf.png)
+![](http://riboseyim-qiniu.riboseyim.com/CLI-20180902-fzf.png)
 
 ```
 # Linux
@@ -75,7 +75,7 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abor
 
 top 是一个快速诊断系统性能的工具。值得一提的是 top for Mac 与 Linux 上的输出不太一样。htop 优化了顶部输出格式，并支持大量的颜色, 键盘快键键和视图, 帮助我们洞察进程行为。更多信息：[http://hisham.hm/htop/](http://hisham.hm/htop/)
 
-![htop](http://og2061b3n.bkt.clouddn.com/CLI-20180902-htop.png)
+![htop](http://riboseyim-qiniu.riboseyim.com/CLI-20180902-htop.png)
 
 htop 提供的键盘快捷键：
 - P - 按 CPU 利用率排序
@@ -91,9 +91,9 @@ alias top="sudo htop" # alias top
 
 GIT 版本控制系统中使用 git diff 来显示两个版本之间差别(包括文件、元数据和改动等)。diff-so-fancy 是一个用 node.js 实现的命令行工具，提供更友好的输出样式和定制能力。更多信息：[https://github.com/so-fancy/diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
 
-![](http://og2061b3n.bkt.clouddn.com/CLI-20180902-diff-so-fancy.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/CLI-20180902-diff-so-fancy.jpg)
 
-![](http://og2061b3n.bkt.clouddn.com/CLI-20180902-git-diff.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/CLI-20180902-git-diff.jpg)
 
 ```
 # download
@@ -132,7 +132,7 @@ git config --bool --global diff-so-fancy.markEmptyLines false
 #### fd > find
 fd 非常快。有意思的是 fd 与 bat 的作者是同一个人（David Peter）。更多信息：[https://github.com/sharkdp/fd/](https://github.com/sharkdp/fd/)
 
-![](http://og2061b3n.bkt.clouddn.com/CLI-20180902-fd.png)
+![](http://riboseyim-qiniu.riboseyim.com/CLI-20180902-fd.png)
 
 常用的命令行：
 ```
@@ -156,9 +156,9 @@ fd cli -x wc -w # 查找 "cli" 并运行 `wc -w`
 
 了解磁盘空间占用情况是一项非常重要的工作。常用的命令是 du -sh  (-sh 表示摘要、便于人工阅读), 但我们经常需要挖掘目录的空间占用。ncdu 是一个替代选择（完全基于 C 语言编写，MIT 许可证）。ncdu 提供了一个交互式界面, 支持快速扫描哪些文件夹或文件占用空间, 并且导航非常方便。更多信息：[https://dev.yorhel.nl/ncdu](https://dev.yorhel.nl/ncdu)
 
-![](http://og2061b3n.bkt.clouddn.com/CLI-20180902-nudu.png)
+![](http://riboseyim-qiniu.riboseyim.com/CLI-20180902-nudu.png)
 
-![](http://og2061b3n.bkt.clouddn.com/CLI-20180902-nudu-nav.png)
+![](http://riboseyim-qiniu.riboseyim.com/CLI-20180902-nudu-nav.png)
 
 ```
 git clone git://g.blicky.net/ncdu.git/
@@ -239,7 +239,7 @@ bash-3.2$ tldr tar
 
 grep 无疑是一个强大的命令行工具, 但多年来它已被许多工具所取代，包括 ack 和 ag 。更多信息：[https://beyondgrep.com/]
 
-![](http://og2061b3n.bkt.clouddn.com/CLI-20180902-ack.png)
+![](http://riboseyim-qiniu.riboseyim.com/CLI-20180902-ack.png)
 
 ```
 curl https://beyondgrep.com/ack-2.24-single-file > ~/bin/ack && chmod 0755 ~/bin/ack

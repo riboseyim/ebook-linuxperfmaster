@@ -96,7 +96,7 @@ nters.
 6.  Root filesystem mount （挂载根目录）
 7.  User space start （用户空间启动）
 
-![root filesystem](http://og2061b3n.bkt.clouddn.com/Linux_kernel_root_filesystem.png)
+![root filesystem](http://riboseyim-qiniu.riboseyim.com/Linux_kernel_root_filesystem.png)
 
 ### Kernel Parameters
 
@@ -150,11 +150,11 @@ Android 和 BSD （运行存放于'/etc/rc'的初始化 shell 脚本）也有它
 **System V init**: 存在一个启动序列，同一时间只能启动一个任务，这种架构下，很容易解决依赖问题，但是性能方面要受一些影响。
 **systemd is goal oriented.** : 针对System V init的不足，systemd所有的服务都并发启动。systemd时基于目标的，需要定义要实现的目标，以及它的依赖项。systemd 将所有过程都抽象为一个配置单元，即 unit。可以认为一个服务是一个配置单元；一个挂载点是一个配置单元。
 
-![systemd Unit target Tree](http://og2061b3n.bkt.clouddn.com/Linux_kernel_systemd_UnitTree.png)
+![systemd Unit target Tree](http://riboseyim-qiniu.riboseyim.com/Linux_kernel_systemd_UnitTree.png)
 
 **Upstart is reactionary.**:Upstart是基于事件的，Upstart的事件驱动模型允许它以异步方式对生成的事件作出回应。
 
-![System V init Vs UpStart Vs Systemd](http://og2061b3n.bkt.clouddn.com/Linux_kernel_systemd_upstart_sysV.png)
+![System V init Vs UpStart Vs Systemd](http://riboseyim-qiniu.riboseyim.com/Linux_kernel_systemd_upstart_sysV.png)
 
 ## (三) The Initial RAM filesystem
 

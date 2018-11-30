@@ -4,7 +4,7 @@
 
 （Linux/XOR.DDoS）木马入侵分析及其它
 
-![样本](http://o8m8ngokc.bkt.clouddn.com/trojan-demo-1.png)
+![样本](http://riboseyim-qiniu.riboseyim.com/trojan-demo-1.png)
 
 ### 工程师的三大法宝
 
@@ -103,9 +103,9 @@ MalwareMustDie首先在2014年10月曝光了该木马。32位和64位的Linux We
 
 **多态（Polymorphic）** 是指恶意软件在自我繁殖期间不断改变（“morphs”）其自身文件特征码（大小、hash等等）的特点，衍生后的恶意软件可能跟以前副本不一致。因此，这种能够自我变种的恶意软件很难使用基于签名扫描的安全软件进行识别和检测。
 
-![样本](http://o8m8ngokc.bkt.clouddn.com/trojan-demo-1.png)
+![样本](http://riboseyim-qiniu.riboseyim.com/trojan-demo-1.png)
 
-![样本](http://o8m8ngokc.bkt.clouddn.com/trojan-demo-1-2.png)
+![样本](http://riboseyim-qiniu.riboseyim.com/trojan-demo-1-2.png)
 
 木马具有非常多功能：增加服务、删除服务、执行程序、隐藏进程、隐藏文件、下载文件、获取系统信息、发起DDOS攻击等行为。
 主程序的作用是根据感染目标机器的系统开发版本传输并且选择C&C服务器。

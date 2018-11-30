@@ -12,7 +12,7 @@
 #### 点击劫持（Clickjacking）
 点击劫持,[clickjacking](https://www.troyhunt.com/clickjack-attack-hidden-threat-right-in/) 是一种在网页中将恶意代码等隐藏在看似无害的内容（如按钮）之下，并诱使用户点击的手段，又被称为界面伪装（UI redressing）。例如用户收到一封包含一段视频的电子邮件，但其中的“播放”按钮并不会真正播放视频，而是被诱骗进入一个购物网站。
 
-![](http://omb2onfvy.bkt.clouddn.com/CyberSecurity_Clickjack.png)
+![](http://riboseyim-qiniu.riboseyim.com/CyberSecurity_Clickjack.png)
 
 针对点击劫持攻击，[开放Web应用程序安全项目(Open Web Application Security Project ,OWASP)](https://www.owasp.org)(非营利组织，其目的是协助个人、企业和机构来发现和使用可信赖软件) 提供了一份指引，[《Defending_with_X-Frame-Options_Response_Headers》](https://www.owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet#Defending_with_X-Frame-Options_Response_Headers) 。
 
@@ -76,7 +76,7 @@ add_header X-Content-Type-Options "nosniff" always;
 
 中间人攻击中攻击者与通讯的两端分别创建独立的联系，并交换其所收到的数据，使通讯的两端认为他们正在通过一个私密的连接与对方直接对话，但事实上整个会话都被攻击者完全控制。例如，在一个未加密的Wi-Fi 无线接入点的接受范围内的中间人攻击者，可以将自己作为一个中间人插入这个网络。强制用户使用[HTTP严格传输安全（HTTP Strict Transport Security,HSTS）](#)。 HSTS 是一套由 [IETF](http://riboseyim.github.io/2017/05/12/RFC/) 发布的互联网安全策略机制。Chrome 和 Firefox 浏览器有一个内置的 HSTS 的主机列表，网站可以选择使用 HSTS 策略强制浏览器使用 HTTPS 协议与网站进行通信，以减少会话劫持风险。
 
-![](http://omb2onfvy.bkt.clouddn.com/CyberSecurity_sslstrip-mitm.png)
+![](http://riboseyim-qiniu.riboseyim.com/CyberSecurity_sslstrip-mitm.png)
 
 服务器设置下列选项可以强制所有客户端只能通过 HTTPS 连接：
 ```java
@@ -129,9 +129,9 @@ add_header Referrer-Policy: no-referrer-when-downgrade
 #### 测试
 安全研究员 Scott Helme 贡献了一个非常棒的网站 [https://securityheaders.io/]，可以分析自己站点的Header(报文头)，并提出改进安全性的建议。示例如下（环境参数，Operating System: CentOS 7 ; haproxy 1.5.14 ; nginx 1.12.0）。
 - 加固前的检测结果
-![加固前](http://omb2onfvy.bkt.clouddn.com/CyberSecuryty_Web_Headers_1.png)
+![加固前](http://riboseyim-qiniu.riboseyim.com/CyberSecuryty_Web_Headers_1.png)
 - 加固后的检测结果
-![加固后](http://omb2onfvy.bkt.clouddn.com/CyberSecuryty_Web_Headers_2.png)
+![加固后](http://riboseyim-qiniu.riboseyim.com/CyberSecuryty_Web_Headers_2.png)
 
 ## 参考文献
 - [SSL Man-in-the-Middle Attacks|SANS Institute InfoSec Reading Room](https://www.sans.org/reading-room/whitepapers/threats/ssl-man-in-the-middle-attacks-480)

@@ -7,9 +7,9 @@
 
 展馆位于珠海市三灶机场。机场本身是在一个南面临海的半岛，展会期间的主要流量方向来自市区、珠三角城市群、外地经广深中转人群。主要的人、车流量会从北、东、西三个方面汇入，穿越市区，经过跨海大桥以及机场高速，进入珠海西部区域。如图所示：
 
-![](http://ogtqvs10n.bkt.clouddn.com/Traffic_Question_ZH2016_01.png)
+![](http://riboseyim-qiniu.riboseyim.com/Traffic_Question_ZH2016_01.png)
 
-![](http://ogtqvs10n.bkt.clouddn.com/Traffic_Question_ZH2016_02.png)
+![](http://riboseyim-qiniu.riboseyim.com/Traffic_Question_ZH2016_02.png)
 
 
 这是一个典型的流量突发峰值场景：
@@ -17,9 +17,9 @@
 2、航展两年举办一次，每次一周。特别为此硬性扩容，经济性太差；
 3、整个业务链条存在明显的薄弱环节：珠海大桥（珠海大道主干道单向4车道，辅道单向3车道，7条车道的车流集中汇集在珠海大桥上桥处，而珠海大桥单向只有3车道）；
 
-![](http://ogtqvs10n.bkt.clouddn.com/Traffic_Question_ZH2016_030.png)
+![](http://riboseyim-qiniu.riboseyim.com/Traffic_Question_ZH2016_030.png)
 
-![](http://ogtqvs10n.bkt.clouddn.com/Traffic_Question_ZH2016_04.png)
+![](http://riboseyim-qiniu.riboseyim.com/Traffic_Question_ZH2016_04.png)
 
 <!--more-->
 
@@ -46,7 +46,7 @@ c) 取消三日通票，按日售票，通过票务系统引导，分摊每日�
 第三，安排大运量公共交通接驳，减少核心展区交通压力；
 第四，设置航展专用车道，保障公交、旅游包车等优先通行；
 第五，最薄弱环节珠海大道启用同向红绿灯，增设导流实线。
-![](http://ogtqvs10n.bkt.clouddn.com/Traffic_Question_ZH2016_06.png)
+![](http://riboseyim-qiniu.riboseyim.com/Traffic_Question_ZH2016_06.png)
 
 往届现场车辆大排长龙的景像今年没有出现，一路畅通。从技术上分析，上述方案能够取得明显效果，主要思路是一致的，即采用“负载均衡+缓存”机制，适当降低某些业务的优先级和时延，提升通行效率，保证整体可用性。具体表现为：
 
@@ -55,7 +55,7 @@ c) 取消三日通票，按日售票，通过票务系统引导，分摊每日�
 
 另外，在珠海大道开启二级负载均衡。主要措施：启用同向红绿灯，红绿灯口被重新划分为6个车道，每个车道会对应一个信号灯组，增设导流实线。限制加塞变道、不同方向车流抢道的现象发生。
 
-![](http://ogtqvs10n.bkt.clouddn.com/Traffic_Question_ZH2016_08.png)
+![](http://riboseyim-qiniu.riboseyim.com/Traffic_Question_ZH2016_08.png)
 
 **2、缓存机制**
 
@@ -71,11 +71,11 @@ c) 取消三日通票，按日售票，通过票务系统引导，分摊每日�
 此外，**出租车GPS可视化系统**、高配置的警用摩托车等装备也有一定特色。
 
 上述方案能够落实到位，我相信是与大量引用新型技术密不可分的。
-![](http://ogtqvs10n.bkt.clouddn.com/Traffic_Question_ZH2016_09.png)
+![](http://riboseyim-qiniu.riboseyim.com/Traffic_Question_ZH2016_09.png)
 
-![](http://ogtqvs10n.bkt.clouddn.com/Traffic_Question_ZH2016_12.png)
+![](http://riboseyim-qiniu.riboseyim.com/Traffic_Question_ZH2016_12.png)
 
-![](http://ogtqvs10n.bkt.clouddn.com/Traffic_Question_ZH2016_11.png)
+![](http://riboseyim-qiniu.riboseyim.com/Traffic_Question_ZH2016_11.png)
 
 --------------------------------
 ### 2016珠海航展图集

@@ -12,7 +12,7 @@
 ## What is Packet Capturing
 Packet capture is a computer networking term for intercepting a data packet that is crossing or moving over a specific computer network.Once a packet is captured, it is stored temporarily so that it can be analyzed. The packet is inspected to help diagnose and solve network problems and determine whether network security policies are being followed.
 
-![Packet Capture Overview](http://og2061b3n.bkt.clouddn.com/Packet_Capture_Overview.png)
+![Packet Capture Overview](http://riboseyim-qiniu.riboseyim.com/Packet_Capture_Overview.png)
 
 ## How can it be used
 
@@ -37,7 +37,7 @@ forensics for crime investigations.Whenever viruses, worms or other intrusions a
 
 >libpcap flow involving data copy from kernel to user space.
 
-![](http://og2061b3n.bkt.clouddn.com/Packet_Capture_Flow_1.png)
+![](http://riboseyim-qiniu.riboseyim.com/Packet_Capture_Flow_1.png)
 
 ```C
 //Compile with: gcc find_device.c -lpcap
@@ -133,7 +133,7 @@ snoop uses both the network packet filter and streams buffer modules to provide 
 #### BPF
 Berkeley Packet Filter，缩写BPF，是类Unix系统上数据链路层的一种接口，提供原始链路层封包的收发。BPF支持“过滤”封包，这样BPF会只把“感兴趣”的封包到上层软件，可以避免从操作系统内核向用户态复制其他封包，降低抓包的CPU的负担以及所需的缓冲区空间，从而减少丢包率。BPF的过滤功能是以BPF虚拟机机器语言的解释器的形式实现的，这种语言的程序可以抓取封包数据，对封包中的数据采取算术操作，并将结果与常量或封包中的数据或结果中的测试位比较，根据比较的结果决定接受还是拒绝封包。
 
-![BPF Overview](http://og2061b3n.bkt.clouddn.com/Packet_Capture_BPF.png)
+![BPF Overview](http://riboseyim-qiniu.riboseyim.com/Packet_Capture_BPF.png)
 
 ## Go Packet
 
@@ -179,7 +179,7 @@ func main() {
 
 ### Decoding Packet Layers
 
-![](http://og2061b3n.bkt.clouddn.com/Packet_Capture_Flow_2.png)
+![](http://riboseyim-qiniu.riboseyim.com/Packet_Capture_Flow_2.png)
 
 #### Capture Packet Workflow
 - Getting a list of network devices

@@ -24,7 +24,7 @@ gRPC 在推出的第一年内就被 CoreOS，Netflix，Square 和 Cockroach Labs
 
 ####  1.2 什么是 gRPC ?
 当我第一次遇到 gRPC，它使我想到 CORBA。两个框架都基于语言无关的接口定义语言（IDL） 声明服务，通过特定的语言绑定实现。
-![](http://og2061b3n.bkt.clouddn.com/OpenSource-gRPC.png)
+![](http://riboseyim-qiniu.riboseyim.com/OpenSource-gRPC.png)
 
 CORBA 和 gRPC 二者的设计，都是为了使客户端相信服务器在同一台机器。客户机在桩（Stub）上调用一个方法（method），调用过程由底层协议透明地处理。
 
@@ -45,7 +45,7 @@ Protocol Buffer 的最新版本是 proto3，支持多种开发语言的代码生
 4. 创建一个客户端调用服务
 5. 运行服务端和客户端
 
-![](http://og2061b3n.bkt.clouddn.com/Arch_gRPC_Workflow.png)
+![](http://riboseyim-qiniu.riboseyim.com/Arch_gRPC_Workflow.png)
 
 **Note:Node.js 客户端不需要生成存根（Stub），只要 Protocol Buffer 文件是可访问的，它就可以直接与服务端对话。**
 

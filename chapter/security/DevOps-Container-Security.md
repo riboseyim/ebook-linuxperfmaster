@@ -17,7 +17,7 @@
 
 容器提供了一种简单的应用程序打包方法将它们无缝地从开发、测试环境部署到生产环境。它有助于确保各种环境中的一致性，包括物理服务器、虚拟机（VM）或私有或公共云。领先的组织基于这些好处迅速采用容器，以便轻松地开发和管理增加业务价值的应用程序。
 
-![](http://og2061b3n.bkt.clouddn.com/Linux-Containers-Security-5.png)
+![](http://riboseyim-qiniu.riboseyim.com/Linux-Containers-Security-5.png)
 
 企业应用需要强壮的安全性，任何在容器中运行基础服务的人都会问：“容器是安全的吗？”、“可以让我们的应用程序信任容器吗？”
 
@@ -30,7 +30,7 @@
 
 容器是隔离和约束资源的 Linux 进程，使您能够在共享宿主内核中运行沙盒应用程序。您保护容器的方法应该与确保 Linux 上任何正在运行的进程的安全方法相同。放弃特权是重要的，目前仍然是最佳实践。更好的方法是创建尽可能少的特权容器。容器应该作为普通用户运行，而不是 root 用户。接下来，利用 Linux 中可用的多种级别的安全特性确保容器的安全： Linux 命名空间，安全增强的Linux（SELinux）， cgroups，capabilities 和安全计算模式（seccomp）。
 
-![](http://og2061b3n.bkt.clouddn.com/Linux-Containers-Security-1.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/Linux-Containers-Security-1.jpg)
 
 #### 2. 容器内容（使用可信源）
 当说到安全性的时候，对于容器内容来说意味着什么呢？。一段时间以来，应用程序和基础设施都是由现成的组件组成的。很多都来自于开源软件，例如如 Linux 操作系统，Apache Web 服务器，红帽 JBoss 企业应用平台，PostgreSQL 和 Node.js。基于容器的各种软件包版本现在一应俱全，所以你不需要建立自己。但是，与从外部源下载的任何代码一样，您需要知道包的起源、它们是由谁创建，以及它们内部是否存在恶意代码。
@@ -48,7 +48,7 @@
 
 最后，对定制的容器签名，这样可以确保它们在构建和部署环节之间不会被篡改。
 
-![](http://og2061b3n.bkt.clouddn.com/Linux-Containers-Security-4.png)
+![](http://riboseyim-qiniu.riboseyim.com/Linux-Containers-Security-4.png)
 
 #### 5. 控制集群中可部署的内容
 为了防备在构建过程中发生任何问题，或者在部署一个镜像后发现漏洞，需要增加以自动化的、基于策略的部署的另一层安全性。
@@ -71,7 +71,7 @@
 
 考虑到开发人员和运维人员拥有的广泛能力，强大的基于角色的访问控制是容器平台的关键元素。例如，编排管理服务器是访问的中心点，应该得到最高级别的安全检查。API 是大规模自动化容器管理的关键，用于验证和配置容器、服务和复制控制器的数据；对传入的请求执行项目验证；并调用其他主要系统组件上的触发器。
 
-![](http://og2061b3n.bkt.clouddn.com/Linux-Containers-Security-3.png)
+![](http://riboseyim-qiniu.riboseyim.com/Linux-Containers-Security-3.png)
 
 #### 7. 网络隔离
 在容器部署现代微服务应用程序往往意味着在多个节点分布式部署多个容器。考虑到网络防御，您需要一种在集群中隔离应用程序的方法。

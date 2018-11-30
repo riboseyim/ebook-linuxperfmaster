@@ -39,7 +39,7 @@
 
 >It is the basis of Kanban.
 
-![](http://ombx24fbq.bkt.clouddn.com/PM_Tools_kanban_Demo_5.png)
+![](http://riboseyim-qiniu.riboseyim.com/PM_Tools_kanban_Demo_5.png)
 
 >The power of Little’s Law to Kanban teams is not its ability to predict WIP, Thoughput or Leadtime. The true power lies in its ability to influence team behavior with its underlying assumptions.
 
@@ -60,13 +60,13 @@
 
 **Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure.任何组织在设计一套系统（广义概念上的系统）时，所交付的设计方案在结构上都与该组织的通信结构保持一致 -- Melvyn Conway, 1967**
 
-![](http://omb2onfvy.bkt.clouddn.com/MicroService_Org.png)
+![](http://riboseyim-qiniu.riboseyim.com/MicroService_Org.png)
 
 >《人月神话》：Adding manpower to a late software project makes it later --Fred Brooks, (1975)
 
 为了赶进度加程序员就像用水去灭油锅里的火一样，原因在于：沟通成本 = n(n-1)/2，沟通成本随着项目或者组织的人员增加呈指数级增长。很多项目在经过一段时间的发展之后，都会有不少恐龙级代码，无人敢挑战。比如一个类的规模就多达数千行，核心方法近千行，大量重复代码，每次调整都以失败告终。庞大的系统规模导致团队新成员接手困难，项目组人员增加导致的代码冲突问题，系统复杂度的增加导致的不确定上线风险、引入新技术困难等。应用领域：Micro-Service 微服务
 
-![](http://omb2onfvy.bkt.clouddn.com/MicroServices_Math_Demo.png)
+![](http://riboseyim-qiniu.riboseyim.com/MicroServices_Math_Demo.png)
 
 #### 4. Parkinson’s Law
 

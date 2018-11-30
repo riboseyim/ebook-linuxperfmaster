@@ -20,7 +20,7 @@ This article is part of an **Distributed Tracing and Monitoring System** tutoria
 #### logging
 日志（logging）的特征是处理离散事件。按照事件发生的源可以分为 Application Events、System Events、Service Events、DNS Events 等。通常也包含针对原始记录的处理过程，例如：通过 Syslog 将应用程序调试或错误消息发送到 Elasticsearch ; 审计记录通过 Kafka 将数据推送到类似 BigTable 的数据池; 从服务调用中提取特定的请求元数据, 并发送错误跟踪服务（例如 [NewRelic](https://ruby-china.org/topics/22379)）。
 
-![](http://og2061b3n.bkt.clouddn.com/DTM-MetricsTracingLogging-v2.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTM-MetricsTracingLogging-v2.png)
 
 #### tracing
 跟踪（tracing）的特征：跟踪处理的是请求范围内的信息（request-scoped），例如 SQL 语句在数据库的实际执行时间或 HTTP 请求耗时。以 DTrace & SystemTap 为代表的 [动态追踪技术](https://riboseyim.github.io/2016/11/26/DTrace/) 基于操作系统内核，不需要埋点就可以提供高级性能分析和调试功能。但是在分布式架构场景中也有一些不足，例如某些功能需要多次调用 RPC 远程服务，这些服务分布在多台不同的 host/vm/docker 中，如果需要测量该功能响应的完整持续时间就有难度。
@@ -31,11 +31,11 @@ This article is part of an **Distributed Tracing and Monitoring System** tutoria
 
 - 串行调用函数方法，包括网络访问和持久化操作
 
-![](http://og2061b3n.bkt.clouddn.com/zipkin-%E4%B8%B2%E8%A1%8C.png)
+![](http://riboseyim-qiniu.riboseyim.com/zipkin-%E4%B8%B2%E8%A1%8C.png)
 
 - 示例（OpenCensus with OpenZipkin）：并行调用函数方法（Go routine）
 
-![](http://og2061b3n.bkt.clouddn.com/zipkin-%E5%B9%B6%E8%A1%8C.png)
+![](http://riboseyim-qiniu.riboseyim.com/zipkin-%E5%B9%B6%E8%A1%8C.png)
 
 ## Google Dapper Family
 
@@ -59,7 +59,7 @@ TChannel 协议规范在二进制格式中直接定义了追踪字段：“ span
 - jaeger-ui：一个基于 React 的前端 webui
 - jaeger spark: 是一个基于 Spark 聚合数据管道，用以完成服务依赖分析
 
-![](http://og2061b3n.bkt.clouddn.com/DTM-Uber-Jaeger.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTM-Uber-Jaeger.png)
 
 #### 淘宝 EagleEye（鹰眼）
 
@@ -98,9 +98,9 @@ TChannel 协议规范在二进制格式中直接定义了追踪字段：“ span
 
 目前多数分布式追踪系统采用异步写入日志、建立缓冲存储（基于内存或者内存数据库）、设置采样阈值策略（包括一定情况下直接丢弃）的方式控制追踪负载。Google Dapper 公布的性能损耗测评数据如下：
 
-![](http://og2061b3n.bkt.clouddn.com/DTM-Dapper-Overhead-1.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/DTM-Dapper-Overhead-1.jpg)
 
-![](http://og2061b3n.bkt.clouddn.com/DTM-Dapper-Overhead-2.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/DTM-Dapper-Overhead-2.jpg)
 
 **淘宝 EagleEye** ：1）专属日志输出实现，日志异步写入来避免 hang 住业务线程，可调节日志输出缓冲大小，控制每秒写日志的 IO 次数等。2）全局采样开关，在运行期控制调用链的采样率（根据 TraceId 来决定当前的这一次访问日志是否输出）。比如采样率被设置为 10，一部分调用链日志完全不输出，只有 hash(traceId) mod 10 的值等于0的日志才会输出。例如核心入口的调用量样本空间足够大（每日百万次以上级别），假设统计误差 0.1% ，即使开启1/10的采样总和误差也是可以接受的。
 

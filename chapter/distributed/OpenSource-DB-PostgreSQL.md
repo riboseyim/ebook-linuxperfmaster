@@ -90,7 +90,7 @@ $ rm -rf ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 
 ## Architecture OverView
 
-![](http://omb2onfvy.bkt.clouddn.com/DB_PostgreSQL_Overview.png)
+![](http://riboseyim-qiniu.riboseyim.com/DB_PostgreSQL_Overview.png)
 
 ## 扩展阅读
 - [Data Model Generation for PostgreSQL](http://packagemain.blogspot.it/2016/05/data-model-generation-for-postgresql.html)

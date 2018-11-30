@@ -4,7 +4,7 @@
 这本书由他和大卫·戴蒙德（David Diamond）联合撰写，叙述林纳斯·托瓦兹从小的成长历程、创建Linux内核、Git的过程以及软件世界的江湖恩怨。
 全书主体部分采用一问一答的访谈形式，由戴蒙德在他们的的汽车旅行过程中记录完成；另外一部分收录了林纳斯的几篇专题论述文章，比如作者关于软件版权的一些批判性意见。
 
-![](http://og2061b3n.bkt.clouddn.com/Linus_Torvalds_BookTheme.png)
+![](http://riboseyim-qiniu.riboseyim.com/Linus_Torvalds_BookTheme.png)
 
 ## I was an ugly child.I was a nerd.I was A geek.
 
@@ -21,12 +21,12 @@ geek和nerd这个词类似，江湖俗称发烧友或怪咖，通常被用于形
 1. 教授之家
    林纳斯·托瓦兹的外祖父家族原来只是贫穷的农民，直到外祖父那一代，六兄弟中有两人获得博士学位。（p13）Leo Törnqvist是芬兰第一批统计学教授，同时意外地开启了林纳斯的编程之路。教授购买了一台Commodore VIC 20电脑，期望用户解决工作中遇到的统计计算问题，显然老教授并不善此道。彼时小林纳斯11岁，仅仅是因为好玩，通过阅读手册自学了指令集，并开始使用BASIC语言编写一些统计学方面的小程序。
 
-![](http://og2061b3n.bkt.clouddn.com/Linus_Torvalds_Family_201705.png)
+![](http://riboseyim-qiniu.riboseyim.com/Linus_Torvalds_Family_201705.png)
 
 2. 破碎之家（dysfunctional family）
    林纳斯的父母在他很小的时候就离异了。“At times we lived with my dad and his girlfriend, at other times Sara lived with my dad and I lived with my mom.At times both of us lived with my mom.” 他的祖父晚年中风，祖母也年老体弱，一家老小挤在一所旧房子里。作为职业女性，林纳斯的母亲经常需要工作到很晚，林纳斯只得和妹妹自己去购物、安排晚餐。在艰难的日子里，电脑是唯一的寄托。“The computer found a home on a tiny desk against the window, maybe two feet from my bed.(p19)”
 
-![](http://og2061b3n.bkt.clouddn.com/Linux_Torvalds_VIC20.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/Linux_Torvalds_VIC20.jpg)
 
 3. 左派之家
    Torvalds家族的一大鲜明特色就是左翼传统。祖父是一名诗人和记者，父亲、母亲都是记者，曾是芬兰学生运动、左翼社会运动的活跃分子。直到林纳斯，坚持开放源代码理念也就顺理成章了。他本人对于金钱本身一直也没什么概念，直到1999年，Red Hat公司依靠Linux赚到不好意思以后，主动要求赠送一大笔股票期权给林纳斯（估值2000万美元）。在黑客的江湖里，林纳斯也许是最知名的“喷子”之一：例如，抨击Nvidia是他所接触过的“最烂的公司”（the worst company）和 “最麻烦的公司”（the worst trouble spot），有一次与人争论Git为何不使用C++开发时与对方用“放屁”（原文为“bullshit”、“BS”）互骂，更曾以“一群自慰的猴子”（原文为“OpenBSD crowd is a bunch of masturbating monkeys”）来称呼OpenBSD团队。不用奇怪，这也许只是他们家的记者基因灵魂附体而已。

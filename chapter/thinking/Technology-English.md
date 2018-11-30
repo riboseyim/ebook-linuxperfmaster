@@ -17,7 +17,7 @@
 本篇文章接下来将结合挨踢行业的一些情况，严肃地讨论一下技术人员的语言能力问题，希望您读完以后能够有所触动、有所行动、有所裨益。
 
 
-![](http://ombx24fbq.bkt.clouddn.com/TE_Theme.png)
+![](http://riboseyim-qiniu.riboseyim.com/TE_Theme.png)
 
 ## 全英文技术学习的必要性
 
@@ -39,7 +39,7 @@
 
 对比文艺类书籍，专业书籍是垂直市场、受众人群少、销量小。大部分（50%以上）的IT书籍，销售量不超过3000本，只能刚刚弥补纸张、印刷、作者、编辑的成本，对出版社来说，毫无利润。
 
-![中文图书出版市场-计算机类别](http://ombx24fbq.bkt.clouddn.com/TE_Publish_Chinese_Computer.png)
+![中文图书出版市场-计算机类别](http://riboseyim-qiniu.riboseyim.com/TE_Publish_Chinese_Computer.png)
 
 #### 中文作者的报酬
 出版社给作者的版税是8%，现在一本书定价大约为50～100元，卖一本书作者到手4～8块，保本销售才到手12000～24000元，北上广稍微资深一点的码农月薪一般都比这个高，有写书的功夫还不都玩去了。翻译译者的报酬就更低了，已经十多年没有变了（耗时数月，斟酌字句：千字60元RMB)，所以技术书籍的译者，基本上是在为人民服务、跟做公益差不多。
@@ -49,7 +49,7 @@
 ### 现状三：中文对学术的贡献度低
 如果前面两个问题还可以通过 **国民教育改革** 、**知识产权制度建设** 以及国内相关产业的**技术提升**而逐步改善，那么国人**原创能力和动力不足**的现实问题更加突出：互联网上有英语使用者9.5亿，中文网民7.6亿紧随其后，这个数量远远超过排名第三、只有2.9亿使用者的西班牙语网民。但是互联网的资讯数量，英语信息占到51.7%，紧随其后的俄语和日语信息，分别是6.5%和5.6%。中文排名一下子落到了第九位，只占整个互联网信息总量的2%，甚至还逊于2.5%的葡萄牙语、2.4%的意大利语。
 
-![技术资料由英文转为中文目前还需要较长的周期](http://ombx24fbq.bkt.clouddn.com/TE_Compare_20170629.png)
+![技术资料由英文转为中文目前还需要较长的周期](http://riboseyim-qiniu.riboseyim.com/TE_Compare_20170629.png)
 
 上述数据显示：**使用中文的人更喜欢浏览网络上的资讯，但对创作新的内容并不感兴趣**。这一点亦可以在微信朋友圈上得到印证：大多数人习于转发，习惯于转述流行的热帖，而有一定创作能力或者说表达自己观点的人，可以说是凤毛麟角。
 
@@ -86,7 +86,7 @@
 -  应用者的讨论与实践总结
 -  实践应用。实践出真知，读完以上所有资料之后顶多算得到一些认识，要升华为自己掌握的知识，必须通过实践综合运用。
 
-![](http://ombx24fbq.bkt.clouddn.com/TE_Known_King.png)
+![](http://riboseyim-qiniu.riboseyim.com/TE_Known_King.png)
 
 从经典的入门专业教材一本本开始读起，找自己专业教材对应的英文原版或者参考书刊的对应原版。
 >当时班上一哥们问我如何能过英语六级考试，我就建议他改看计算机类的原版教材，别再看中文教材了，这样本专业和英语两不误。结果后来他果然轻松过了六级，貌似考得比我还高呢。后来他逢人就夸我的法子好，哈哈！ ——— 章亦春 @agentzh
@@ -110,8 +110,8 @@
 
 例如，我对系统性能优化方面受益最多的来自于 **Brendan Gregg**，他维护的个人博客发布了大量的原创内容，出版了包括[《性能之巅》]()在内的一大批书籍，囊括了性能问题领域的技术、工具、方法论等方方面面，并且持续保持着活跃的更新频率。又如kanban这一方法论，我很多年前就已经知道，但是一直不甚了了、未能实践，但是看过 **Marcus Hammarberg** 的视频[《Kanban in Action》]()之后，一下子就有触类旁通的感觉，很快就能娴熟应用。
 
-![](http://ombx24fbq.bkt.clouddn.com/TE_Slideshare_PPT.png)
-![](http://ombx24fbq.bkt.clouddn.com/PM_Tools_kanban_Demo_6.png)
+![](http://riboseyim-qiniu.riboseyim.com/TE_Slideshare_PPT.png)
+![](http://riboseyim-qiniu.riboseyim.com/PM_Tools_kanban_Demo_6.png)
 
 ### 五、善用效率工具，持续改进
 
@@ -120,9 +120,9 @@
 >“把所有事情都从你的脑袋里弄出来。在事情出现，而不是在事情爆发的时候,就做好相关行动的一系列决定。以合适的类别组织好你的项目的各种提醒以及下一步的行动。保持你的系统更新和完整，充分地检查，使你在任何时候都能信任你的对于你正在做（或者不做）的事情直觉的选择。”
 
 一般过程：“搜集-处理-整理-行动-检查”。举例：将Twitter上发现的感兴趣内容发送到OmniFocus收件箱，整理分类并 **设置一个要求完成时间** （最关键的要素，没有完成时间的计划都是耍流氓），定期检查待办事项完成情况，再开启下一轮调整优化。
-![](http://ombx24fbq.bkt.clouddn.com/PM_Tools_Mac_Service_Right.png)
-![](http://ombx24fbq.bkt.clouddn.com/PM_Tools_OmniFocus_New.png)
-![](http://ombx24fbq.bkt.clouddn.com/PM_Tools_OmniFocus_CheckDone.png)
+![](http://riboseyim-qiniu.riboseyim.com/PM_Tools_Mac_Service_Right.png)
+![](http://riboseyim-qiniu.riboseyim.com/PM_Tools_OmniFocus_New.png)
+![](http://riboseyim-qiniu.riboseyim.com/PM_Tools_OmniFocus_CheckDone.png)
 
 ## 总结：从input到output
 

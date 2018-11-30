@@ -19,15 +19,15 @@ This article is part of an **Virtualization Technology** tutorial series. Make s
 
 我们还看到数据库解决方案的使用在增加, 例如在容器环境中运行 [PostgreSQL]((https://riboseyim.github.io/2018/01/03/OpenSource-DB-PostgreSQL/)) 和 MongoDB 。这是一个信号, 表明在容器中部署有状态服务已经成为现实。容器的短暂性，让许多人对于在容器中运行高价值数据服务抱有怀疑态度, 但是市场回答了问题的解决方案--即为微服务设计的持久、便携和共享存储。数据显示, 客户开始转向完全由容器驱动的环境。
 
-![](http://omb2onfvy.bkt.clouddn.com/Docker_2018_01.png)
+![](http://riboseyim-qiniu.riboseyim.com/Docker_2018_01.png)
 
 #### 容器密度
 
 在2017年每个主机的容器数的中位数是 10 。2018年，这个数字上升到 15，同比增长 50% 。另一方面，我们看到一个客户的单台主机上运行了 154 个容器，比我们去年观察到的最大 95 个增长了。
 
-![](http://omb2onfvy.bkt.clouddn.com/Docker_2018_02.png)
+![](http://riboseyim-qiniu.riboseyim.com/Docker_2018_02.png)
 
-![](http://omb2onfvy.bkt.clouddn.com/Docker_2018_03.png)
+![](http://riboseyim-qiniu.riboseyim.com/Docker_2018_03.png)
 
 #### 容器运行环境
 
@@ -37,13 +37,13 @@ This article is part of an **Virtualization Technology** tutorial series. Make s
 
 事实上，在过去的一年里, 客户对其他平台的使用增加了。CoreOS RKT 显著增长到 12% , Mesos containerizer 占有 4% 。LXC 也在增长, 尽管从业人员规模比例还较低。数据显示, 客户在生产环境中使用 "non-Docker" 解决方案更加便利了。
 
-![Container runtimes: Docker leads, followed by rkt and Mesos.](http://omb2onfvy.bkt.clouddn.com/Docker_2018_04.png)
+![Container runtimes: Docker leads, followed by rkt and Mesos.](http://riboseyim-qiniu.riboseyim.com/Docker_2018_04.png)
 
 #### 容器存活周期
 
 95% 的容器存活时间低于一周。
 
-![](http://omb2onfvy.bkt.clouddn.com/Docker_2018_05.png)
+![](http://riboseyim-qiniu.riboseyim.com/Docker_2018_05.png)
 
 容器和服务的生存时间是多少？ 我们观察了容器、容器镜像和服务的数量, 它们在短时间内开始并停止, 存活10秒或更短, 或者一周或更长。下图显示不同间隔内的容器百分比。 11% 的容器活了不到10秒。大部分容器（27%） 的生存期在五分钟之内。
 
@@ -53,7 +53,7 @@ This article is part of an **Virtualization Technology** tutorial series. Make s
 
 我们还观察了容器镜像的使用时间。通过查看这些数据, 我们了解到客户在 DevOps CI/CD 流程的一部分中是如何频繁地进行新的容器更新部署的。 一小部分 -- 一个百分点--在不到10秒内更新。69% 的容器镜像在一周的跨度内更新。
 
-![](http://omb2onfvy.bkt.clouddn.com/Docker_2018_06.png)
+![](http://riboseyim-qiniu.riboseyim.com/Docker_2018_06.png)
 
 #### 服务存活周期
 
@@ -61,7 +61,7 @@ This article is part of an **Virtualization Technology** tutorial series. Make s
 
 我们看到大多数服务(67%)生存期超过一周。少量的服务在更频繁的基础上被停止, 但是对于大多数客户来说, 目标是让应用程序 24 小时持续工作。容器和 Pods 可能会来了又走, 但是服务持续处于启动并且可用状态。
 
-![Most container-based services stay up beyond a week.](http://omb2onfvy.bkt.clouddn.com/Docker_2018_07.png)
+![Most container-based services stay up beyond a week.](http://riboseyim-qiniu.riboseyim.com/Docker_2018_07.png)
 
 #### 容器编排器
 
@@ -76,7 +76,7 @@ This article is part of an **Virtualization Technology** tutorial series. Make s
 
 2. Docker 企业版, 具有通用控制平面 (Universal Control Plane (UCP) ), 在许多操作层面上降低了启动 Swarm 的门槛。
 
-![编排器份额： Kubernetes 和 Swarm 增长, Mesos 萎缩。](http://omb2onfvy.bkt.clouddn.com/Docker_2018_08.png)
+![编排器份额： Kubernetes 和 Swarm 增长, Mesos 萎缩。](http://riboseyim-qiniu.riboseyim.com/Docker_2018_08.png)
 
 #### 容器集群大小
 
@@ -87,7 +87,7 @@ This article is part of an **Virtualization Technology** tutorial series. Make s
 
 我们的客户, 往往是更大的企业（在私有数据中心运行 Sysdig 解决方案）采用 OpenShift 的数量比我们的 SaaS 客户数量还要多。 Rancher Labs 于 2015 年出现, 为 Docker Swarm 和 Kubernetes 提供支持。直到 2017 年, Rancher （“大农场主”）才完全兼容 Kubernetes 作为其编排器。
 
-![Mesos clusters 50% larger than Kubernetes. Swarm 30% smaller.](http://omb2onfvy.bkt.clouddn.com/Docker_2018_09.png)
+![Mesos clusters 50% larger than Kubernetes. Swarm 30% smaller.](http://riboseyim-qiniu.riboseyim.com/Docker_2018_09.png)
 
 
 #### Kubernetes 分发版
@@ -96,7 +96,7 @@ This article is part of an **Virtualization Technology** tutorial series. Make s
 
 OpenShift 获得接受不应该是一个惊喜。Kubernetes 于 2014 年诞生于 Google , Red Hat 也发布了该平台的 OpenShift 分发版, 并提出了针对企业客户实现 Kubernetes 的目标。
 
-![Open source Kubernetes most used, followed by OpenShift and Rancher distributions.](http://omb2onfvy.bkt.clouddn.com/Docker_2018_10.png)
+![Open source Kubernetes most used, followed by OpenShift and Rancher distributions.](http://riboseyim-qiniu.riboseyim.com/Docker_2018_10.png)
 
 #### 容器健康与应用性能监控
 
@@ -107,7 +107,7 @@ OpenShift 获得接受不应该是一个惊喜。Kubernetes 于 2014 年诞生�
 - 1）资源利用率
 - 2）容器数量
 
-![最流行的告警条件：服务响应时间和正常运行时间](http://omb2onfvy.bkt.clouddn.com/Docker_2018_11.png)
+![最流行的告警条件：服务响应时间和正常运行时间](http://riboseyim-qiniu.riboseyim.com/Docker_2018_11.png)
 
 **默认情况下容器没有资源限制** 。鉴于客户越来越注意容器限制方面的告警，这意味着他们正在使用 Docker运行时配置来控制容器使用内存，CPU或磁盘I / O 的上限，用户希望知道何时会超出阈值，应用程序的性能风险需要处于可控状态。
 
@@ -119,7 +119,7 @@ Kubernetes 管理员也经常使用 **基于事件的告警（ Event-based alert
 
 Http 错误可能表明软件或基础架构存在问题，最终会影响性能。
 
-![Kubernetes pod and namespace rises to top of alert scoping in 2018.](http://omb2onfvy.bkt.clouddn.com/Docker_2018_12.png)
+![Kubernetes pod and namespace rises to top of alert scoping in 2018.](http://riboseyim-qiniu.riboseyim.com/Docker_2018_12.png)
 
 > Alerts are not a one-size-fits-all approach.
 
@@ -135,7 +135,7 @@ Http 错误可能表明软件或基础架构存在问题，最终会影响性能
 
 55％ 的 Sysdig SaaS 用户使用与 Java 应用程序相关的 JMX 指标。这与我们看到的 Java 应用程序部署非常广泛的事实一致。 StatsD 占有 29％ 的份额，Prometheus 占有 20％ 的份额（预计这个数字会随着时间的推移而增长）。
 
-![JMX is the most used custom metric format.](http://omb2onfvy.bkt.clouddn.com/Docker_2018_13.png)
+![JMX is the most used custom metric format.](http://riboseyim-qiniu.riboseyim.com/Docker_2018_13.png)
 
 #### 容器注册
 
@@ -146,7 +146,7 @@ Http 错误可能表明软件或基础架构存在问题，最终会影响性能
 
 2018 年前三名中，Google Container Registry（GCR）的比例最高，其次是 Quay ,之后是 Docker和 Amazon Elastic Container Registry（ECR）。 GCR 和 ACR 都是完全基于云托管的（private Docker container registries）。Quay 和 Docker 既可以用作本地解决方案也可以在云中运行（注：Sysdig 的用户群只有 50％ 能够清楚地识别出容器注册方案）
 
-![Container registry use is divided across public and private solutions.](http://omb2onfvy.bkt.clouddn.com/Docker_2018_14.png)
+![Container registry use is divided across public and private solutions.](http://riboseyim-qiniu.riboseyim.com/Docker_2018_14.png)
 
 >New approaches are maturing and helping organizations develop applications more quickly to solve real business challenges and compete in the digital marketplace.
 

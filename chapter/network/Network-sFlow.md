@@ -17,7 +17,7 @@
 #### 2、网络分层对传感器的影响
 总的来说，网络传感器的焦点是OSI模型中的第2层～第4层，而服务传感器的焦点是第5层及以上。分层对网络流量的影响中，还需要考虑最大传输单元（MTU）：数据帧尺寸的上限，影响到介质中可以传送的封包的最大尺寸，以太网的MTU为1500字节，即IP封包不会超过这个尺寸。OSI模型第5层会话层需要考虑的情况是会话加密，加密后的信息无法直接理解；在第6层和第7层中，必须知道协议细节，才能提取有意义的信息。   
 
-![](http://og2061b3n.bkt.clouddn.com/Network_Layer_201707.png)                                       
+![](http://riboseyim-qiniu.riboseyim.com/Network_Layer_201707.png)                                       
 
 ## 二、网络分析技术
 网络流量反映了网络的运行状态，是判别网络运行是否正常的关键。如果网络所接收的流量超过其实际运载能力，就会引起网络性能下降。网络中流量的各种参数主要包括：接收和发送数据报、丢包率、数据报延迟。
@@ -34,7 +34,7 @@ IF-MIB::ifHCInOctets.2 = Counter64: 12343743
 IF-MIB::ifHCInOctets.3 = Counter64: 7123
 IF-MIB::ifHCInOctets.21 = Counter64: 3854
 ```
-![](http://og2061b3n.bkt.clouddn.com/Flow_RRDTool_Demo_1.png)
+![](http://riboseyim-qiniu.riboseyim.com/Flow_RRDTool_Demo_1.png)
 
 #### 2、RMON
 SNMP是基于TCP/IP、应用最广泛的网管协议，但是也有一些明显的不足，如：SNMP使用轮询方式采集数据信息，在大型网络中轮询会产生巨大的网络管理通讯报文；不支持管理进程的分布式管理，它将收集数据的负担加在网管站上，网络管理站会成为瓶颈；只能从这些管理信息库中获得单个设备的局部信息，标准管理信息库MIB-II(RFC1213)和各厂家的专有MIB库主要提供设备端口状态、流量、错误包数等数据，要想获得一个网段的性能信息是比较困难。
@@ -53,11 +53,11 @@ NetFlow最早由 Cisco 研发的流量汇总标准，最初用于网络服务计
 8. Source and destination AS
 9. TCP_Flag & TOS
 
-![](http://og2061b3n.bkt.clouddn.com/Flow_Vendor_Supported_201707.png)
+![](http://riboseyim-qiniu.riboseyim.com/Flow_Vendor_Supported_201707.png)
 
 **NetFlow vs IPFIX** NetFlow 的主力实现版本是 v5，但是 v5 主要针对 IPv4 存在很多限制，因此 Cisco 推出了基于模版的 NetFlow v9 。在NetFlow v9 的基础上，IETF在2008年发布了标准化的 IPFIX( Internet Protocol Flow Information eXport)（RFC5101/5102），IPFIX 提供了几百种流字段。另外，Juniper也有一套自己的标准 **J-Flow** 。
 
-![](http://og2061b3n.bkt.clouddn.com/Network_NetFlow_Arch.png)
+![](http://riboseyim-qiniu.riboseyim.com/Network_NetFlow_Arch.png)
 
 **sFlow** (Sampled Flow, 采样流，RFC3176 )是另一种一种基于报文采样的网络流量监控技术，主要用于对网络流量进行统计分析。sFlow 2001年由lnMon公司提出来，目前是IEFE的一个开放标准，可提供完整的第二层到第四层、全网络范围内的流量信息。sFlow 关注的是接口的流量情况、转发情况以及设备整体运行状况，因此适合于网络异 常监控以及网络异常定位，通过 Collector 可以以报表的方式将情况反应出来，特别适合于企业网用户 。sFlow Agent内嵌于网络设备中，在 sFlow 系统中收集流量统计数据发送到 Collector 端供分析。
 
@@ -81,7 +81,7 @@ NetFlow最早由 Cisco 研发的流量汇总标准，最初用于网络服务计
 
 #### 1、面向流向分析的可视化
 文中开头我们就提到测量网络的第一步就是获得网络拓扑图，如果要获得全局角度实时感知能力，需要在拓扑的基础之上叠加通过各种网络分析技术获得的流量/Flow/事件等信息，进而处理分析网络异常流量。能够实用的数据分析具有相当的复杂性，需要专门的工具软件，区分正常流量数据和异常流量数据、对于“异常模式”的算法训练都有一定门槛，因此存在大量的开源和商业解决方案。
-![](http://og2061b3n.bkt.clouddn.com/Flow_DynamicTopo_LiveAction_1.png)
+![](http://riboseyim-qiniu.riboseyim.com/Flow_DynamicTopo_LiveAction_1.png)
 
 #### 2、面向故障诊断的可视化
 
@@ -91,7 +91,7 @@ NetFlow最早由 Cisco 研发的流量汇总标准，最初用于网络服务计
 
 一个典型的故障场景：两个服务之间发生故障、无法收发信息，可以通过tcpdump的抓包，并将抓包结果在WireShark上分析，基于染色的方式通信失败的报文被高亮提示。TCP通信中客户端向服务端发送tcp zero window（表示没有window可以接收新数据），如果出现该特征一般可以确定故障是由接收端服务器TCP缓冲区占满的引起，应将排查方向锁定在接收端。关于网络数据包的捕获、过滤、分析的具体实现细节，可以参考：[Packet Capturing:关于网络数据包的捕获、过滤和分析](http://riboseyim.github.io/2017/06/16/Pcap/)
 
-![wireshark应用案例：TCP Window Zero](http://og2061b3n.bkt.clouddn.com/PacketCapturing_WinZero_2015.png)
+![wireshark应用案例：TCP Window Zero](http://riboseyim-qiniu.riboseyim.com/PacketCapturing_WinZero_2015.png)
 
 在企业应用中，网络监测数据通常需要与基础监控平台融合才能发挥最大价值（开源的方案Zabbix/Ganglia/Nagios／Graphite等）。Collectd与Ganglia是竞争关系，都是C语言开发,数据输出都是RRDTool，性能应该差不多，Collectd不包含图形化组件。zabbix是覆盖面比较广的综合套件，除了采集还有告警等其它管理功能，专业性和大规模应用方面可能就不太强。Nagios在思路方面比较接近zabbix,走的是综合性路子，侧重于告警方案：“Ganglia is more concerned with gathering metrics and tracking them over time while Nagios has focused on being an alerting mechanism.” 在Ganglia项目中提供了一个 gmond_proxy 可以搭配 sFlow-RT 支持 NetFlow／sFlow 的数据收集，如果是自己实现 sFlow-RT 类似的组件也需要考虑对 Logstash/splunk的支持。
 
@@ -103,7 +103,7 @@ NetFlow最早由 Cisco 研发的流量汇总标准，最初用于网络服务计
 |Nagios|C ，PHP（front-end）| Core+Plugins |包含多种图形化扩展插件|
 |[Grafana](http://docs.grafana.org/features/panels/graph/) | Go | 指标数据的可视化展现板 | 需要提前对数据进行时序化处理，例如 InfluxDB 等 |
 
-![](http://og2061b3n.bkt.clouddn.com/Network_sFlow_Arch.png)
+![](http://riboseyim-qiniu.riboseyim.com/Network_sFlow_Arch.png)
 ![](http://1.bp.blogspot.com/--W4Io9SdkCA/Vme0AecgIKI/AAAAAAAACOM/WRkZQRZNUVo/s1600/gmond-proxy.png)
 
 #### 3、面向安全分析的可视化
@@ -112,8 +112,8 @@ NetFlow最早由 Cisco 研发的流量汇总标准，最初用于网络服务计
 - 地理位置服务，根据IP地址确定改地址的物理位置信息（坐标）：[MaxMind GeoIP](https://www.maxmind.com/zh/geoip-demo)
 - 安全威胁情报服务，通过信息共享渠道了解识别攻击者的来源、类型和安全厂商确认情况，做到知己知彼。
 
-![](http://og2061b3n.bkt.clouddn.com/ntopng-geomap.png)
-![](http://og2061b3n.bkt.clouddn.com/Cyber-Security-Weibu-Demo.png)
+![](http://riboseyim-qiniu.riboseyim.com/ntopng-geomap.png)
+![](http://riboseyim-qiniu.riboseyim.com/Cyber-Security-Weibu-Demo.png)
 
 
 ## 参考文献

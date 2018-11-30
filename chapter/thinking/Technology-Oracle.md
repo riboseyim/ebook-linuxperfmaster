@@ -14,7 +14,7 @@
 
 随着近年的业务暴涨、负载上升、硬件老化，服务器、磁盘都时有故障发生，负载水平线逼近极限，故障率还有加速抬头的趋势。整个运营团队面临了巨大的客户压力，提升系统稳定性的巨大挑战摆在了大家面前。
 
-![迁移拓扑](http://o8m8ngokc.bkt.clouddn.com/oracle-trans-go.png)
+![迁移拓扑](http://riboseyim-qiniu.riboseyim.com/oracle-trans-go.png)
 
 ## 二、主要困难
 
@@ -32,11 +32,11 @@
 系统的拓扑结构最初是星型：以数据库和应用服务器为核心，外挂近100台服务器。数据库服务器配置双网卡，连通内网、外网。
 
 
-![迁移前](http://o8m8ngokc.bkt.clouddn.com/oracle-trans-t1.png)
+![迁移前](http://riboseyim-qiniu.riboseyim.com/oracle-trans-t1.png)
 
 虽然星型结构简单易用，却也存在较大的安全隐患。在早期建设的时候，规范尚未健全，还可以用业务优先的理由搪塞过去。在本期工程中，非常明确必须要完成内外网分离的改造。
 
-![迁移后](http://o8m8ngokc.bkt.clouddn.com/oracle-trans-t2.png)
+![迁移后](http://riboseyim-qiniu.riboseyim.com/oracle-trans-t2.png)
 
 #### 2.3 困难3: 安全一票否决
 Oracle 版本由10g 升级到 11g，集中管理访问权限。
@@ -99,7 +99,7 @@ Oracle 版本由10g 升级到 11g，集中管理访问权限。
 预配置／检查工具；
 连接 切换 & 回退 工具；
 
-![割接流程](http://o8m8ngokc.bkt.clouddn.com/oracle-trans-cflow-1.png)
+![割接流程](http://riboseyim-qiniu.riboseyim.com/oracle-trans-cflow-1.png)
 
 ## 四、失败的体验：没有一帆风顺
 
@@ -127,9 +127,9 @@ Oracle 版本由10g 升级到 11g，集中管理访问权限。
 为了提高安全性，防止暴力破解数据库中用户的密码，Oracle默认提供了一种机制：**延长失败尝试响应**。
 这种策略是：在连续使用错误密码反复尝试登录时，从第四次错误尝试开始，每次增加1秒的延迟，最长延迟目前是10秒。使用这种手段可以相对比较有效的防治用户密码的暴力破解。
 
-![01](http://o8m8ngokc.bkt.clouddn.com/oracle-trans-test1.png)
-![02](http://o8m8ngokc.bkt.clouddn.com/oracle-trans-test2.png)
-![03](http://o8m8ngokc.bkt.clouddn.com/oracle-trans-test3.png)
+![01](http://riboseyim-qiniu.riboseyim.com/oracle-trans-test1.png)
+![02](http://riboseyim-qiniu.riboseyim.com/oracle-trans-test2.png)
+![03](http://riboseyim-qiniu.riboseyim.com/oracle-trans-test3.png)
 
 由于系统服务器较多，历史遗留程序瞬间就触发该机制，导致所有应用不可用。
 

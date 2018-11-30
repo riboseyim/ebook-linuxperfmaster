@@ -11,7 +11,7 @@ Graphite 是处理可视化和指标数据的优秀开源工具。它有强大�
 
 Graphite 部署痛苦的部分原因是，它是由三个不同的元素组成（当然，如果包括指标采集就是四个），这些取决于你的环境，只有其中一个或多个默认元素可能不能满足你的需要。
 ￼
-![Graphite  Architecture Diagram](http://og2061b3n.bkt.clouddn.com/Graphite-OverView-2.png)
+![Graphite  Architecture Diagram](http://riboseyim-qiniu.riboseyim.com/Graphite-OverView-2.png)
 
 虽然 Graphite 包含三个组件可能会导致一些实施的问题，但也有积极的成果。每一个模块块都是一个独立的单元，这样你就可以按照实际的需要混合和匹配使用三个组件中的哪一个。同时意味着您可以为自己构建一个完全定制化的 Graphite 部署方案。
 
@@ -75,12 +75,12 @@ influxdata 支持 Carbon 使用的协议，使它能够悄悄置换 Whisper，�
 #### 4. 可视化组件  – Graphite-Web 和 Grafana
 一旦你收集并存储了指标数据，就下来的步骤就是可视化它们。Graphite-web 的角色就是提供可视化。 Graphite-web 是一种基于 Django 的 Web 应用程序，提供指标数据可视化和交互能力。它在数据的处理方面提供了相当多的能力，但可视化组件并不十分美观（也就是说 “土”、“丑”）。Graphite-web 作为前端组件，我们将着重讨论用户体验的相关内容。
 ￼
-![A standard Graphite Dashboard](http://og2061b3n.bkt.clouddn.com/Graphite-OverView-3.png)
+![A standard Graphite Dashboard](http://riboseyim-qiniu.riboseyim.com/Graphite-OverView-3.png)
 
 **Graphite-web  替代方案**
 归功于卓越的  Graphite API ，目前有一系列第三方仪表盘工具可以支持 Graphite 。因为有如此众多的可视化选项，它们的优劣其实主要取决于个人品味，再次不作过多扩展，但我确实想特别指出其中的一个。也许最具潜力的  Graphite 可视化替代方案， 或至少是人们谈论最多的是 Grafana 。
 
-![Dashboards in Grafana](http://og2061b3n.bkt.clouddn.com/Graphite-OverView-1.png)
+![Dashboards in Grafana](http://riboseyim-qiniu.riboseyim.com/Graphite-OverView-1.png)
 
 Grafana 是一个开源的仪表盘工具，可以兼容 Graphite 和 InfluxDB 。Grafana 曾经只是一个基于 Elasticsearch 存储的前端仪表盘工具，从 V2.0 版本开始，它拥有了一个支持用户自定义的后端存储组件。Grafana 在设计之初即考虑到支持 Graphite 创建更加优美的可视化组件，因此它非常适合替换默认的 Graphite-web 。Grafana 功能相当丰富，性能稳定。Grafana 拥有一个后端组件，如果你也可以找到纯粹的前端工具，Graphite 文档中提供了工具列表。
 
@@ -107,7 +107,7 @@ OverOps 发布了一个新的功能，可以让你把代码级指标从 JVM 应�
 #### 总结
 所有针对 Graphite 的投诉都集中于（它的工作性能不够稳定，仪表盘丑陋！规模化部署是硬伤！），但不妨碍它成为一个很流行的工具。如果你想要一个开源的指标和可视化工具，为许多企业级工具提供支持，那么 Graphite 值得一试。其中最重要的一点是，你可以自定义数据内容。Graphite 并不是由完全特定的组件一起工作，其中的乐趣何在 ？经过一些尝试和错误，您可以在您自己的环境中构建一个完全定制化的、非常有用 Graphite （或类似 Graphite 的）部署方案。
 
-![Graphite](http://og2061b3n.bkt.clouddn.com/opensource-graphite.png)
+![Graphite](http://riboseyim-qiniu.riboseyim.com/opensource-graphite.png)
 
 ## 扩展阅读：数据可视化
 - [数据可视化（一）思维利器 OmniGraffle 绘图指南 ](https://riboseyim.github.io/2017/09/15/Visualization-OmniGraffle/)

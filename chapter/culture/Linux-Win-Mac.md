@@ -24,7 +24,7 @@
 
 在过去的 27 年里, Linux 已经慢慢成长壮大，它不再是一个学生的业余项目。目前，Linux 运行在世界上大多数的计算设备和超级计算机上。
 
-![](http://omb2onfvy.bkt.clouddn.com/History_macOS_Linux.png)
+![](http://riboseyim-qiniu.riboseyim.com/History_macOS_Linux.png)
 
 >他在旧版的SketchPad代码基础上进行了修改，让它运行在Macintosh上，并改名MacSketch。SketchPad通过菜单的方式选取图案和样式，Bill把它们放到屏幕下方，变成固定的调色板，并在屏幕左边另外增加一组调色板，包含了各种各样的绘图工具。后续还会不断增加新的工具，不过MacPaint早期的基本架构已经就此成形。
 —— 《硅谷革命：成就苹果公司的疯狂往事》
@@ -38,7 +38,7 @@ macOS kernel 的特色官方总结为: XNU。意思是 "XNU 不是 Unix"。根�
 ## Linux Kernel 特色
 如果说 macOS 内核的特点是结合了微核心 (microkernel ，Mach) 和宏内核 (monolithic kernel ，BSD)，那么 Linux 则仅仅是一个宏内核。宏内核负责管理 CPU、内存、进程间通信、设备驱动程序、文件系统和系统服务调用。
 
-![](http://omb2onfvy.bkt.clouddn.com/OS_Kernel_Model.png)
+![](http://riboseyim-qiniu.riboseyim.com/OS_Kernel_Model.png)
 
 ## 一句话总结
 

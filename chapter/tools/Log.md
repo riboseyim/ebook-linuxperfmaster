@@ -185,6 +185,6 @@ func main() {
 }
 ```
 效果如下：
-![](http://o8m8ngokc.bkt.clouddn.com/logmatic_demo_1.png)
+![](http://riboseyim-qiniu.riboseyim.com/logmatic_demo_1.png)
 
-![](http://o8m8ngokc.bkt.clouddn.com/logmatic_demo_2.png)
+![](http://riboseyim-qiniu.riboseyim.com/logmatic_demo_2.png)

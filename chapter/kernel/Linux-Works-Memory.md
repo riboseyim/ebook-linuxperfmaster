@@ -27,7 +27,7 @@ $ dmesg | tail
 - 内存利用率（概括）: free
 - 内存利用率（进程）: top
 
-![](http://omb2onfvy.bkt.clouddn.com/Linux-Perf-Memory-Normal.png)
+![](http://riboseyim-qiniu.riboseyim.com/Linux-Perf-Memory-Normal.png)
 
 
 ```C
@@ -234,7 +234,7 @@ nonvoluntary_ctxt_switches:	19
 
 #### Linux 应用内存分配
 
-![](http://omb2onfvy.bkt.clouddn.com/Linux-Memory-Application.png)
+![](http://riboseyim-qiniu.riboseyim.com/Linux-Memory-Application.png)
 
 类似 Java 之类的虚拟机应用程序可以设置内存参数，例如:
 Xms128m JVM初始分配的堆内存

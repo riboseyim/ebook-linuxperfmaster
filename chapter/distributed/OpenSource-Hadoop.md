@@ -35,7 +35,7 @@ HDFS 被设计为可伸缩的分布式文件系统, 单个群集支持上千个�
 
 2016 年晚些时候, 我们开始发现 NameNode  RPC 队列时间高的问题。有时, NameNode 队列时间可能超过每个请求 500毫秒 (最慢的队列时间达到接近一秒), 这意味着每一个 HDFS 请求在队列中至少等待半秒 -- 与我们的正常进程时间（10 毫秒以下）相比, 这是明显的减速。
 
-- ![Figure 1. In 2016, our NameNode RPC queue time could exceed half a second per HDFS request.](http://og2061b3n.bkt.clouddn.com/Uber-Hadoop-201809-1.png)
+- ![Figure 1. In 2016, our NameNode RPC queue time could exceed half a second per HDFS request.](http://riboseyim-qiniu.riboseyim.com/Uber-Hadoop-201809-1.png)
 
 ## Enabling scaling & improving performance
 
@@ -53,7 +53,7 @@ HDFS 被设计为可伸缩的分布式文件系统, 单个群集支持上千个�
 
 最后, 我们在 ViewFs 后端实现了独立的的 HDFS 群集, 而不是基础架构中的 HDFS Federation 。通过这种设置, 可以逐步执行 HDFS 升级, 最大限度地减少大规模停机的风险; 此外, 完全隔离还有助于提高系统的可靠性。然而, 这种修复方案的一个缺点是, 保持单独的 HDFS 群集会导致更高的运营成本。
 
-- ![Figure 2. We installed ViewFs in multiple data centers to help manage our HDFS namespaces.](http://og2061b3n.bkt.clouddn.com/Uber-Hadoop-201809-2.png)
+- ![Figure 2. We installed ViewFs in multiple data centers to help manage our HDFS namespaces.](http://riboseyim-qiniu.riboseyim.com/Uber-Hadoop-201809-2.png)
 
 #### HDFS upgrades
 第二个解决方案是升级 HDFS 以跟上最新版本。我们一年执行了两次主要升级, 首先从 CDH 5.7.2 ( 包含大量 HDFS 2.6.0 补丁) 升级到 Apache 2.7.3, 然后升级到 Apache  2.8.2。为此, 我们还必须重构基于 Puppet 和 Jenkins 之上的部署框架, 以更换第三方群集管理工具。
@@ -86,7 +86,7 @@ XX:+DisableExplicitGC
 
 Uber 还在评估是否将第一垃圾回收器 (Garbage-First Garbage Collector , G1GC) 集成在系统中。虽然在过去使用 G1GC 时没有看到优势, 但 JVM 的新版本带来了额外的垃圾回收器性能改进, 因此重新审视收集器和配置的选择有时是必要的。
 
-- ![Figure 3. By increasing the young generation size from 1.5GB to 16GB and tuning the ParGCCardsPerStrideChunk value, the total time our production NameNode spent on GC pause decreased from 13 percent to 1.7 percent.](http://og2061b3n.bkt.clouddn.com/Uber-Hadoop-201809-3.png)
+- ![Figure 3. By increasing the young generation size from 1.5GB to 16GB and tuning the ParGCCardsPerStrideChunk value, the total time our production NameNode spent on GC pause decreased from 13 percent to 1.7 percent.](http://riboseyim-qiniu.riboseyim.com/Uber-Hadoop-201809-3.png)
 
 #### Controlling the number of small files
 
@@ -102,12 +102,12 @@ Uber 还在评估是否将第一垃圾回收器 (Garbage-First Garbage Collector
 
 在目前的 Spotlight 实现中, 审计日志从活跃的 NameNode 以流的形式送到一个基于 Flink 和 Kafka 的后端实时处理。最后，日志分析结果通过仪表板输出, 并用于自动化处理（例如自动禁用帐户或杀死导致 HDFS 减速的工作流）。
 
-- ![Figure 4. Spotlight enables us to identify and disable accounts that are causing HDFS slowdown.](http://og2061b3n.bkt.clouddn.com/Uber-Hadoop-201809-4.png)
+- ![Figure 4. Spotlight enables us to identify and disable accounts that are causing HDFS slowdown.](http://riboseyim-qiniu.riboseyim.com/Uber-Hadoop-201809-4.png)
 
 #### New Feature : Observer NameNode
 Uber 正在开发一个新的 HDFS 功能 Observer NameNode (HDFS-12975)   。 Observer NameNode 设计为一个 NameNode 只读副本, 目的是减少在活跃的 NameNode 群集上加载。由于 HDFS RPC 容量和增长的一半以上来自只读的 Presto 查询, Uber 希望借助 Observer NameNodes 的帮助将总体 NameNode 吞吐量扩展到 100% 。Uber 已经完成了这个工具的验证, 并正在将其投入生产环境中。
 
-- ![Figure 5. Uber Engineering’s current HDFS architecture incorporates high availability and Observer NameNodes.](http://og2061b3n.bkt.clouddn.com/Uber-Hadoop-201809-5.jpg)
+- ![Figure 5. Uber Engineering’s current HDFS architecture incorporates high availability and Observer NameNodes.](http://riboseyim-qiniu.riboseyim.com/Uber-Hadoop-201809-5.jpg)
 
 ## 最佳实践
 -  Layer your solutions: 考虑不同层次的解决方案。实现像 Observer NameNode 那样的工具或将 HDFS 切分到多集群需要付出巨大的努力。短期措施, 如 GC 调整和通过 stitcher 合并较小的文件, 给了我们很多喘息的空间以开发完善长期的解决方案。
@@ -119,7 +119,7 @@ Uber 正在开发一个新的 HDFS 功能 Observer NameNode (HDFS-12975)   。 O
 在不久的将来, Uber 计划将各种新服务集成到存储系统（如 图6 所示）。
 
 - ![Figure 6. Our near-future HDFS architecture will incorporate several additional features and functionalities that will contribute to the growth of our storage
-infrastructure.](http://og2061b3n.bkt.clouddn.com/Uber-Hadoop-201809-6.png)
+infrastructure.](http://riboseyim-qiniu.riboseyim.com/Uber-Hadoop-201809-6.png)
 
 接下来重点介绍两个主要项目, 基于路由的 HFDS Federation 和 tiered storage :
 

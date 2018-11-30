@@ -13,7 +13,7 @@ Uber Engineering 每天的常规工作是支持数以万计的应用程序、运
 
 分布式环境中存在大量进程需要度量，包括在同一服务器上运行着多个 Spark 应用、多服务器上运行的 Spark 应用有大量的进程 (例如数以千计的执行者 executors ) , 如 图1 所示:
 
-![](http://og2061b3n.bkt.clouddn.com/JVM-Profile-1.png)
+![](http://riboseyim-qiniu.riboseyim.com/JVM-Profile-1.png)
 
 Uber 现有的工具只能做到服务器级别的度量（server-level metrics）并且不能针对单个应用做到精确测量。我们需要一个解决方案, 可以收集每个过程的度量值, 并将它们与每个应用程序的进程关联起来。此外, 我们不知道这些过程将在何时启动, 以及它们将运行多长时间。为了能够在这种环境中收集度量, 需要在每个进程中自动启动探查器。
 
@@ -44,7 +44,7 @@ JVM Profiler 支持各种用例, 最典型的是能够检测任意 Java 代码�
 #### JVM Profiler 实现
 JVM Profiler 具有非常简单且可扩展的设计。可以很容易地添加其他 Profiler 收集更多的指标, 也能部署自定义 reporter 向不同的系统发送数据指标。
 
-![](http://og2061b3n.bkt.clouddn.com/JVM-Profile-2.png)
+![](http://riboseyim-qiniu.riboseyim.com/JVM-Profile-2.png)
 
 一旦启动 JVM Profiler 代码即通过代理参数加载到一个 Java 进程中。它由三个主要部分组成:
 
@@ -70,7 +70,7 @@ java -javaagent:jvm-profiler-0.0.5.jar=reporter=com.uber.profiling.reporters.Cus
 
 #### 数据基础设施整合
 
-![](http://og2061b3n.bkt.clouddn.com/JVM-Profile-3.png)
+![](http://riboseyim-qiniu.riboseyim.com/JVM-Profile-3.png)
 
 Uber 将 JVM Profiler 与自己的数据基础设施进行整合：
 
@@ -122,7 +122,7 @@ spark-submit --deploy-mode cluster --master yarn --conf spark.jars=hdfs://hdfs_u
 #### 指标查询
 Uber 将指标数据发送到 Kafka topic 和后台数据管线并自动存储于 Hive tables 。用户可以设置类似的管线并使用 SQL 查询指标数据。用户也可以编写自己的 reporter , 将指标发送到 SQL 数据库（如 MySQL）。Hive table 查询示例，包含每个进程的内存和 CPU 指标：
 
-![](http://og2061b3n.bkt.clouddn.com/JVM-Profile-4.png)
+![](http://riboseyim-qiniu.riboseyim.com/JVM-Profile-4.png)
 
 ## Next
 
@@ -130,7 +130,7 @@ Uber 将 JVM Profiler 应用到自己最大 Spark 应用 (1000 多个 executor )
 
 Uber 还将 JVM Profiler 应用到了所有 Hive on Spark 应用, 并发现了一些提高内存使用效率的机会。下面的图3显示了 Uber 发现的一个结果: 大约70% 的应用程序的实际内存利用率不到已分配内存的 80% 。研究结果表明, 大多数应用程序可以分配较少的内存并将内存利用率提高 20% 。
 
-![](http://og2061b3n.bkt.clouddn.com/JVM-Profile-5.png)
+![](http://riboseyim-qiniu.riboseyim.com/JVM-Profile-5.png)
 
 
 ## Tips

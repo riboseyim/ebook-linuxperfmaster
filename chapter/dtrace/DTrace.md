@@ -12,7 +12,7 @@
 自从那件事情之后，这些工程师就痛定思痛，创造了 DTrace 这样一个非常高级的调试工具，来帮助他们在未来的工作当中避免把过多精力花费在愚蠢问题上面。
 毕竟大部分所谓的“诡异问题”其实都是低级问题，属于那种“调不出来很郁闷，调出来了更郁闷”的类型。---《漫谈动态追踪技术》
 
-![](http://og2061b3n.bkt.clouddn.com/DTrace_History_01.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTrace_History_01.png)
 
 通观DTrace的演变过程，几乎相当于一部现代操作系统系统的发展史，细查起来，极其复杂。
 但是有两个人非常值得关注，一个是国际级的布道师，一个是国内的代表人物，
@@ -39,7 +39,7 @@
 动态追踪技术最复杂的地方在于追踪器种类繁多，让人一时无从下手。
 根据前人的一些经验总结，建议按照以下路径进行选择：
 
-![](http://og2061b3n.bkt.clouddn.com/DTrace_Linux_Choose.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTrace_Linux_Choose.png)
 
 <!--more-->
 
@@ -51,7 +51,7 @@
 
 perf_events的应用很广泛，配合Brendan Gregg老师研究的火焰图工具，可以分析程序在所有代码基的资源消耗，精确定位到函数级。
 例如：
-![火焰图实例](http://og2061b3n.bkt.clouddn.com/DTrace_Flame_Java_01.png)
+![火焰图实例](http://riboseyim-qiniu.riboseyim.com/DTrace_Flame_Java_01.png)
 
 **进程追踪**
 ```
@@ -69,7 +69,7 @@ Tracing exec()s. Ctrl-C to end.
 
 >Understanding all the Linux tracers to make a rational decision between them a huge undertaking.
 
-![](http://og2061b3n.bkt.clouddn.com/DTrace_Linux_Types.png)
+![](http://riboseyim-qiniu.riboseyim.com/DTrace_Linux_Types.png)
 
 1. ftrace
 内核hacker的最爱。已经包含在内核，能够支持 tracepoints, kprobes, and uprobes,

@@ -12,9 +12,9 @@
 
 升格后的网络安全和科技罪案调查科，属下设有“科技罪案组”及“网络安全组”两大组别，前者调查集团式及高科技罪案，后者则调查大型网络攻击及重大网络安全事故，另设“高级训练队”，负责科技罪案调查的技术培训和训练。（截止2016年11月1日，该科共有编制238人（军装226个））
 
-![香港警务处管理架构](http://ombx24fbq.bkt.clouddn.com/HK_Policy_%20Criminal_201704.png)
+![香港警务处管理架构](http://riboseyim-qiniu.riboseyim.com/HK_Policy_%20Criminal_201704.png)
 
-![网络安全与科技罪案调查科内部组织架构](http://ombx24fbq.bkt.clouddn.com/HK_Policy_%20CSTCB_201705.png)
+![网络安全与科技罪案调查科内部组织架构](http://riboseyim-qiniu.riboseyim.com/HK_Policy_%20CSTCB_201705.png)
 
 ## 总警司
 总警司（Chief Superintendent of Police，缩写CSP）俗称“一拖二”，是香港警察职级其中一个宪委级职级，为高级警官的级别；位于高级警司之上，警务处助理处长之下，由警务处处长委任。香港警察职级乃参考自英国警衔／军衔，总警司比照上校职级。

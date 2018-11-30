@@ -19,13 +19,13 @@ KRACK 攻击将目标放在你的移动设备和 Wi-Fi 接入点之间的链路�
 
 #### 1、不可信任的基础设施：Wi-Fi
 如果现在阅读本文是通过你的笔记本电脑或者移动电话，那么你的通信链可能看起来应该是这样的：
-![](http://omb2onfvy.bkt.clouddn.com/BlankNetworkDiagram-Basics.png)
+![](http://riboseyim-qiniu.riboseyim.com/BlankNetworkDiagram-Basics.png)
 
 KRACK 攻击将目标放在你的移动设备和 Wi-Fi 接入点之间的链路，它可能是一台路由器 —— 在你的家里、办公室、社区图书馆或者你最喜欢咖啡店。
-![](http://omb2onfvy.bkt.clouddn.com/BlankNetworkDiagram-WhereKrackshappen.png)
+![](http://riboseyim-qiniu.riboseyim.com/BlankNetworkDiagram-WhereKrackshappen.png)
 
 实际上，这个图应该类似于这样：
-![](http://omb2onfvy.bkt.clouddn.com/BlankNetworkDiagram-Everywhere.png)
+![](http://riboseyim-qiniu.riboseyim.com/BlankNetworkDiagram-Everywhere.png)
 
 Wi-Fi 仅仅是我们漫长的通信链中的第一个不应该信任的环节。如果让我猜的话，你正在使用的 Wi-Fi 路由器可能从开始使用的那天起就没有收到过安全更新。更糟的是，它可能是默认的或容易被猜到的管理凭据（用户名/口令/密钥等），从来就没有更改过。除非你自己初始化并配置了路由器，同时你还能记住自己最后一次是什么时候更新它的固件，总之，你应该假设它现在是由别人控制，不能被信任。
 
@@ -40,11 +40,11 @@ Linux 基金会发起 [“Let’s Encrypt” 项目,Let’s Encrypt is a free, 
 
 好吧…只能说尽量接近没有风险。
 
-![](http://omb2onfvy.bkt.clouddn.com/BlankNetworkDiagram-HTTPS.png)
+![](http://riboseyim-qiniu.riboseyim.com/BlankNetworkDiagram-HTTPS.png)
 
 #### 3、历史遗留问题：DNS
 即使我们忠实地使用 HTTPS 协议来创建一个可信的通信渠道，攻击者还有一个机会，访问我们的 Wi-Fi 路由器或改变我们的 Wi-Fi 流量 — 例如 KRACK 攻击 — 可以诱导我们同错误的网站通信。他们可以这样做事利用了另一个事实，即我们仍然十分依赖于 DNS —— 一种上世纪80年代开始应用，不加密，非常容易被欺骗协议。
-![](http://omb2onfvy.bkt.clouddn.com/BlankNetworkDiagram-LOLDNS.png)
+![](http://riboseyim-qiniu.riboseyim.com/BlankNetworkDiagram-LOLDNS.png)
 
 DNS （Domain Name System，域名系统）可以将人类友好的域名例如“linux.com”转换成 IP 地址 —— 计算机可以基于 IP 地址相互通信。为了将域名转换成 IP 地址，计算机会查询解析器软件 —— 通常运行在 Wi-Fi 路由器上或操作系统本身。解析器将查询一个包括 “root” 域名服务器的分布式网络，找出系统在互联网上所谓的“权威”的信息，域名“Linux .com”对应的IP地址。
 
@@ -62,7 +62,7 @@ DNS 欺骗的解决方案称为 DNSSEC （Domain Name System Security Extension
 
 一个可接受的解决方案是使用一个信誉良好的 VPN 提供商，在你的系统和基础设施之间建立安全通信链路。我们的希望在于他们比你的路由器厂商和你当前的互联网服务提供商更加关注安全，所以他们可以更好地保证您的流量不受嗅探，或者遏制恶意人士的骚扰。让你所有的工作站和移动设备使用 VPN ，可确保类似  漏洞，例如 KRACK 攻击或不安全的路由器等，不影响你与外部世界通信的完整性。
 
-![](http://omb2onfvy.bkt.clouddn.com/BlankNetworkDiagram-VPN.png)
+![](http://riboseyim-qiniu.riboseyim.com/BlankNetworkDiagram-VPN.png)
 
 这里的重要警告是，在选择 VPN 提供商时，必须保证它们的合理地可信性；否则，您只是同另一组恶意行为者进行交易。远离任何提供“免费 VPN”的提供商，他们很可能把你作为间谍目标，或者出售您的流量给营销公司赚钱。 
 

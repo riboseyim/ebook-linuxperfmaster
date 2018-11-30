@@ -2,7 +2,7 @@
 
 >2016年2月 TED Talk , Linux之父Linus Torvalds.
 
-![](http://o8m8ngokc.bkt.clouddn.com/global-view.png)
+![](http://riboseyim-qiniu.riboseyim.com/global-view.png)
 
 ### 开场：神之总部
 0:12（主持人）Chris Anderson:

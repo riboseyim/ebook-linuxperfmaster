@@ -19,13 +19,13 @@
 >**Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure.（任何组织在设计一套系统（广义概念上的系统）时，所交付的设计方案在结构上都与该组织的通信结构保持一致）
 -- Melvyn Conway, 1967**
 
-![](http://omb2onfvy.bkt.clouddn.com/MicroService_Org.png)
+![](http://riboseyim-qiniu.riboseyim.com/MicroService_Org.png)
 
 >《人月神话》：Adding manpower to a late software project makes it later --Fred Brooks, (1975)
 
 为了赶进度加程序员就像用水去灭油锅里的火一样，原因在于：沟通成本 = n(n-1)/2，沟通成本随着项目或者组织的人员增加呈指数级增长。很多项目在经过一段时间的发展之后，都会有不少恐龙级代码，无人敢挑战。比如一个类的规模就多达数千行，核心方法近千行，大量重复代码，每次调整都以失败告终。庞大的系统规模导致团队新成员接手困难，项目组人员增加导致的代码冲突问题，系统复杂度的增加导致的不确定上线风险、引入新技术困难等。
 
-![](http://omb2onfvy.bkt.clouddn.com/MicroServices_Math_Demo.png)
+![](http://riboseyim-qiniu.riboseyim.com/MicroServices_Math_Demo.png)
 
 微服务 (Microservices)是解决这些困难的众多方案之一。它本质上是一种软件架构风格，它是以专注于单一责任与功能的小型功能区块 (Small Building Blocks) 为基础，利用模组化的方式组合出复杂的大型应用程序，各功能区块使用与语言无关 (Language-Independent/Language agnostic) 的 API 集相互通讯。
 
@@ -42,7 +42,7 @@ select * from order o, customer c
 
 在DDD领域（Domain-Driven Design，领域驱动设计）有一种架构风格被广泛应用，即CQRS （Command Query Responsibility Seperation，命令查询职责分离）。CQRS最核心的概念是Command、Event，“将数据(Data)看做是事实(Fact)。每个事实都是过去的痕迹，虽然这种过去可以遗忘，但却无法改变。” 这一思想直接发展了Event Source，即将这些事件的发生过程记录下来，使得我们可以追溯业务流程。CQRS对设计者的影响，是将领域逻辑，尤其是业务流程，皆看做是一种领域对象状态迁移的过程。这一点与REST将HTTP应用协议看做是应用状态迁移的引擎，有着异曲同工之妙。
 
-![](http://omb2onfvy.bkt.clouddn.com/MicroService_EventSourcing.png)
+![](http://riboseyim-qiniu.riboseyim.com/MicroService_EventSourcing.png)
 
 ## 实现方案
 
@@ -79,7 +79,7 @@ name:事件名称
 ID：序号
 ......
 
-![](http://omb2onfvy.bkt.clouddn.com/MicroService_EventSourcing_Classes.png)
+![](http://riboseyim-qiniu.riboseyim.com/MicroService_EventSourcing_Classes.png)
 
 
 ### 环境准备
@@ -521,7 +521,7 @@ msgVal = msg.Value
 ```
 即使程序崩溃，MarkOffset也会将消息标记为 **processed** ,标签包括元数据以及这个时间点的状态。元数据可以被另外一个Consumer恢复数据状态，也就能被重新消费。即即使同样的消息被处理两次，结果也是一样的，这个过程理论上是 **幂等** 的（idempotent）。
 
-![Kafka Consumers](http://omb2onfvy.bkt.clouddn.com/MicroService_Kafka_Consumers.jpg)
+![Kafka Consumers](http://riboseyim-qiniu.riboseyim.com/MicroService_Kafka_Consumers.jpg)
 
 ```go
 //运行多个consumer实例
@@ -663,14 +663,14 @@ services:
 
 云带来的好的一方面是它让公司中的任何人都可以轻松部署、配置和管理他们需要的基础设施。虽然很多基础设施团队采用了云和自动化技术，却没有采用相应的自动化测试和发布流程。它们把这些当作一门过于复杂的脚本语言来使用。他们会为每一次具体的改动编写手册、配置文件和执行脚本，再针对一部分指定的服务器手工运行它们，也就是说每一次改动都还需要花费专业知识、时间和精力。这种工作方式意味着基础设施团队没有把他们自己从日常的重复性劳动中解放出来。目前已经有很多商业云平台提供了Docker服务，只需要将自己的 **git repository** 链接到平台，即可以自动帮你完成部署，在云上完成集成测试。
 
-![](http://omb2onfvy.bkt.clouddn.com/MicroService_UseDocker.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/MicroService_UseDocker.jpg)
 
 ```bash
     docker-compose build
     docker-compose run app ginkgo
 ```
 
-![](http://omb2onfvy.bkt.clouddn.com/MicroService_CloudTest.png)
+![](http://riboseyim-qiniu.riboseyim.com/MicroService_CloudTest.png)
 
 
 ## 扩展阅读

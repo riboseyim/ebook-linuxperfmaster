@@ -28,7 +28,7 @@ Kafka Monitor 使得这些事情变得很容易：
 
 一个Kafka Monitor 实例运行在一个单独的Java进程，在相同的进程里可以再产生多个测试用例和服务。下面的示意图表达了服务，测试用例和Kafka Monitor实例之间的关系，也可以知道Kafka  Monitor 如何在Kafka集群和用户之间相互作用。
 
-![](http://o8m8ngokc.bkt.clouddn.com/KafkaMonitor-2.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/KafkaMonitor-2.jpg)
 
 #### 测试
 一个典型的测试，将仿真一系列场景，基于某些前期已经定义的定时任务，需要启动一些生产者／消费者，上报指标，验证指标值是否符合前期定义的断言。举个例子，Kafka Monitor 能够启动一个生产者，一个消费者，每五分钟反射一个随机代理（比方说，如果说它是监控一个测试集群）。Kafka Monitor 接下来就可以度量可用性，消息丢包率，揭露JMX指标，用户可以在一个实时的健康仪表盘看到这些信息。
@@ -50,7 +50,7 @@ Kafka Monitor 使得这些事情变得很容易：
 第一个Kafka Monitor 实例包含一个生产者服务，提供给Kafka 集群1。消息从集群1反射到集群2。
 最后，在第二个Kafka Monitor 实例的消费者服务，处理了消息，来自集群2中的同一个主题，并且报告了通过集群通道的端到端时延。
 
-![](http://o8m8ngokc.bkt.clouddn.com/KafkaMonitor-3.jpg)	 
+![](http://riboseyim-qiniu.riboseyim.com/KafkaMonitor-3.jpg)	 
 
 #### Kafka Monitor 在LinkedIn的应用
 
@@ -83,7 +83,7 @@ Kafka Monitor自己的特点就是专注于可扩展性，模块化以及客户�
 #### 开始
 Kafka Monitor的源代码可以从 Github 下载，基于Apache 2.0 授权协议。使用指南，设计文档和未来规划在README文件和项目wiki中可以查阅。我们很乐于听到你对该项目的反馈意见。当Kafka Monitor被设计用来作为，测试和监控Kafka部署情况的框架的时候，我们视线了一个基本的但是有用的测试，确保你能开箱即用。这些测试可以度量可用性，端到端时延，消息丢包率以及消息复制速率，通过运行一个生产者和一个消费者，它们使用同一个主题生产／处理消息。你可以在终端看到这些指标，基于HTTP GET请求、程序化地获得它们的值，甚至随着时间查看它们的值，通过一个简单（快速启动）的图形界面，如下面的截图所示。关于如何运行测试、查看指标的详细介绍内容请参阅项目网站。
 
-![](http://o8m8ngokc.bkt.clouddn.com/KafkaMonitor-1.jpg)
+![](http://riboseyim-qiniu.riboseyim.com/KafkaMonitor-1.jpg)
 
 #### 演进规划
 

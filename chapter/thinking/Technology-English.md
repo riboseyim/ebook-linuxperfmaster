@@ -96,7 +96,7 @@
 
 其要者无非有二：一者领先优势显著、独步天下，二者大佬辈出、产业和学术高度融合。具体案例就是，很多技术发明或者开源软件项目都是以学术论文的形式进入公众视野的。例如Hadoop项目的《MapReduce:Simplified Data Processing on Large Clusters》、《The Google File System》,Ganglia项目的《 The ganglia distributed monitoring system: design, implementation, and experience》。论文的可读性很强，能看到发明者设计初衷、实现原理甚至测试数据等。
 
-![](http://og2061b3n.bkt.clouddn.com/Ganglia_DIE.png)
+![](http://riboseyim-qiniu.riboseyim.com/Ganglia_DIE.png)
 
 ### 三、电子书必不可少
 

@@ -14,7 +14,7 @@
 
 随着近年的业务暴涨、负载上升、硬件老化，服务器、磁盘都时有故障发生，负载水平线逼近极限，故障率还有加速抬头的趋势。整个运营团队面临了巨大的客户压力，提升系统稳定性的巨大挑战摆在了大家面前。
 
-![迁移拓扑](http://riboseyim-qiniu.riboseyim.com/oracle-trans-go.png)
+<!--![迁移拓扑](http://riboseyim-qiniu.riboseyim.com/oracle-trans-go.png)-->
 
 ## 二、主要困难
 
@@ -32,11 +32,11 @@
 系统的拓扑结构最初是星型：以数据库和应用服务器为核心，外挂近100台服务器。数据库服务器配置双网卡，连通内网、外网。
 
 
-![迁移前](http://riboseyim-qiniu.riboseyim.com/oracle-trans-t1.png)
+<!--![迁移前](http://riboseyim-qiniu.riboseyim.com/oracle-trans-t1.png)-->
 
 虽然星型结构简单易用，却也存在较大的安全隐患。在早期建设的时候，规范尚未健全，还可以用业务优先的理由搪塞过去。在本期工程中，非常明确必须要完成内外网分离的改造。
 
-![迁移后](http://riboseyim-qiniu.riboseyim.com/oracle-trans-t2.png)
+<!--![迁移后](http://riboseyim-qiniu.riboseyim.com/oracle-trans-t2.png)-->
 
 #### 2.3 困难3: 安全一票否决
 Oracle 版本由10g 升级到 11g，集中管理访问权限。
@@ -144,7 +144,7 @@ Oracle 版本由10g 升级到 11g，集中管理访问权限。
 
 	决策是一件非常艰难的事情，受到多种因素的制约，最终的决策是一个各种利益妥协的结果。正如另一位资深哲人所说：
 
-	>项目经理首先要学会变通。——瓦西里.杨
+	>项目经理首先要学会变通。
 
 	天下武功，无坚不摧，唯变不破。
 
